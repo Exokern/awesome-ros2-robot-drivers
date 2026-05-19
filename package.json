@@ -1,0 +1,20 @@
+{
+  "name": "awesome-ros2-robot-drivers",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Curated list of ROS 2 robot, sensor, actuator, and hardware-interface drivers.",
+  "license": "CC0-1.0",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-index.mjs"
+  },
+  "keywords": [
+    "awesome",
+    "awesome-list",
+    "robotics",
+    "ros2",
+    "drivers",
+    "robot-drivers"
+  ]
+}
+

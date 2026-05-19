@@ -1,0 +1,32 @@
+schema_version: "0.1"
+id: "org.example.driver"
+name: "Example ROS 2 Driver"
+summary: "Short factual summary of the ROS 2 driver and its hardware target."
+version: "0.1.0"
+
+source:
+  type: "github"
+  url: "https://github.com/owner/repository"
+  commit: ""
+
+package:
+  type: "config_pack"
+  license: "unknown"
+  languages: []
+  frameworks: ["ros2"]
+
+task:
+  categories: ["config"]
+  contact_rich: false
+  objects: []
+
+compatibility:
+  robots: []
+  grippers: []
+  sensors: []
+  runtimes: ["ros2"]
+
+verification:
+  level: "unverified"
+  notes: "Curated list metadata only. Not tested or certified by EXOKERN."
+

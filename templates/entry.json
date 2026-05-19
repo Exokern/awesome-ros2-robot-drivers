@@ -1,0 +1,13 @@
+{
+  "name": "Driver Name",
+  "repo": "owner/repository",
+  "url": "https://github.com/owner/repository",
+  "category": "industrial-manipulators",
+  "hardware": ["Robot or device target"],
+  "ros2_native": true,
+  "source_status": "official",
+  "license": "unknown",
+  "last_checked": "YYYY-MM-DD",
+  "notes": "Short factual review note. No compatibility guarantee."
+}
+
