@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 
 import { renderCurationReport } from "./render-curation-report.mjs";
+import { buildExports } from "./render-exports.mjs";
 import { renderReadme } from "./render-readme.mjs";
 
 const indexPath = new URL("../data/index.json", import.meta.url);
@@ -17,6 +18,18 @@ const reviewStatuses = new Set(["candidate", "curated", "legacy", "needs-review"
 
 function fail(message) {
   failures.push(message);
+}
+
+function readGeneratedFile(relativePath) {
+  try {
+    return readFileSync(new URL(`../${relativePath}`, import.meta.url), "utf8");
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      fail(`${relativePath} is missing. Run \`npm run generate\`.`);
+      return null;
+    }
+    throw error;
+  }
 }
 
 function isPlainString(value) {
@@ -106,6 +119,13 @@ if (readme !== renderedReadme) {
 const renderedCurationReport = renderCurationReport(data);
 if (curationReport !== renderedCurationReport) {
   fail("docs/curation-report.md is out of date. Run `npm run generate`.");
+}
+
+for (const [relativePath, expectedContent] of Object.entries(buildExports(data))) {
+  const actualContent = readGeneratedFile(relativePath);
+  if (actualContent !== null && actualContent !== expectedContent) {
+    fail(`${relativePath} is out of date. Run \`npm run generate\`.`);
+  }
 }
 
 if (failures.length) {

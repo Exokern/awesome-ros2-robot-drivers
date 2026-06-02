@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.2",
+  "reviewed_at": "2026-06-02",
+  "entry_count": 43,
+  "category_count": 8,
+  "counts_by_category": {
+    "industrial-manipulators": 10,
+    "mobile-bases-and-robots": 8,
+    "cameras-and-rgb-d": 7,
+    "lidar": 9,
+    "imu-and-positioning": 2,
+    "grippers-and-end-effectors": 2,
+    "actuators-and-motor-controllers": 2,
+    "control-and-hardware-interfaces": 3
+  },
+  "counts_by_source_status": {
+    "community": 13,
+    "official": 30
+  },
+  "counts_by_review_status": {
+    "curated": 43
+  },
+  "counts_by_license": {
+    "Apache-2.0": 18,
+    "BSD-2-Clause": 1,
+    "BSD-3-Clause": 9,
+    "MIT": 1,
+    "NOASSERTION": 14
+  },
+  "license_follow_up_repos": [
+    "AuboRobot/aubo_ros2_driver",
+    "FANUC-CORPORATION/fanuc_driver",
+    "Kinovarobotics/ros2_kortex",
+    "Livox-SDK/livox_ros_driver2",
+    "LORD-MicroStrain/microstrain_inertial",
+    "ouster-lidar/ouster-ros",
+    "RoboSense-LiDAR/rslidar_sdk",
+    "ros-drivers/urg_node",
+    "ros-drivers/usb_cam",
+    "ros-drivers/velodyne",
+    "ros-perception/image_pipeline",
+    "TechmanRobotInc/tmr_ros2",
+    "Yaskawa-Global/motoros2",
+    "YDLIDAR/ydlidar_ros2_driver"
+  ],
+  "low_coverage_categories": [
+    "imu-and-positioning",
+    "grippers-and-end-effectors",
+    "actuators-and-motor-controllers"
+  ]
+}

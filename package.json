@@ -4,9 +4,36 @@
   "private": false,
   "description": "Curated list of ROS 2 robot, sensor, actuator, and hardware-interface drivers.",
   "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Exokern/awesome-ros2-robot-drivers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Exokern/awesome-ros2-robot-drivers/issues"
+  },
+  "homepage": "https://github.com/Exokern/awesome-ros2-robot-drivers#readme",
   "type": "module",
+  "exports": {
+    "./index": "./dist/index.json",
+    "./summary": "./dist/summary.json",
+    "./categories": "./dist/categories.json",
+    "./entries.csv": "./dist/entries.csv",
+    "./schema": "./data/schema.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "CONTRIBUTING.md",
+    "README.md",
+    "LICENSE",
+    "data/",
+    "dist/",
+    "docs/",
+    "scripts/",
+    "templates/"
+  ],
   "scripts": {
     "audit:github": "node scripts/audit-github-metadata.mjs",
+    "export": "node scripts/render-exports.mjs",
     "generate": "node scripts/generate.mjs",
     "report": "node scripts/render-curation-report.mjs",
     "validate": "node scripts/validate-index.mjs",
