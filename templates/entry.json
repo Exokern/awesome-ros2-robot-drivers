@@ -3,11 +3,12 @@
   "repo": "owner/repository",
   "url": "https://github.com/owner/repository",
   "category": "industrial-manipulators",
+  "description": "Short factual description of the ROS 2 driver role and hardware target.",
   "hardware": ["Robot or device target"],
   "ros2_native": true,
   "source_status": "official",
-  "license": "unknown",
+  "review_status": "candidate",
+  "license": "NOASSERTION",
   "last_checked": "YYYY-MM-DD",
-  "notes": "Short factual review note. No compatibility guarantee."
+  "notes": "Short factual caveat. No compatibility guarantee."
 }
-

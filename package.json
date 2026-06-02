@@ -6,7 +6,10 @@
   "license": "CC0-1.0",
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate-index.mjs"
+    "audit:github": "node scripts/audit-github-metadata.mjs",
+    "generate": "node scripts/render-readme.mjs",
+    "validate": "node scripts/validate-index.mjs",
+    "check": "npm run validate"
   },
   "keywords": [
     "awesome",
@@ -17,4 +20,3 @@
     "robot-drivers"
   ]
 }
-

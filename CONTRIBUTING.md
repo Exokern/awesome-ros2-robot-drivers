@@ -1,32 +1,69 @@
 # Contributing
 
-This repository curates ROS 2 driver repositories. It is not a place for marketing submissions, broad robotics resources, course lists, or unverified compatibility claims.
+This repository curates ROS 2 driver repositories. It is not a place for marketing submissions, broad robotics resources, course lists, generic AI demos, or unverified compatibility claims.
+
+The goal is a high-signal index that a robotics engineer can use before choosing hardware or planning bringup.
 
 ## Add Or Update An Entry
 
-Open a pull request that updates both:
+Open a pull request that updates the canonical metadata:
 
-- `README.md`
 - `data/index.json`
 
-Before opening the pull request:
+Then regenerate the readable list:
 
 ```bash
+npm run generate
 npm run validate
 ```
 
-If the repository has a `robot_skill.yaml`, mention it in the pull request. If it does not, do not invent compatibility claims. Use upstream README, package files, releases, and official documentation as evidence.
+Do not edit the generated README entry by hand. If the README output is wrong, fix the metadata or the renderer.
 
 ## Entry Requirements
 
 Entries should have:
 
-- A public GitHub repository root URL.
-- A clear ROS 2 driver, wrapper, bridge, hardware-interface, or controller role.
-- A visible hardware target.
-- Recent activity, or a specific reason to keep a slow-moving stable driver.
-- A visible license or a `license: unknown` note.
-- No claims that EXOKERN or this list has tested the driver on hardware.
+- A public GitHub repository root URL with no trailing slash.
+- A clear ROS 2 driver, wrapper, bridge, hardware-interface, controller, or platform-stack role.
+- A visible hardware target, or a generic hardware-interface role such as `ros2_control`.
+- Recent activity, or a specific reason to keep a stable but slow-moving driver.
+- A visible license, `NOASSERTION`, or a direct caveat when licensing is unclear.
+- A concise caveat covering branch, distro, firmware, controller, hardware, license, or maintenance uncertainty.
+- No claim that EXOKERN or this list has tested the driver on hardware.
+
+## Review Status
+
+Use `review_status` carefully:
+
+- `candidate` - plausible entry, but not yet fully reviewed.
+- `curated` - manually reviewed against the entry requirements.
+- `legacy` - retained for historical or still-useful reasons despite low activity.
+- `needs-review` - known useful, but current metadata or upstream state needs attention.
+
+## Source Status
+
+Use `source_status` to describe upstream ownership:
+
+- `official` - maintained by the vendor or original hardware owner.
+- `community` - maintained by the ROS community, a lab, an integrator, or an independent contributor.
+- `vendor-adjacent` - maintained by a partner, integrator, or organization closely tied to the hardware.
+- `legacy` - retained for continuity even though upstream status is old or unclear.
+
+## Evidence
+
+Use upstream README files, package manifests, releases, official documentation, license files, and repository metadata as evidence. If a repository has a `robot_skill.yaml`, mention it in the pull request. If it does not, do not invent compatibility claims.
+
+Good notes are specific:
+
+- "Confirm firmware and controller software requirements upstream."
+- "GitHub API did not expose an SPDX license; inspect package-level license files."
+- "Framework entry, not a device-specific driver."
+
+Weak notes should be rewritten:
+
+- "Works great."
+- "Best driver."
+- "Should support all robots."
 
 ## Out Of Scope
 
@@ -43,4 +80,3 @@ For detailed compatibility metadata, use the EXOKERN Robot Skill Spec:
 https://github.com/Exokern/robot-skill-spec
 
 This list may link to upstream `robot_skill.yaml` files or curated overlays, but it does not redefine that schema.
-

@@ -1,0 +1,20 @@
+name: GitHub Metadata Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 7 * * 1"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm run audit:github
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
