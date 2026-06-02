@@ -17,7 +17,7 @@ npm run generate
 npm run validate
 ```
 
-Do not edit the generated README entry by hand. If the README output is wrong, fix the metadata or the renderer.
+Do not edit generated README or curation-report output by hand. If generated output is wrong, fix the metadata or the renderer.
 
 ## Entry Requirements
 
@@ -52,6 +52,8 @@ Use `source_status` to describe upstream ownership:
 ## Evidence
 
 Use upstream README files, package manifests, releases, official documentation, license files, and repository metadata as evidence. If a repository has a `robot_skill.yaml`, mention it in the pull request. If it does not, do not invent compatibility claims.
+
+Use [docs/curation-report.md](docs/curation-report.md) to find weak categories, license follow-ups, and aging entries before proposing broad additions. Strong entries should improve the report, not just increase the count.
 
 Good notes are specific:
 

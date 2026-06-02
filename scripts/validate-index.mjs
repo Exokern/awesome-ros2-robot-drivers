@@ -1,12 +1,15 @@
 import { readFileSync } from "node:fs";
 
+import { renderCurationReport } from "./render-curation-report.mjs";
 import { renderReadme } from "./render-readme.mjs";
 
 const indexPath = new URL("../data/index.json", import.meta.url);
 const readmePath = new URL("../README.md", import.meta.url);
+const curationReportPath = new URL("../docs/curation-report.md", import.meta.url);
 
 const data = JSON.parse(readFileSync(indexPath, "utf8"));
 const readme = readFileSync(readmePath, "utf8");
+const curationReport = readFileSync(curationReportPath, "utf8");
 const failures = [];
 
 const sourceStatuses = new Set(["official", "community", "vendor-adjacent", "legacy"]);
@@ -98,6 +101,11 @@ for (const category of categories.keys()) {
 const renderedReadme = renderReadme(data);
 if (readme !== renderedReadme) {
   fail("README.md is out of date. Run `npm run generate`.");
+}
+
+const renderedCurationReport = renderCurationReport(data);
+if (curationReport !== renderedCurationReport) {
+  fail("docs/curation-report.md is out of date. Run `npm run generate`.");
 }
 
 if (failures.length) {

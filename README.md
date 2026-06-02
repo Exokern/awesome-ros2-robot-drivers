@@ -30,6 +30,7 @@ Schema: 0.2
 - [Selection Checklist](#selection-checklist)
 - [Review Rules](#review-rules)
 - [Data And Automation](#data-and-automation)
+- [Curation Report](#curation-report)
 - [Related EXOKERN Spec](#related-exokern-spec)
 - [Contributing](#contributing)
 
@@ -305,7 +306,7 @@ Entries that are ROS 1 only, archived, experimental, or unclear should be labele
 
 ## Data And Automation
 
-The canonical metadata lives in [data/index.json](data/index.json) and is documented by [data/schema.json](data/schema.json). The README is generated from that file so contributors only maintain one source of truth.
+The canonical metadata lives in [data/index.json](data/index.json) and is documented by [data/schema.json](data/schema.json). The README and curation report are generated from that file so contributors only maintain one source of truth.
 
 ```bash
 npm run generate
@@ -313,7 +314,11 @@ npm run validate
 npm run audit:github
 ```
 
-`npm run validate` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, and README drift. `npm run audit:github` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata.
+`npm run validate` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, and curation-report drift. `npm run audit:github` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata.
+
+## Curation Report
+
+The generated [curation report](docs/curation-report.md) summarizes category coverage, source mix, review status, license follow-up work, and aging review queues. Use it to decide where the next curated entries or metadata fixes should go.
 
 ## Related EXOKERN Spec
 

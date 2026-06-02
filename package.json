@@ -7,7 +7,8 @@
   "type": "module",
   "scripts": {
     "audit:github": "node scripts/audit-github-metadata.mjs",
-    "generate": "node scripts/render-readme.mjs",
+    "generate": "node scripts/generate.mjs",
+    "report": "node scripts/render-curation-report.mjs",
     "validate": "node scripts/validate-index.mjs",
     "check": "npm run validate"
   },
