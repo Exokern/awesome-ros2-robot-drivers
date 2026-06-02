@@ -33,6 +33,11 @@
       "description": "Drivers for grippers, end effectors, and related actuator interfaces."
     },
     {
+      "id": "actuators-and-motor-controllers",
+      "name": "Actuators And Motor Controllers",
+      "description": "Actuator SDKs, smart-servo interfaces, and motor-controller packages used in ROS 2 hardware bringup."
+    },
+    {
       "id": "control-and-hardware-interfaces",
       "name": "Control And Hardware Interfaces",
       "description": "Core ROS 2 control frameworks, controllers, and generic hardware-interface packages."
@@ -208,6 +213,90 @@
       "notes": "Use upstream platform docs to map this common package stack to a specific Clearpath robot."
     },
     {
+      "name": "Clearpath Robot",
+      "repo": "clearpathrobotics/clearpath_robot",
+      "url": "https://github.com/clearpathrobotics/clearpath_robot",
+      "category": "mobile-bases-and-robots",
+      "description": "ROS 2 platform stack for Clearpath robots, paired with Clearpath configuration and common packages.",
+      "hardware": ["Clearpath robot platforms"],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "BSD-3-Clause",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm exact robot model, generated configuration, firmware, and distro branch upstream."
+    },
+    {
+      "name": "TurtleBot 4 Robot",
+      "repo": "turtlebot/turtlebot4_robot",
+      "url": "https://github.com/turtlebot/turtlebot4_robot",
+      "category": "mobile-bases-and-robots",
+      "description": "ROS 2 robot packages for TurtleBot 4 platform bringup.",
+      "hardware": ["TurtleBot 4"],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "Apache-2.0",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm robot image, create3/base firmware, sensor configuration, and ROS distro branch upstream."
+    },
+    {
+      "name": "LinoRobot 2",
+      "repo": "linorobot/linorobot2",
+      "url": "https://github.com/linorobot/linorobot2",
+      "category": "mobile-bases-and-robots",
+      "description": "ROS 2 platform packages for custom 2WD, 4WD, and mecanum mobile robots.",
+      "hardware": ["2WD mobile robots", "4WD mobile robots", "Mecanum mobile robots"],
+      "ros2_native": true,
+      "source_status": "community",
+      "review_status": "curated",
+      "license": "Apache-2.0",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm base electronics, motor driver, firmware, and branch/distro mapping upstream."
+    },
+    {
+      "name": "ROSbot ROS",
+      "repo": "husarion/rosbot_ros",
+      "url": "https://github.com/husarion/rosbot_ros",
+      "category": "mobile-bases-and-robots",
+      "description": "ROS packages for Husarion ROSbot mobile robots.",
+      "hardware": ["Husarion ROSbot XL", "Husarion ROSbot 3", "Husarion ROSbot 2"],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "Apache-2.0",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm exact ROSbot model, OS image, firmware, and ROS distro branch upstream."
+    },
+    {
+      "name": "Scout ROS 2",
+      "repo": "agilexrobotics/scout_ros2",
+      "url": "https://github.com/agilexrobotics/scout_ros2",
+      "category": "mobile-bases-and-robots",
+      "description": "ROS 2 support package for AgileX Scout UGV platforms.",
+      "hardware": ["AgileX Scout"],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "Apache-2.0",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm CAN interface, SDK requirements, model variant, and ROS distro branch upstream."
+    },
+    {
+      "name": "Hunter ROS 2",
+      "repo": "agilexrobotics/hunter_ros2",
+      "url": "https://github.com/agilexrobotics/hunter_ros2",
+      "category": "mobile-bases-and-robots",
+      "description": "ROS 2 support package for AgileX Hunter UGV platforms.",
+      "hardware": ["AgileX Hunter"],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "Apache-2.0",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm CAN interface, SDK requirements, model variant, and ROS distro branch upstream."
+    },
+    {
       "name": "RealSense ROS",
       "repo": "realsenseai/realsense-ros",
       "url": "https://github.com/realsenseai/realsense-ros",
@@ -320,6 +409,34 @@
       "notes": "GitHub API did not expose an SPDX license; confirm ROS 2 branch status, model coverage, and license upstream."
     },
     {
+      "name": "Hokuyo URG Node",
+      "repo": "ros-drivers/urg_node",
+      "url": "https://github.com/ros-drivers/urg_node",
+      "category": "lidar",
+      "description": "ROS wrapper for the Hokuyo urg_c library and Hokuyo URG LiDAR devices.",
+      "hardware": ["Hokuyo URG LiDAR"],
+      "ros2_native": true,
+      "source_status": "community",
+      "review_status": "curated",
+      "license": "NOASSERTION",
+      "last_checked": "2026-06-02",
+      "notes": "GitHub API did not expose an SPDX license; confirm ROS 2 branch, urg_c dependency, model coverage, and license upstream."
+    },
+    {
+      "name": "YDLIDAR ROS 2 Driver",
+      "repo": "YDLIDAR/ydlidar_ros2_driver",
+      "url": "https://github.com/YDLIDAR/ydlidar_ros2_driver",
+      "category": "lidar",
+      "description": "ROS 2 driver package for YDLIDAR 2D LiDAR sensors.",
+      "hardware": ["YDLIDAR 2D LiDAR sensors"],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "NOASSERTION",
+      "last_checked": "2026-06-02",
+      "notes": "GitHub API did not expose an SPDX license; confirm exact sensor model, SDK version, serial/USB setup, and license upstream."
+    },
+    {
       "name": "SICK Scan XD",
       "repo": "SICKAG/sick_scan_xd",
       "url": "https://github.com/SICKAG/sick_scan_xd",
@@ -418,6 +535,20 @@
       "notes": "GitHub API did not expose an SPDX license; confirm exact product family, transport, firmware, and ROS 2 branch support upstream."
     },
     {
+      "name": "NMEA NavSat Driver",
+      "repo": "ros-drivers/nmea_navsat_driver",
+      "url": "https://github.com/ros-drivers/nmea_navsat_driver",
+      "category": "imu-and-positioning",
+      "description": "ROS driver for NMEA GPS and GNSS devices that output satellite navigation data.",
+      "hardware": ["NMEA GPS receivers", "NMEA GNSS receivers"],
+      "ros2_native": true,
+      "source_status": "community",
+      "review_status": "curated",
+      "license": "BSD-3-Clause",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm receiver sentence support, serial/network transport, frame IDs, and ROS distro branch upstream."
+    },
+    {
       "name": "ROS 2 Robotiq Gripper",
       "repo": "PickNikRobotics/ros2_robotiq_gripper",
       "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper",
@@ -446,6 +577,34 @@
       "notes": "Confirm hardware transport, firmware assumptions, and ROS distro support upstream."
     },
     {
+      "name": "DYNAMIXEL Hardware Interface",
+      "repo": "ROBOTIS-GIT/dynamixel_hardware_interface",
+      "url": "https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface",
+      "category": "actuators-and-motor-controllers",
+      "description": "ROS 2 hardware interface for controlling ROBOTIS DYNAMIXEL motors through ros2_control.",
+      "hardware": ["ROBOTIS DYNAMIXEL smart servos"],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "Apache-2.0",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm supported actuator models, serial or controller transport, ros2_control plugin configuration, and ROS distro branch upstream."
+    },
+    {
+      "name": "DYNAMIXEL Workbench",
+      "repo": "ROBOTIS-GIT/dynamixel-workbench",
+      "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench",
+      "category": "actuators-and-motor-controllers",
+      "description": "ROS packages for DYNAMIXEL controllers, managers, toolbox utilities, messages, and tutorials with ROS 2 branches.",
+      "hardware": ["ROBOTIS DYNAMIXEL smart servos"],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "Apache-2.0",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm whether Workbench or the ros2_control hardware interface is the right integration path for the target ROS distro and controller."
+    },
+    {
       "name": "ros2_control",
       "repo": "ros-controls/ros2_control",
       "url": "https://github.com/ros-controls/ros2_control",
@@ -472,6 +631,20 @@
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
       "notes": "Framework entry, not a device-specific driver; verify controller availability for the target ROS distro."
+    },
+    {
+      "name": "gz_ros2_control",
+      "repo": "ros-controls/gz_ros2_control",
+      "url": "https://github.com/ros-controls/gz_ros2_control",
+      "category": "control-and-hardware-interfaces",
+      "description": "Gazebo integration layer that exposes simulated hardware to ros2_control.",
+      "hardware": ["Gazebo simulated hardware interfaces"],
+      "ros2_native": true,
+      "source_status": "community",
+      "review_status": "curated",
+      "license": "Apache-2.0",
+      "last_checked": "2026-06-02",
+      "notes": "Simulation bridge, not a physical device driver; use it to validate ros2_control hardware-interface behavior before hardware bringup."
     }
   ]
 }

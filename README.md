@@ -7,7 +7,7 @@ A curated index of ROS 2 robot, sensor, actuator, controller, and hardware-inter
 Use this list to find maintained upstream driver projects before choosing a hardware stack. It is not a compatibility guarantee, safety certification, installation guide, or endorsement by the original vendors unless the upstream repository says so.
 
 Last reviewed: 2026-06-02  
-Entries: 31  
+Entries: 43  
 Schema: 0.2
 
 ## How To Use This List
@@ -25,6 +25,7 @@ Schema: 0.2
 - [LiDAR](#lidar)
 - [IMU And Positioning](#imu-and-positioning)
 - [Grippers And End Effectors](#grippers-and-end-effectors)
+- [Actuators And Motor Controllers](#actuators-and-motor-controllers)
 - [Control And Hardware Interfaces](#control-and-hardware-interfaces)
 - [Selection Checklist](#selection-checklist)
 - [Review Rules](#review-rules)
@@ -100,6 +101,36 @@ Drivers and platform package stacks for mobile robots and base platforms.
   - Source: official; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
   - Caveat: Use upstream platform docs to map this common package stack to a specific Clearpath robot.
 
+- [Clearpath Robot](https://github.com/clearpathrobotics/clearpath_robot) - ROS 2 platform stack for Clearpath robots, paired with Clearpath configuration and common packages.
+  - Hardware: Clearpath robot platforms.
+  - Source: official; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
+  - Caveat: Confirm exact robot model, generated configuration, firmware, and distro branch upstream.
+
+- [TurtleBot 4 Robot](https://github.com/turtlebot/turtlebot4_robot) - ROS 2 robot packages for TurtleBot 4 platform bringup.
+  - Hardware: TurtleBot 4.
+  - Source: official; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Confirm robot image, create3/base firmware, sensor configuration, and ROS distro branch upstream.
+
+- [LinoRobot 2](https://github.com/linorobot/linorobot2) - ROS 2 platform packages for custom 2WD, 4WD, and mecanum mobile robots.
+  - Hardware: 2WD mobile robots, 4WD mobile robots, Mecanum mobile robots.
+  - Source: community; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Confirm base electronics, motor driver, firmware, and branch/distro mapping upstream.
+
+- [ROSbot ROS](https://github.com/husarion/rosbot_ros) - ROS packages for Husarion ROSbot mobile robots.
+  - Hardware: Husarion ROSbot XL, Husarion ROSbot 3, Husarion ROSbot 2.
+  - Source: official; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Confirm exact ROSbot model, OS image, firmware, and ROS distro branch upstream.
+
+- [Scout ROS 2](https://github.com/agilexrobotics/scout_ros2) - ROS 2 support package for AgileX Scout UGV platforms.
+  - Hardware: AgileX Scout.
+  - Source: official; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Confirm CAN interface, SDK requirements, model variant, and ROS distro branch upstream.
+
+- [Hunter ROS 2](https://github.com/agilexrobotics/hunter_ros2) - ROS 2 support package for AgileX Hunter UGV platforms.
+  - Hardware: AgileX Hunter.
+  - Source: official; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Confirm CAN interface, SDK requirements, model variant, and ROS distro branch upstream.
+
 ## Cameras And RGB-D
 
 Camera, RGB-D, and image pipeline packages used for perception bringup.
@@ -148,6 +179,16 @@ Camera, RGB-D, and image pipeline packages used for perception bringup.
   - Source: community; review: curated; license: NOASSERTION; last checked: 2026-06-02.
   - Caveat: GitHub API did not expose an SPDX license; confirm ROS 2 branch status, model coverage, and license upstream.
 
+- [Hokuyo URG Node](https://github.com/ros-drivers/urg_node) - ROS wrapper for the Hokuyo urg_c library and Hokuyo URG LiDAR devices.
+  - Hardware: Hokuyo URG LiDAR.
+  - Source: community; review: curated; license: NOASSERTION; last checked: 2026-06-02.
+  - Caveat: GitHub API did not expose an SPDX license; confirm ROS 2 branch, urg_c dependency, model coverage, and license upstream.
+
+- [YDLIDAR ROS 2 Driver](https://github.com/YDLIDAR/ydlidar_ros2_driver) - ROS 2 driver package for YDLIDAR 2D LiDAR sensors.
+  - Hardware: YDLIDAR 2D LiDAR sensors.
+  - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
+  - Caveat: GitHub API did not expose an SPDX license; confirm exact sensor model, SDK version, serial/USB setup, and license upstream.
+
 - [SICK Scan XD](https://github.com/SICKAG/sick_scan_xd) - Driver for a broad range of SICK LiDAR and radar devices with ROS support.
   - Hardware: SICK LiDAR sensors, SICK radar devices.
   - Source: official; review: curated; license: Apache-2.0; last checked: 2026-06-02.
@@ -187,6 +228,11 @@ IMU, GNSS, inertial, and positioning sensor drivers used in robot state estimati
   - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
   - Caveat: GitHub API did not expose an SPDX license; confirm exact product family, transport, firmware, and ROS 2 branch support upstream.
 
+- [NMEA NavSat Driver](https://github.com/ros-drivers/nmea_navsat_driver) - ROS driver for NMEA GPS and GNSS devices that output satellite navigation data.
+  - Hardware: NMEA GPS receivers, NMEA GNSS receivers.
+  - Source: community; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
+  - Caveat: Confirm receiver sentence support, serial/network transport, frame IDs, and ROS distro branch upstream.
+
 ## Grippers And End Effectors
 
 Drivers for grippers, end effectors, and related actuator interfaces.
@@ -201,6 +247,20 @@ Drivers for grippers, end effectors, and related actuator interfaces.
   - Source: community; review: curated; license: Apache-2.0; last checked: 2026-06-02.
   - Caveat: Confirm hardware transport, firmware assumptions, and ROS distro support upstream.
 
+## Actuators And Motor Controllers
+
+Actuator SDKs, smart-servo interfaces, and motor-controller packages used in ROS 2 hardware bringup.
+
+- [DYNAMIXEL Hardware Interface](https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface) - ROS 2 hardware interface for controlling ROBOTIS DYNAMIXEL motors through ros2_control.
+  - Hardware: ROBOTIS DYNAMIXEL smart servos.
+  - Source: official; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Confirm supported actuator models, serial or controller transport, ros2_control plugin configuration, and ROS distro branch upstream.
+
+- [DYNAMIXEL Workbench](https://github.com/ROBOTIS-GIT/dynamixel-workbench) - ROS packages for DYNAMIXEL controllers, managers, toolbox utilities, messages, and tutorials with ROS 2 branches.
+  - Hardware: ROBOTIS DYNAMIXEL smart servos.
+  - Source: official; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Confirm whether Workbench or the ros2_control hardware interface is the right integration path for the target ROS distro and controller.
+
 ## Control And Hardware Interfaces
 
 Core ROS 2 control frameworks, controllers, and generic hardware-interface packages.
@@ -214,6 +274,11 @@ Core ROS 2 control frameworks, controllers, and generic hardware-interface packa
   - Hardware: generic ROS 2 controllers.
   - Source: community; review: curated; license: Apache-2.0; last checked: 2026-06-02.
   - Caveat: Framework entry, not a device-specific driver; verify controller availability for the target ROS distro.
+
+- [gz_ros2_control](https://github.com/ros-controls/gz_ros2_control) - Gazebo integration layer that exposes simulated hardware to ros2_control.
+  - Hardware: Gazebo simulated hardware interfaces.
+  - Source: community; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Simulation bridge, not a physical device driver; use it to validate ros2_control hardware-interface behavior before hardware bringup.
 
 ## Selection Checklist
 
