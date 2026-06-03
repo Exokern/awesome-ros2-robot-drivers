@@ -43,25 +43,14 @@ function renderEntry(entry) {
   return [
     `- [${entry.name}](${entry.url}) - ${entry.description}`,
     `  - Hardware: ${formatList(entry.hardware)}.`,
-    `  - Source: ${formatStatus(entry.source_status)}; review: ${formatStatus(entry.review_status)}; license: ${entry.license}; last checked: ${entry.last_checked}.`,
-    `  - Caveat: ${entry.notes}`,
+    `  - Check: ${entry.notes}`,
+    `  - Metadata: ${formatStatus(entry.source_status)}; ${entry.license}; checked ${entry.last_checked}.`,
   ].join("\n");
 }
 
-function renderStartHere() {
+function renderQuickSearch() {
   return [
-    "## Start Here",
-    "",
-    markdownTable(
-      ["If you need to...", "Start with..."],
-      [
-        ["Compare hardware before purchase", "Search the matching category and read each entry caveat."],
-        ["Check whether a driver already exists", "Run `npm run find -- --q <hardware-or-repo>`."],
-        ["Build a shortlist for bringup", "Prefer official sources, clear ROS 2 support, and recent checks."],
-        ["Add a missing driver", "Suggest it with upstream evidence, or open a focused PR."],
-        ["Consume this index in another tool", "Use the generated `dist/` exports."],
-      ],
-    ),
+    "## Quick Search",
     "",
     "```bash",
     "npm run find -- --q realsense",
@@ -71,7 +60,7 @@ function renderStartHere() {
   ].join("\n");
 }
 
-function renderCoverage(data, entriesByCategory) {
+function renderProjectHealth(data, entriesByCategory) {
   const sourceCounts = countBy(data.entries, "source_status");
   const reviewCounts = countBy(data.entries, "review_status");
   const licenseFollowUps = data.entries.filter((entry) => entry.license === "NOASSERTION").length;
@@ -101,13 +90,13 @@ function renderCoverage(data, entriesByCategory) {
   });
 
   return [
-    "## What Is Covered",
+    "## Project Health",
     "",
-    "The index is intentionally narrow: ROS 2 driver, wrapper, bridge, controller, hardware-interface, and platform-stack repositories that help with real hardware bringup.",
+    "These metrics are generated from the same metadata as the list. They are here for maintainers and downstream tools, not because users need to read them first.",
     "",
     markdownTable(["Signal", "Current"], signalRows),
     "",
-    "### Category Coverage",
+    "### Coverage",
     "",
     markdownTable(["Category", "Entries", "Curated", "Official", "Community", "License Follow-Up"], coverageRows),
   ].join("\n");
@@ -117,7 +106,7 @@ export function renderReadme(data) {
   const entriesByCategory = new Map(data.categories.map((category) => [category.id, []]));
   for (const entry of data.entries) entriesByCategory.get(entry.category)?.push(entry);
 
-  const categoryLinks = data.categories.map((category) => `- [${category.name}](#${slugify(category.name)})`).join("\n");
+  const categoryLinks = data.categories.map((category) => `[${category.name}](#${slugify(category.name)})`).join(" | ");
   const sections = data.categories.map((category) => {
     const entries = entriesByCategory.get(category.id) || [];
     return [
@@ -133,62 +122,31 @@ export function renderReadme(data) {
 
 [![Validate](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml/badge.svg)](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml)
 
-A curated index of ROS 2 robot, sensor, actuator, controller, and hardware-interface driver repositories.
+Find ROS 2 driver repositories for robot arms, mobile bases, cameras, LiDAR, IMUs, grippers, actuators, controllers, and hardware interfaces.
 
-Use it before buying hardware, planning bringup, or debugging a stack: find upstream ROS 2 driver repositories, compare ownership and license signals, and see the main caveats to verify before deployment.
-
-This is a curation index, not a hardware test report. Always confirm ROS 2 distribution, firmware, controller, transport, safety, and license requirements in the upstream project.
+Use this before buying hardware or planning bringup. Each entry points to the upstream repository and calls out the main thing to verify before deployment.
 
 - Last reviewed: ${data.reviewed_at}
 - Entries: ${data.entries.length}
-- Schema: ${data.schema_version}
 
-## Contents
+${renderQuickSearch()}
 
-- [Start Here](#start-here)
-- [What This Helps You Do](#what-this-helps-you-do)
-- [What Is Covered](#what-is-covered)
-- [Selection Guide](#selection-guide)
-- [Suggest A Driver](#suggest-a-driver)
+## Categories
+
 ${categoryLinks}
-- [Selection Checklist](#selection-checklist)
-- [Review Rules](#review-rules)
-- [Curation Policy](#curation-policy)
-- [Data For Tools](#data-for-tools)
-- [Maintenance Model](#maintenance-model)
-- [Quality Gates](#quality-gates)
-- [Curation Report](#curation-report)
-- [Machine-Readable Exports](#machine-readable-exports)
-- [Local Search](#local-search)
-- [Related EXOKERN Spec](#related-exokern-spec)
 
-${renderStartHere()}
+## How To Read Entries
 
-## What This Helps You Do
-
-- Find maintained upstream driver projects before committing to a robot, sensor, gripper, actuator, or controller.
-- Separate official vendor repositories from community-maintained integrations.
-- Catch common bringup risks early: unclear distro support, firmware requirements, controller options, transport assumptions, stale branches, and license uncertainty.
-- Use one machine-readable index instead of scraping a long Markdown list.
-- Contribute corrections without turning the repo into a generic robotics link dump.
-
-${renderCoverage(data, entriesByCategory)}
-
-## Selection Guide
-
-Use [docs/selection-guide.md](docs/selection-guide.md) for a practical workflow before choosing hardware or planning bringup.
-
-## Suggest A Driver
-
-Good suggestions are narrow, evidence-backed, and tied to ROS 2 hardware bringup. A strong suggestion includes the upstream GitHub repository, target hardware, ROS 2 role, license evidence, supported distro or branch notes, and one caveat a user still needs to verify.
-
-Use the [suggest-driver issue template](https://github.com/Exokern/awesome-ros2-robot-drivers/issues/new?template=suggest-driver.md) for quick proposals. Use a pull request when you can update \`data/index.json\` directly and regenerate the derived files.
+- Open the upstream repository before choosing hardware.
+- Use \`Hardware\` to check whether the entry matches your device family.
+- Use \`Check\` as the first bringup risk to verify upstream.
+- Use \`Metadata\` for ownership signal, license signal, and review freshness.
 
 ${sections}
 
-## Selection Checklist
+## Before Bringup
 
-Before building around any driver, verify:
+This list is not a compatibility guarantee, hardware test report, safety certification, or vendor endorsement. Before building around any driver, verify:
 
 - The upstream repository targets your exact robot, sensor, actuator, controller, or interface.
 - The branch or release supports your ROS 2 distribution.
@@ -196,7 +154,13 @@ Before building around any driver, verify:
 - The license is visible and acceptable for your use case.
 - The project is active enough for your risk profile, or stable enough that low activity is reasonable.
 
-## Review Rules
+Use [docs/selection-guide.md](docs/selection-guide.md) for a more detailed selection workflow.
+
+## Suggest A Driver
+
+Good suggestions are narrow, evidence-backed, and tied to ROS 2 hardware bringup. Use the [suggest-driver issue template](https://github.com/Exokern/awesome-ros2-robot-drivers/issues/new?template=suggest-driver.md) for quick proposals.
+
+## Curation Rules
 
 Main-list entries must have:
 
@@ -211,11 +175,11 @@ Main-list entries must have:
 
 Entries that are ROS 1 only, archived, experimental, or unclear should be labeled with a caveat instead of being presented as production-ready.
 
-## Curation Policy
-
 Use [docs/curation-policy.md](docs/curation-policy.md) for acceptance rules, category selection, status semantics, license evidence, stale-entry handling, and merge expectations.
 
-## Data For Tools
+${renderProjectHealth(data, entriesByCategory)}
+
+## Data And Maintenance
 
 The canonical metadata lives in [data/index.json](data/index.json) and is documented by [data/schema.json](data/schema.json). The README, curation report, and export files are generated from that file so contributors only maintain one source of truth.
 
