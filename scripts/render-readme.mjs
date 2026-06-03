@@ -115,10 +115,12 @@ npm run smoke
 npm run lint:awesome
 npm run find -- --q lidar
 npm run audit:github
+npm run audit:evidence
 npm run audit:github:artifacts
+npm run audit:evidence:artifacts
 \`\`\`
 
-\`npm run validate\` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. \`npm run smoke\` checks package exports, search output, JSON query output, and the hardware lookup map. \`npm run lint:awesome\` checks README conformance with Awesome-list rules. \`npm run export\` refreshes only the machine-readable \`dist/\` outputs. \`npm run find\` queries the canonical index locally by text, category, hardware, source status, review status, and license. \`npm run audit:github\` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. \`npm run audit:github:artifacts\` also writes JSON and CSV snapshots under \`audit-results/\`.
+\`npm run validate\` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. \`npm run smoke\` checks package exports, search output, JSON query output, and the hardware lookup map. \`npm run lint:awesome\` checks README conformance with Awesome-list rules. \`npm run export\` refreshes only the machine-readable \`dist/\` outputs. \`npm run find\` queries the canonical index locally by text, category, hardware, source status, review status, and license. \`npm run audit:github\` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. \`npm run audit:evidence\` checks that every structured evidence link resolves through GitHub. The \`:artifacts\` audit variants also write JSON and CSV snapshots under \`audit-results/\`.
 
 ## Quality Gates
 

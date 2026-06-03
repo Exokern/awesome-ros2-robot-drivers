@@ -73,7 +73,9 @@ Do not delete a useful but old entry without replacing it or explaining why it n
 
 Run `npm run audit:github` to check that indexed upstream repositories are still reachable, unarchived, not disabled, and aligned with GitHub repository-level license metadata when GitHub exposes it.
 
-Run `npm run audit:github:artifacts` when you need an auditable snapshot. It writes `audit-results/github-metadata-audit.json` and `audit-results/github-metadata-audit.csv`. The scheduled GitHub Action uploads those files as workflow artifacts instead of committing time-dependent audit output.
+Run `GITHUB_TOKEN="$(gh auth token)" npm run audit:evidence` to check that every structured evidence URL still resolves through GitHub. This catches stale README, license, manifest, branch, and repository links that schema validation cannot prove.
+
+Run `npm run audit:github:artifacts` and `npm run audit:evidence:artifacts` when you need auditable snapshots. They write JSON and CSV files under `audit-results/`. The scheduled GitHub Action uploads those files as workflow artifacts instead of committing time-dependent audit output.
 
 ## Merge Expectations
 

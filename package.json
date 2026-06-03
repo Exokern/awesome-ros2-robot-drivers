@@ -34,6 +34,8 @@
     "templates/"
   ],
   "scripts": {
+    "audit:evidence": "node scripts/audit-evidence-links.mjs",
+    "audit:evidence:artifacts": "node scripts/audit-evidence-links.mjs --output-dir audit-results",
     "audit:github": "node scripts/audit-github-metadata.mjs",
     "audit:github:artifacts": "node scripts/audit-github-metadata.mjs --output-dir audit-results",
     "export": "node scripts/render-exports.mjs",

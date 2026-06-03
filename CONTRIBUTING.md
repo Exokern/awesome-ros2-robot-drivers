@@ -64,6 +64,8 @@ Use upstream README files, package manifests, releases, official documentation, 
 
 Each entry must store that evidence in `data/index.json`. The first evidence item should be the repository URL, followed by the most relevant upstream README, license, documentation, release, or `package.xml` links.
 
+Run `GITHUB_TOKEN="$(gh auth token)" npm run audit:evidence` after adding or changing evidence links. The audit verifies every structured evidence URL through GitHub and fails on missing files, stale branches, or unreachable repositories.
+
 For `license`, prefer the SPDX value exposed by GitHub when it exists. If GitHub reports `NOASSERTION`, inspect upstream `LICENSE`, `COPYING`, and `package.xml` files. Use a compound expression such as `BSD-3-Clause OR Apache-2.0` when package-level evidence is mixed. Keep `NOASSERTION` only when the evidence is missing, contradictory, or incomplete, and explain that caveat in `notes`.
 
 Use [docs/curation-report.md](docs/curation-report.md) to find weak categories, license follow-ups, and aging entries before proposing broad additions. Strong entries should improve the report, not just increase the count.
