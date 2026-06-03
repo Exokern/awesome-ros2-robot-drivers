@@ -55,6 +55,7 @@ Use this list to find maintained upstream driver projects before choosing a hard
 ## Contents
 
 - [How To Use This List](#how-to-use-this-list)
+- [Selection Guide](#selection-guide)
 ${categoryLinks}
 - [Selection Checklist](#selection-checklist)
 - [Review Rules](#review-rules)
@@ -72,6 +73,10 @@ ${categoryLinks}
 - Open the upstream repository and confirm supported ROS 2 distro, hardware revision, firmware/controller requirements, and license before using it.
 - Treat each caveat as a review prompt, not as a blocker or approval.
 - Prefer entries with clear upstream ownership, active maintenance, visible licensing, and explicit ROS 2 support.
+
+## Selection Guide
+
+Use [docs/selection-guide.md](docs/selection-guide.md) for a practical workflow before choosing hardware or planning bringup.
 
 ${sections}
 
