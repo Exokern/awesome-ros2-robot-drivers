@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2",
+  "schema_version": "0.3",
   "reviewed_at": "2026-06-02",
   "entry_count": 48,
   "category_count": 8,
@@ -52,7 +52,8 @@
     "thresholds": {
       "minimumEntriesPerCategory": 3,
       "maximumLicenseFollowUps": 5,
-      "maximumLastCheckedAgeDays": 180
+      "maximumLastCheckedAgeDays": 180,
+      "minimumEvidenceLinksPerEntry": 2
     },
     "gates": [
       {
@@ -79,6 +80,14 @@
         "name": "Review freshness",
         "threshold": "<= 180 days since last check",
         "actual": "0 stale entries",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "id": "evidence-completeness",
+        "name": "Evidence completeness",
+        "threshold": ">= 2 evidence links per entry, including repository plus support",
+        "actual": "0 entries missing required evidence",
         "passed": true,
         "failures": []
       }

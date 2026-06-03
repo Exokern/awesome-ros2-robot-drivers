@@ -2,6 +2,7 @@ export const QUALITY_GATE_THRESHOLDS = Object.freeze({
   minimumEntriesPerCategory: 3,
   maximumLicenseFollowUps: 5,
   maximumLastCheckedAgeDays: 180,
+  minimumEvidenceLinksPerEntry: 2,
 });
 
 export function daysBetween(startDate, endDate) {
@@ -31,9 +32,19 @@ function oldestReviewAgeDaysByCategory(data) {
   );
 }
 
+function hasRequiredEvidence(entry) {
+  if (!Array.isArray(entry.evidence) || entry.evidence.length < QUALITY_GATE_THRESHOLDS.minimumEvidenceLinksPerEntry) {
+    return false;
+  }
+
+  return entry.evidence.some((evidence) => evidence.type === "repository" && evidence.url === entry.url)
+    && entry.evidence.some((evidence) => evidence.type !== "repository");
+}
+
 export function buildQualityMetrics(data) {
   const countsByCategory = categoryCounts(data);
   const licenseFollowUps = (data.entries || []).filter((entry) => entry.license === "NOASSERTION");
+  const evidenceFollowUps = (data.entries || []).filter((entry) => !hasRequiredEvidence(entry));
   const staleEntries = (data.entries || []).filter((entry) => (
     daysBetween(entry.last_checked, data.reviewed_at) > QUALITY_GATE_THRESHOLDS.maximumLastCheckedAgeDays
   ));
@@ -44,7 +55,9 @@ export function buildQualityMetrics(data) {
   return {
     counts_by_category: countsByCategory,
     entries_with_visible_license_signal: (data.entries || []).length - licenseFollowUps.length,
+    entries_with_required_evidence: (data.entries || []).length - evidenceFollowUps.length,
     license_follow_up_repos: licenseFollowUps.map((entry) => entry.repo).sort((a, b) => a.localeCompare(b)),
+    evidence_follow_up_repos: evidenceFollowUps.map((entry) => entry.repo).sort((a, b) => a.localeCompare(b)),
     stale_entry_repos: staleEntries.map((entry) => entry.repo).sort((a, b) => a.localeCompare(b)),
     low_coverage_categories: lowCoverageCategories.map((category) => category.id).sort((a, b) => a.localeCompare(b)),
     oldest_review_age_days_by_category: oldestReviewAgeDaysByCategory(data),
@@ -77,6 +90,14 @@ export function evaluateQualityGates(data) {
       actual: `${metrics.stale_entry_repos.length} stale entries`,
       passed: metrics.stale_entry_repos.length === 0,
       failures: metrics.stale_entry_repos,
+    },
+    {
+      id: "evidence-completeness",
+      name: "Evidence completeness",
+      threshold: `>= ${QUALITY_GATE_THRESHOLDS.minimumEvidenceLinksPerEntry} evidence links per entry, including repository plus support`,
+      actual: `${metrics.evidence_follow_up_repos.length} entries missing required evidence`,
+      passed: metrics.evidence_follow_up_repos.length === 0,
+      failures: metrics.evidence_follow_up_repos,
     },
   ];
 

@@ -8,7 +8,7 @@ Use this list to find maintained upstream driver projects before choosing a hard
 
 - Last reviewed: 2026-06-02
 - Entries: 48
-- Schema: 0.2
+- Schema: 0.3
 
 ## How To Use This List
 
@@ -329,6 +329,7 @@ Main-list entries must have:
 - Recent activity, or a specific reason to keep a stable but slow-moving driver.
 - A visible license, `NOASSERTION`, or a clear upstream licensing caveat.
 - Package-level license evidence when GitHub does not expose a repository SPDX value.
+- Structured `evidence` links in [data/index.json](data/index.json), including the repository and at least one supporting upstream source.
 - No claim that EXOKERN or this list has tested the driver on hardware.
 
 Entries that are ROS 1 only, archived, experimental, or unclear should be labeled with a caveat instead of being presented as production-ready.
@@ -367,8 +368,8 @@ Generated exports live in [dist/](dist/):
 
 - [dist/index.json](dist/index.json) - generated copy of the canonical index for consumers that should not read source files directly.
 - [dist/categories.json](dist/categories.json) - category metadata with entry counts and license follow-up counts.
-- [dist/summary.json](dist/summary.json) - aggregate counts, license follow-up repositories, and low-coverage categories.
-- [dist/entries.csv](dist/entries.csv) - spreadsheet-friendly entry table.
+- [dist/summary.json](dist/summary.json) - aggregate counts, quality gates, evidence metrics, license follow-up repositories, and low-coverage categories.
+- [dist/entries.csv](dist/entries.csv) - spreadsheet-friendly entry table with evidence links.
 
 ## Related EXOKERN Spec
 

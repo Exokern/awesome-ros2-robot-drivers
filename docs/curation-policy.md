@@ -51,6 +51,12 @@ Prefer the SPDX value exposed by GitHub when it exists. If GitHub reports `NOASS
 
 Use compound expressions such as `BSD-3-Clause OR Apache-2.0` when package-level evidence is mixed. Keep `NOASSERTION` only when evidence is missing, contradictory, or incomplete, and make the remaining uncertainty explicit in `notes`.
 
+## Evidence Links
+
+Every entry stores structured `evidence` links in `data/index.json`. Evidence must include the repository URL and at least one supporting upstream source such as README, license, documentation, release, or `package.xml`.
+
+Use the smallest useful set of links. A strong entry usually has repository, README, license, and one to three package manifests. Avoid unrelated marketing pages or generic vendor websites unless they directly document driver support.
+
 ## Stale Or Broken Entries
 
 Move an entry toward `needs-review` or `legacy` when:

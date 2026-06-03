@@ -31,6 +31,7 @@ Entries should have:
 - Recent activity, or a specific reason to keep a stable but slow-moving driver.
 - A visible license, `NOASSERTION`, or a direct caveat when licensing is unclear.
 - A concise caveat covering branch, distro, firmware, controller, hardware, license, or maintenance uncertainty.
+- Structured `evidence` links, including the repository and at least one supporting upstream source such as README, license, documentation, release, or `package.xml`.
 - No claim that EXOKERN or this list has tested the driver on hardware.
 
 Use [docs/curation-policy.md](docs/curation-policy.md) when deciding category placement, status fields, stale-entry handling, and merge readiness.
@@ -56,6 +57,8 @@ Use `source_status` to describe upstream ownership:
 ## Evidence
 
 Use upstream README files, package manifests, releases, official documentation, license files, and repository metadata as evidence. If a repository has a `robot_skill.yaml`, mention it in the pull request. If it does not, do not invent compatibility claims.
+
+Each entry must store that evidence in `data/index.json`. The first evidence item should be the repository URL, followed by the most relevant upstream README, license, documentation, release, or `package.xml` links.
 
 For `license`, prefer the SPDX value exposed by GitHub when it exists. If GitHub reports `NOASSERTION`, inspect upstream `LICENSE`, `COPYING`, and `package.xml` files. Use a compound expression such as `BSD-3-Clause OR Apache-2.0` when package-level evidence is mixed. Keep `NOASSERTION` only when the evidence is missing, contradictory, or incomplete, and explain that caveat in `notes`.
 

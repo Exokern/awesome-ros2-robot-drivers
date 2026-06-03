@@ -7,7 +7,7 @@
   "additionalProperties": false,
   "properties": {
     "schema_version": {
-      "const": "0.2"
+      "const": "0.3"
     },
     "reviewed_at": {
       "type": "string",
@@ -53,7 +53,8 @@
           "review_status",
           "license",
           "last_checked",
-          "notes"
+          "notes",
+          "evidence"
         ],
         "additionalProperties": false,
         "properties": {
@@ -105,6 +106,24 @@
           "notes": {
             "type": "string",
             "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "object",
+              "required": ["type", "url"],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "enum": ["repository", "readme", "license", "manifest", "documentation", "release"]
+                },
+                "url": {
+                  "type": "string",
+                  "pattern": "^https://github\\.com/[^/\\s]+/[^\\s]+$"
+                }
+              }
+            }
           }
         }
       }

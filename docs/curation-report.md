@@ -20,6 +20,7 @@ Generated from [data/index.json](../data/index.json). This report is a maintenan
 | Minimum category coverage | >= 3 entries per category | 0 categories below threshold | pass |
 | License follow-up budget | <= 5 NOASSERTION entries | 2 NOASSERTION entries | pass |
 | Review freshness | <= 180 days since last check | 0 stale entries | pass |
+| Evidence completeness | >= 2 evidence links per entry, including repository plus support | 0 entries missing required evidence | pass |
 
 ## Category Coverage
 

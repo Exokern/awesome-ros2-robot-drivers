@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2",
+  "schema_version": "0.3",
   "reviewed_at": "2026-06-02",
   "categories": [
     {
@@ -59,7 +59,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Verify exact PolyScope, external-control, and ROS distro support upstream before deployment."
+      "notes": "Verify exact PolyScope, external-control, and ROS distro support upstream before deployment.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/blob/main/ur_controllers/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/blob/main/ur_dashboard_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/blob/main/ur_robot_driver/package.xml"
+        }
+      ]
     },
     {
       "name": "Franka ROS 2",
@@ -75,7 +101,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm exact arm generation, libfranka version, and supported ROS distro upstream."
+      "notes": "Confirm exact arm generation, libfranka version, and supported ROS distro upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/frankarobotics/franka_ros2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/frankarobotics/franka_ros2/blob/humble/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/frankarobotics/franka_ros2/blob/humble/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/frankarobotics/franka_ros2/blob/humble/franka_bringup/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/frankarobotics/franka_ros2/blob/humble/franka_example_controllers/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/frankarobotics/franka_ros2/blob/humble/franka_gazebo_bringup/package.xml"
+        }
+      ]
     },
     {
       "name": "FANUC ROS 2 Driver",
@@ -91,7 +143,29 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Package manifests expose Apache-2.0; confirm controller options, supported robot models, and ROS distro support upstream."
+      "notes": "Package manifests expose Apache-2.0; confirm controller options, supported robot models, and ROS distro support upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/FANUC-CORPORATION/fanuc_driver"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/FANUC-CORPORATION/fanuc_driver/blob/main/README.md"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/FANUC-CORPORATION/fanuc_driver/blob/main/fanuc_controllers/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/FANUC-CORPORATION/fanuc_driver/blob/main/fanuc_hardware_interface/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/FANUC-CORPORATION/fanuc_driver/blob/main/fanuc_msgs/package.xml"
+        }
+      ]
     },
     {
       "name": "Kinova ROS 2 Kortex",
@@ -107,7 +181,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Repository license and package manifests indicate BSD/BSD-3-Clause licensing; confirm firmware, API version, and supported distros upstream."
+      "notes": "Repository license and package manifests indicate BSD/BSD-3-Clause licensing; confirm firmware, API version, and supported distros upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/Kinovarobotics/ros2_kortex"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Kinovarobotics/ros2_kortex/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Kinovarobotics/ros2_kortex/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/Kinovarobotics/ros2_kortex/blob/main/kortex_bringup/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/Kinovarobotics/ros2_kortex/blob/main/kortex_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/Kinovarobotics/ros2_kortex/blob/main/kortex_api/package.xml"
+        }
+      ]
     },
     {
       "name": "xArm ROS 2",
@@ -123,7 +223,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Confirm model coverage, controller firmware, and branch/distro mapping upstream."
+      "notes": "Confirm model coverage, controller firmware, and branch/distro mapping upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/xArm-Developer/xarm_ros2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/xArm-Developer/xarm_ros2/blob/humble/ReadMe.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/xArm-Developer/xarm_ros2/blob/humble/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/xArm-Developer/xarm_ros2/blob/humble/xarm_controller/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/xArm-Developer/xarm_ros2/blob/humble/xarm_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/xArm-Developer/xarm_ros2/blob/humble/demo/mbot_demo/package.xml"
+        }
+      ]
     },
     {
       "name": "Doosan Robot 2",
@@ -139,7 +265,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Confirm controller software requirements and model coverage upstream."
+      "notes": "Confirm controller software requirements and model coverage upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/DoosanRobotics/doosan-robot2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/DoosanRobotics/doosan-robot2/blob/humble/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/DoosanRobotics/doosan-robot2/blob/humble/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/DoosanRobotics/doosan-robot2/blob/humble/dsr_bringup2/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/DoosanRobotics/doosan-robot2/blob/humble/dsr_controller2/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/DoosanRobotics/doosan-robot2/blob/humble/dsr_example2/dsr_realtime_control/package.xml"
+        }
+      ]
     },
     {
       "name": "MotoROS2",
@@ -155,7 +307,17 @@
       "review_status": "curated",
       "license": "NOASSERTION",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license and no package.xml files were found in the default branch; confirm license, controller generation, and MotoPlus requirements upstream."
+      "notes": "GitHub API did not expose an SPDX license and no package.xml files were found in the default branch; confirm license, controller generation, and MotoPlus requirements upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/Yaskawa-Global/motoros2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Yaskawa-Global/motoros2/blob/main/README.md"
+        }
+      ]
     },
     {
       "name": "KUKA RSI Driver",
@@ -171,7 +333,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Hardware use depends on KUKA RSI availability and controller configuration."
+      "notes": "Hardware use depends on KUKA RSI availability and controller configuration.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/fzi-forschungszentrum-informatik/kuka_rsi_driver"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/fzi-forschungszentrum-informatik/kuka_rsi_driver/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/fzi-forschungszentrum-informatik/kuka_rsi_driver/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/fzi-forschungszentrum-informatik/kuka_rsi_driver/blob/main/kuka_rsi_controllers/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/fzi-forschungszentrum-informatik/kuka_rsi_driver/blob/main/kuka_rsi_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/fzi-forschungszentrum-informatik/kuka_rsi_driver/blob/main/kuka_rsi_interfaces/package.xml"
+        }
+      ]
     },
     {
       "name": "TM ROS 2",
@@ -187,7 +375,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Repository license and package manifests expose BSD-3-Clause; verify current branch, distro support, and model coverage upstream."
+      "notes": "Repository license and package manifests expose BSD-3-Clause; verify current branch, distro support, and model coverage upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/TechmanRobotInc/tmr_ros2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/TechmanRobotInc/tmr_ros2/blob/foxy/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/TechmanRobotInc/tmr_ros2/blob/foxy/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/TechmanRobotInc/tmr_ros2/blob/foxy/techman_robot_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/TechmanRobotInc/tmr_ros2/blob/foxy/tm_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/TechmanRobotInc/tmr_ros2/blob/foxy/tm_msgs/package.xml"
+        }
+      ]
     },
     {
       "name": "AUBO ROS 2 Driver",
@@ -203,7 +417,33 @@
       "review_status": "curated",
       "license": "NOASSERTION",
       "last_checked": "2026-06-02",
-      "notes": "Most package manifests indicate BSD/BSD-3-Clause, but one manifest still reports TODO; confirm complete licensing, controller versions, models, and distro branches upstream."
+      "notes": "Most package manifests indicate BSD/BSD-3-Clause, but one manifest still reports TODO; confirm complete licensing, controller versions, models, and distro branches upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/AuboRobot/aubo_ros2_driver"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/AuboRobot/aubo_ros2_driver/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/AuboRobot/aubo_ros2_driver/blob/main/aubo_msgs/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/AuboRobot/aubo_ros2_driver/blob/main/aubo_dashboard_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/AuboRobot/aubo_ros2_driver/blob/main/aubo_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/AuboRobot/aubo_ros2_driver/blob/main/aubo_ros2_driver/package.xml"
+        }
+      ]
     },
     {
       "name": "TurtleBot3",
@@ -219,7 +459,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Check branch and distro documentation before use because ROS 1 and ROS 2 material coexist upstream."
+      "notes": "Check branch and distro documentation before use because ROS 1 and ROS 2 material coexist upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ROBOTIS-GIT/turtlebot3"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ROBOTIS-GIT/turtlebot3/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ROBOTIS-GIT/turtlebot3/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ROBOTIS-GIT/turtlebot3/blob/main/turtlebot3_bringup/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ROBOTIS-GIT/turtlebot3/blob/main/turtlebot3/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ROBOTIS-GIT/turtlebot3/blob/main/turtlebot3_cartographer/package.xml"
+        }
+      ]
     },
     {
       "name": "Clearpath Common",
@@ -235,7 +501,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Use upstream platform docs to map this common package stack to a specific Clearpath robot."
+      "notes": "Use upstream platform docs to map this common package stack to a specific Clearpath robot.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/clearpathrobotics/clearpath_common"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/clearpathrobotics/clearpath_common/blob/jazzy/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/clearpathrobotics/clearpath_common/blob/jazzy/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/clearpathrobotics/clearpath_common/blob/jazzy/clearpath_control/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/clearpathrobotics/clearpath_common/blob/jazzy/clearpath_customization/project_bringup/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/clearpathrobotics/clearpath_common/blob/jazzy/clearpath_ros2_control/clearpath_bms_broadcaster/package.xml"
+        }
+      ]
     },
     {
       "name": "Clearpath Robot",
@@ -251,7 +543,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Confirm exact robot model, generated configuration, firmware, and distro branch upstream."
+      "notes": "Confirm exact robot model, generated configuration, firmware, and distro branch upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/clearpathrobotics/clearpath_robot"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/clearpathrobotics/clearpath_robot/blob/jazzy/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/clearpathrobotics/clearpath_robot/blob/jazzy/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/clearpathrobotics/clearpath_robot/blob/jazzy/clearpath_hardware_interfaces/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/clearpathrobotics/clearpath_robot/blob/jazzy/clearpath_motor_drivers/lynx_motor_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/clearpathrobotics/clearpath_robot/blob/jazzy/clearpath_motor_drivers/puma_motor_driver/package.xml"
+        }
+      ]
     },
     {
       "name": "TurtleBot 4 Robot",
@@ -267,7 +585,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm robot image, create3/base firmware, sensor configuration, and ROS distro branch upstream."
+      "notes": "Confirm robot image, create3/base firmware, sensor configuration, and ROS distro branch upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/turtlebot/turtlebot4_robot"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/turtlebot/turtlebot4_robot/blob/jazzy/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/turtlebot/turtlebot4_robot/blob/jazzy/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/turtlebot/turtlebot4_robot/blob/jazzy/turtlebot4_bringup/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/turtlebot/turtlebot4_robot/blob/jazzy/turtlebot4_base/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/turtlebot/turtlebot4_robot/blob/jazzy/turtlebot4_diagnostics/package.xml"
+        }
+      ]
     },
     {
       "name": "LinoRobot 2",
@@ -285,7 +629,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm base electronics, motor driver, firmware, and branch/distro mapping upstream."
+      "notes": "Confirm base electronics, motor driver, firmware, and branch/distro mapping upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/linorobot/linorobot2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/linorobot/linorobot2/blob/jazzy/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/linorobot/linorobot2/blob/jazzy/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/linorobot/linorobot2/blob/jazzy/linorobot2_bringup/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/linorobot/linorobot2/blob/jazzy/linorobot2/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/linorobot/linorobot2/blob/jazzy/linorobot2_base/package.xml"
+        }
+      ]
     },
     {
       "name": "ROSbot ROS",
@@ -303,7 +673,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm exact ROSbot model, OS image, firmware, and ROS distro branch upstream."
+      "notes": "Confirm exact ROSbot model, OS image, firmware, and ROS distro branch upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/husarion/rosbot_ros"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/husarion/rosbot_ros/blob/jazzy/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/husarion/rosbot_ros/blob/jazzy/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/husarion/rosbot_ros/blob/jazzy/rosbot_bringup/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/husarion/rosbot_ros/blob/jazzy/rosbot_controller/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/husarion/rosbot_ros/blob/jazzy/rosbot_hardware_interfaces/package.xml"
+        }
+      ]
     },
     {
       "name": "Scout ROS 2",
@@ -319,7 +715,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm CAN interface, SDK requirements, model variant, and ROS distro branch upstream."
+      "notes": "Confirm CAN interface, SDK requirements, model variant, and ROS distro branch upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/agilexrobotics/scout_ros2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/agilexrobotics/scout_ros2/blob/humble/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/agilexrobotics/scout_ros2/blob/humble/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/agilexrobotics/scout_ros2/blob/humble/scout_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/agilexrobotics/scout_ros2/blob/humble/scout_base/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/agilexrobotics/scout_ros2/blob/humble/scout_description/package.xml"
+        }
+      ]
     },
     {
       "name": "Hunter ROS 2",
@@ -335,7 +757,29 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm CAN interface, SDK requirements, model variant, and ROS distro branch upstream."
+      "notes": "Confirm CAN interface, SDK requirements, model variant, and ROS distro branch upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/agilexrobotics/hunter_ros2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/agilexrobotics/hunter_ros2/blob/humble/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/agilexrobotics/hunter_ros2/blob/humble/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/agilexrobotics/hunter_ros2/blob/humble/hunter_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/agilexrobotics/hunter_ros2/blob/humble/hunter_base/package.xml"
+        }
+      ]
     },
     {
       "name": "RealSense ROS",
@@ -351,7 +795,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm supported camera models, librealsense version, and ROS distro branch upstream."
+      "notes": "Confirm supported camera models, librealsense version, and ROS distro branch upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/realsenseai/realsense-ros"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/realsenseai/realsense-ros/blob/ros2-master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/realsenseai/realsense-ros/blob/ros2-master/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/realsenseai/realsense-ros/blob/ros2-master/realsense2_camera_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/realsenseai/realsense-ros/blob/ros2-master/realsense2_camera/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/realsenseai/realsense-ros/blob/ros2-master/realsense2_description/package.xml"
+        }
+      ]
     },
     {
       "name": "ZED ROS 2 Wrapper",
@@ -367,7 +837,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm ZED SDK version, CUDA/platform requirements, camera model coverage, and ROS distro support upstream."
+      "notes": "Confirm ZED SDK version, CUDA/platform requirements, camera model coverage, and ROS distro support upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/stereolabs/zed-ros2-wrapper"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/stereolabs/zed-ros2-wrapper/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/stereolabs/zed-ros2-wrapper/blob/master/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/stereolabs/zed-ros2-wrapper/blob/master/zed_ros2/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/stereolabs/zed-ros2-wrapper/blob/master/zed_components/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/stereolabs/zed-ros2-wrapper/blob/master/zed_debug/package.xml"
+        }
+      ]
     },
     {
       "name": "DepthAI ROS",
@@ -384,7 +880,33 @@
       "review_status": "curated",
       "license": "MIT",
       "last_checked": "2026-06-02",
-      "notes": "Confirm device model, firmware, DepthAI library version, and branch/distro mapping upstream."
+      "notes": "Confirm device model, firmware, DepthAI library version, and branch/distro mapping upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/luxonis/depthai-ros"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/luxonis/depthai-ros/blob/kilted/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/luxonis/depthai-ros/blob/kilted/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/luxonis/depthai-ros/blob/kilted/depthai_ros_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/luxonis/depthai-ros/blob/kilted/depthai_ros_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/luxonis/depthai-ros/blob/kilted/depthai-ros/package.xml"
+        }
+      ]
     },
     {
       "name": "Zivid ROS",
@@ -400,7 +922,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Confirm supported Zivid SDK version, camera model, and ROS distro support upstream."
+      "notes": "Confirm supported Zivid SDK version, camera model, and ROS distro support upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/zivid/zivid-ros"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/zivid/zivid-ros/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/zivid/zivid-ros/blob/master/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/zivid/zivid-ros/blob/master/zivid_interfaces/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/zivid/zivid-ros/blob/master/zivid_camera/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/zivid/zivid-ros/blob/master/zivid_description/package.xml"
+        }
+      ]
     },
     {
       "name": "Orbbec SDK ROS 2",
@@ -416,7 +964,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm supported camera models, SDK version, USB requirements, and distro branches upstream."
+      "notes": "Confirm supported camera models, SDK version, USB requirements, and distro branches upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/orbbec/OrbbecSDK_ROS2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/orbbec/OrbbecSDK_ROS2/blob/v2-main/README.MD"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/orbbec/OrbbecSDK_ROS2/blob/v2-main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/orbbec/OrbbecSDK_ROS2/blob/v2-main/orbbec_camera_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/orbbec/OrbbecSDK_ROS2/blob/v2-main/orbbec_camera/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/orbbec/OrbbecSDK_ROS2/blob/v2-main/orbbec_description/package.xml"
+        }
+      ]
     },
     {
       "name": "USB Cam",
@@ -432,7 +1006,25 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Repository license and package manifest indicate BSD-style licensing; inspect camera-specific V4L2 behavior upstream."
+      "notes": "Repository license and package manifest indicate BSD-style licensing; inspect camera-specific V4L2 behavior upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-drivers/usb_cam"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-drivers/usb_cam/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-drivers/usb_cam/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-drivers/usb_cam/blob/main/package.xml"
+        }
+      ]
     },
     {
       "name": "Image Pipeline",
@@ -448,7 +1040,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause OR Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Package manifests indicate BSD licensing for most packages and Apache 2.0 for tracetools_image_pipeline; inspect package-level licenses and distro docs upstream."
+      "notes": "Package manifests indicate BSD licensing for most packages and Apache 2.0 for tracetools_image_pipeline; inspect package-level licenses and distro docs upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-perception/image_pipeline"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-perception/image_pipeline/blob/rolling/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-perception/image_pipeline/blob/rolling/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-perception/image_pipeline/blob/rolling/camera_calibration/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-perception/image_pipeline/blob/rolling/depth_image_proc/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-perception/image_pipeline/blob/rolling/image_pipeline/package.xml"
+        }
+      ]
     },
     {
       "name": "Velodyne",
@@ -464,7 +1082,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Repository license and package manifests indicate BSD-style licensing; confirm ROS 2 branch status and model coverage upstream."
+      "notes": "Repository license and package manifests indicate BSD-style licensing; confirm ROS 2 branch status and model coverage upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-drivers/velodyne"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-drivers/velodyne/blob/ros2/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-drivers/velodyne/blob/ros2/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-drivers/velodyne/blob/ros2/velodyne_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-drivers/velodyne/blob/ros2/velodyne_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-drivers/velodyne/blob/ros2/velodyne/package.xml"
+        }
+      ]
     },
     {
       "name": "Hokuyo URG Node",
@@ -480,7 +1124,25 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Repository license and package manifest indicate BSD-style licensing; confirm ROS 2 branch, urg_c dependency, and model coverage upstream."
+      "notes": "Repository license and package manifest indicate BSD-style licensing; confirm ROS 2 branch, urg_c dependency, and model coverage upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-drivers/urg_node"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-drivers/urg_node/blob/ros2-devel/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-drivers/urg_node/blob/ros2-devel/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-drivers/urg_node/blob/ros2-devel/package.xml"
+        }
+      ]
     },
     {
       "name": "YDLIDAR ROS 2 Driver",
@@ -496,7 +1158,25 @@
       "review_status": "curated",
       "license": "MIT",
       "last_checked": "2026-06-02",
-      "notes": "Package manifest exposes MIT; confirm exact sensor model, SDK version, and serial/USB setup upstream."
+      "notes": "Package manifest exposes MIT; confirm exact sensor model, SDK version, and serial/USB setup upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/YDLIDAR/ydlidar_ros2_driver"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/YDLIDAR/ydlidar_ros2_driver/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/YDLIDAR/ydlidar_ros2_driver/blob/master/LICENSE.txt"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/YDLIDAR/ydlidar_ros2_driver/blob/master/package.xml"
+        }
+      ]
     },
     {
       "name": "SICK Scan XD",
@@ -513,7 +1193,29 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm exact sensor family, launch configuration, fieldbus/network setup, and ROS 2 support notes upstream."
+      "notes": "Confirm exact sensor family, launch configuration, fieldbus/network setup, and ROS 2 support notes upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/SICKAG/sick_scan_xd"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/SICKAG/sick_scan_xd/blob/develop/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/SICKAG/sick_scan_xd/blob/develop/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/SICKAG/sick_scan_xd/blob/develop/examples/ros2_example_application/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/SICKAG/sick_scan_xd/blob/develop/package.xml"
+        }
+      ]
     },
     {
       "name": "SLLIDAR ROS 2",
@@ -530,7 +1232,25 @@
       "review_status": "curated",
       "license": "BSD-2-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Check upstream model coverage, serial/USB setup, and maintenance status before deployment."
+      "notes": "Check upstream model coverage, serial/USB setup, and maintenance status before deployment.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/Slamtec/sllidar_ros2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Slamtec/sllidar_ros2/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Slamtec/sllidar_ros2/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/Slamtec/sllidar_ros2/blob/main/package.xml"
+        }
+      ]
     },
     {
       "name": "Livox ROS Driver 2",
@@ -546,7 +1266,21 @@
       "review_status": "curated",
       "license": "MIT",
       "last_checked": "2026-06-02",
-      "notes": "Repository license text indicates MIT for livox_ros_driver2; confirm device model, Livox SDK version, and ROS 2 branch instructions upstream."
+      "notes": "Repository license text indicates MIT for livox_ros_driver2; confirm device model, Livox SDK version, and ROS 2 branch instructions upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/Livox-SDK/livox_ros_driver2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Livox-SDK/livox_ros_driver2/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Livox-SDK/livox_ros_driver2/blob/master/LICENSE.txt"
+        }
+      ]
     },
     {
       "name": "Ouster ROS",
@@ -565,7 +1299,25 @@
       "review_status": "curated",
       "license": "BSD-3-Clause OR BSL-1.0",
       "last_checked": "2026-06-02",
-      "notes": "Repository license file indicates BSD-3-Clause with BSL-1.0 for bundled optional-lite code; confirm firmware, sensor generation, and ROS 2 package support upstream."
+      "notes": "Repository license file indicates BSD-3-Clause with BSL-1.0 for bundled optional-lite code; confirm firmware, sensor generation, and ROS 2 package support upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ouster-lidar/ouster-ros"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ouster-lidar/ouster-ros/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ouster-lidar/ouster-ros/blob/master/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ouster-lidar/ouster-ros/blob/master/package.xml"
+        }
+      ]
     },
     {
       "name": "RoboSense LiDAR SDK",
@@ -581,7 +1333,25 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Repository license file indicates BSD-3-Clause; confirm sensor family, SDK mode, packet source, and ROS 2 instructions upstream."
+      "notes": "Repository license file indicates BSD-3-Clause; confirm sensor family, SDK mode, packet source, and ROS 2 instructions upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/RoboSense-LiDAR/rslidar_sdk"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/RoboSense-LiDAR/rslidar_sdk/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/RoboSense-LiDAR/rslidar_sdk/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/RoboSense-LiDAR/rslidar_sdk/blob/main/package.xml"
+        }
+      ]
     },
     {
       "name": "ROS 2 Ouster Drivers",
@@ -597,7 +1367,29 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Check upstream activity and model/firmware support before use."
+      "notes": "Check upstream activity and model/firmware support before use.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-drivers/ros2_ouster_drivers"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-drivers/ros2_ouster_drivers/blob/ros2/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-drivers/ros2_ouster_drivers/blob/ros2/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-drivers/ros2_ouster_drivers/blob/ros2/ouster_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-drivers/ros2_ouster_drivers/blob/ros2/ros2_ouster/package.xml"
+        }
+      ]
     },
     {
       "name": "MicroStrain Inertial",
@@ -614,7 +1406,33 @@
       "review_status": "curated",
       "license": "MIT OR BSD-2-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Package license files indicate MIT for the driver/messages/examples and BSD-2-Clause for the RQT package; confirm exact product family, transport, firmware, and ROS 2 branch support upstream."
+      "notes": "Package license files indicate MIT for the driver/messages/examples and BSD-2-Clause for the RQT package; confirm exact product family, transport, firmware, and ROS 2 branch support upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/LORD-MicroStrain/microstrain_inertial"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/LORD-MicroStrain/microstrain_inertial/blob/ros/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/LORD-MicroStrain/microstrain_inertial/blob/ros/microstrain_inertial_driver/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/LORD-MicroStrain/microstrain_inertial/blob/ros/microstrain_inertial_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/LORD-MicroStrain/microstrain_inertial/blob/ros/microstrain_inertial_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/LORD-MicroStrain/microstrain_inertial/blob/ros/microstrain_inertial_description/package.xml"
+        }
+      ]
     },
     {
       "name": "NMEA NavSat Driver",
@@ -631,7 +1449,25 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Confirm receiver sentence support, serial/network transport, frame IDs, and ROS distro branch upstream."
+      "notes": "Confirm receiver sentence support, serial/network transport, frame IDs, and ROS distro branch upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-drivers/nmea_navsat_driver"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-drivers/nmea_navsat_driver/blob/master/README.rst"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-drivers/nmea_navsat_driver/blob/master/LICENSE.txt"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-drivers/nmea_navsat_driver/blob/master/package.xml"
+        }
+      ]
     },
     {
       "name": "SBG ROS 2 Driver",
@@ -649,7 +1485,25 @@
       "review_status": "curated",
       "license": "MIT",
       "last_checked": "2026-06-02",
-      "notes": "Confirm exact sensor family, firmware, interface transport, and supported ROS distro upstream."
+      "notes": "Confirm exact sensor family, firmware, interface transport, and supported ROS distro upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/SBG-Systems/sbg_ros2_driver"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/SBG-Systems/sbg_ros2_driver/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/SBG-Systems/sbg_ros2_driver/blob/master/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/SBG-Systems/sbg_ros2_driver/blob/master/package.xml"
+        }
+      ]
     },
     {
       "name": "Fixposition Driver",
@@ -665,7 +1519,33 @@
       "review_status": "curated",
       "license": "MIT",
       "last_checked": "2026-06-02",
-      "notes": "Confirm exact sensor generation, Linux driver requirements, coordinate frames, and ROS 2 package support upstream."
+      "notes": "Confirm exact sensor generation, Linux driver requirements, coordinate frames, and ROS 2 package support upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/fixposition/fixposition_driver"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/fixposition/fixposition_driver/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/fixposition/fixposition_driver/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/fixposition/fixposition_driver/blob/main/fixposition_driver_lib/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/fixposition/fixposition_driver/blob/main/fixposition_driver_msgs/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/fixposition/fixposition_driver/blob/main/fixposition_driver_ros1/package.xml"
+        }
+      ]
     },
     {
       "name": "ROS 2 Robotiq Gripper",
@@ -681,7 +1561,33 @@
       "review_status": "curated",
       "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "Confirm exact gripper model, transport, and controller integration upstream."
+      "notes": "Confirm exact gripper model, transport, and controller integration upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper/blob/main/robotiq_controllers/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper/blob/main/robotiq_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper/blob/main/robotiq_hardware_tests/package.xml"
+        }
+      ]
     },
     {
       "name": "Robotiq Hand-E Driver",
@@ -697,7 +1603,25 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm hardware transport, firmware assumptions, and ROS distro support upstream."
+      "notes": "Confirm hardware transport, firmware assumptions, and ROS distro support upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/AGH-CEAI/robotiq_hande_driver"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/AGH-CEAI/robotiq_hande_driver/blob/humble-devel/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/AGH-CEAI/robotiq_hande_driver/blob/humble-devel/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/AGH-CEAI/robotiq_hande_driver/blob/humble-devel/robotiq_hande_driver/package.xml"
+        }
+      ]
     },
     {
       "name": "DH AG95 Gripper ROS 2",
@@ -713,7 +1637,29 @@
       "review_status": "curated",
       "license": "MIT",
       "last_checked": "2026-06-02",
-      "notes": "Community-maintained entry; confirm AG95 hardware revision, transport wiring, ros2_control integration, and ROS distro support upstream."
+      "notes": "Community-maintained entry; confirm AG95 hardware revision, transport wiring, ros2_control integration, and ROS distro support upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ian-chuang/dh_ag95_gripper_ros2"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ian-chuang/dh_ag95_gripper_ros2/blob/humble/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ian-chuang/dh_ag95_gripper_ros2/blob/humble/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ian-chuang/dh_ag95_gripper_ros2/blob/humble/dh_gripper_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ian-chuang/dh_ag95_gripper_ros2/blob/humble/dh_ag95_description/package.xml"
+        }
+      ]
     },
     {
       "name": "DYNAMIXEL Hardware Interface",
@@ -729,7 +1675,25 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm supported actuator models, serial or controller transport, ros2_control plugin configuration, and ROS distro branch upstream."
+      "notes": "Confirm supported actuator models, serial or controller transport, ros2_control plugin configuration, and ROS distro branch upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface/blob/main/package.xml"
+        }
+      ]
     },
     {
       "name": "DYNAMIXEL Workbench",
@@ -745,7 +1709,29 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm whether Workbench or the ros2_control hardware interface is the right integration path for the target ROS distro and controller."
+      "notes": "Confirm whether Workbench or the ros2_control hardware interface is the right integration path for the target ROS distro and controller.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench/blob/main/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench/blob/main/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench/blob/main/dynamixel_workbench/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench/blob/main/dynamixel_workbench_toolbox/package.xml"
+        }
+      ]
     },
     {
       "name": "ODrive ros2_control",
@@ -761,7 +1747,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Confirm supported ODrive firmware version, control mode, wiring, and ROS distro branch upstream before using it in a robot."
+      "notes": "Confirm supported ODrive firmware version, control mode, wiring, and ROS distro branch upstream before using it in a robot.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/Factor-Robotics/odrive_ros2_control"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Factor-Robotics/odrive_ros2_control/blob/humble-fw-v0.5.3/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Factor-Robotics/odrive_ros2_control/blob/humble-fw-v0.5.3/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/Factor-Robotics/odrive_ros2_control/blob/humble-fw-v0.5.3/odrive_demo_bringup/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/Factor-Robotics/odrive_ros2_control/blob/humble-fw-v0.5.3/odrive_hardware_interface/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/Factor-Robotics/odrive_ros2_control/blob/humble-fw-v0.5.3/odrive_ros2_control/package.xml"
+        }
+      ]
     },
     {
       "name": "ros2_control",
@@ -777,7 +1789,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Framework entry, not a device-specific driver; use it to evaluate hardware-interface architecture."
+      "notes": "Framework entry, not a device-specific driver; use it to evaluate hardware-interface architecture.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-controls/ros2_control"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-controls/ros2_control/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-controls/ros2_control/blob/master/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-controls/ros2_control/blob/master/controller_interface/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-controls/ros2_control/blob/master/controller_manager/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-controls/ros2_control/blob/master/controller_manager_msgs/package.xml"
+        }
+      ]
     },
     {
       "name": "ros2_controllers",
@@ -793,7 +1831,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Framework entry, not a device-specific driver; verify controller availability for the target ROS distro."
+      "notes": "Framework entry, not a device-specific driver; verify controller availability for the target ROS distro.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-controls/ros2_controllers"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-controls/ros2_controllers/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-controls/ros2_controllers/blob/master/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-controls/ros2_controllers/blob/master/ackermann_steering_controller/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-controls/ros2_controllers/blob/master/admittance_controller/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-controls/ros2_controllers/blob/master/bicycle_steering_controller/package.xml"
+        }
+      ]
     },
     {
       "name": "gz_ros2_control",
@@ -809,7 +1873,33 @@
       "review_status": "curated",
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "Simulation bridge, not a physical device driver; use it to validate ros2_control hardware-interface behavior before hardware bringup."
+      "notes": "Simulation bridge, not a physical device driver; use it to validate ros2_control hardware-interface behavior before hardware bringup.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-controls/gz_ros2_control"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-controls/gz_ros2_control/blob/rolling/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-controls/gz_ros2_control/blob/rolling/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-controls/gz_ros2_control/blob/rolling/gz_ros2_control/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-controls/gz_ros2_control/blob/rolling/gz_ros2_control_demos/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-controls/gz_ros2_control/blob/rolling/gz_ros2_control_tests/package.xml"
+        }
+      ]
     },
     {
       "name": "ROS 2 CANopen",
@@ -826,7 +1916,33 @@
       "review_status": "curated",
       "license": "Apache-2.0 OR LGPL-3.0-only",
       "last_checked": "2026-06-02",
-      "notes": "Package license files indicate Apache-2.0 for most packages and LGPL-3.0-only for canopen_402_driver; confirm supported CiA profiles, bus configuration, device EDS/DCF files, and ROS distro branch upstream."
+      "notes": "Package license files indicate Apache-2.0 for most packages and LGPL-3.0-only for canopen_402_driver; confirm supported CiA profiles, bus configuration, device EDS/DCF files, and ROS distro branch upstream.",
+      "evidence": [
+        {
+          "type": "repository",
+          "url": "https://github.com/ros-industrial/ros2_canopen"
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/ros-industrial/ros2_canopen/blob/master/README.md"
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/ros-industrial/ros2_canopen/blob/master/canopen/LICENSE"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-industrial/ros2_canopen/blob/master/canopen_402_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-industrial/ros2_canopen/blob/master/canopen_base_driver/package.xml"
+        },
+        {
+          "type": "manifest",
+          "url": "https://github.com/ros-industrial/ros2_canopen/blob/master/canopen_interfaces/package.xml"
+        }
+      ]
     }
   ]
 }

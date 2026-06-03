@@ -16,6 +16,7 @@ const failures = [];
 
 const sourceStatuses = new Set(["official", "community", "vendor-adjacent", "legacy"]);
 const reviewStatuses = new Set(["candidate", "curated", "legacy", "needs-review"]);
+const evidenceTypes = new Set(["repository", "readme", "license", "manifest", "documentation", "release"]);
 
 function fail(message) {
   failures.push(message);
@@ -45,7 +46,7 @@ function isSpdxish(value) {
   return value === "NOASSERTION" || value === "unknown" || /^[A-Za-z0-9.-]+(\s(AND|OR)\s[A-Za-z0-9.-]+)*$/.test(value);
 }
 
-if (data.schema_version !== "0.2") fail("schema_version must be 0.2");
+if (data.schema_version !== "0.3") fail("schema_version must be 0.3");
 if (!isDate(data.reviewed_at)) fail("reviewed_at must be YYYY-MM-DD");
 if (!Array.isArray(data.categories) || data.categories.length === 0) fail("categories must be a non-empty array");
 if (!Array.isArray(data.entries) || data.entries.length === 0) fail("entries must be a non-empty array");
@@ -93,6 +94,30 @@ for (const [index, entry] of (data.entries || []).entries()) {
     for (const [hardwareIndex, hardware] of entry.hardware.entries()) {
       if (!isPlainString(hardware)) fail(`${label}: hardware[${hardwareIndex}] must be a clean string`);
     }
+  }
+  if (!Array.isArray(entry?.evidence) || entry.evidence.length < 2) {
+    fail(`${label}: evidence must include at least repository evidence and one supporting upstream link`);
+  } else {
+    const evidenceUrls = new Set();
+    let hasRepositoryEvidence = false;
+    let hasSupportingEvidence = false;
+    for (const [evidenceIndex, evidence] of entry.evidence.entries()) {
+      const evidenceLabel = `${label}: evidence[${evidenceIndex}]`;
+      if (!evidence || typeof evidence !== "object" || Array.isArray(evidence)) {
+        fail(`${evidenceLabel} must be an object`);
+        continue;
+      }
+      if (!evidenceTypes.has(evidence.type)) fail(`${evidenceLabel}.type must be a known evidence type`);
+      if (!isPlainString(evidence.url) || !evidence.url.startsWith(`https://github.com/${entry.repo}`)) {
+        fail(`${evidenceLabel}.url must be a clean GitHub URL under ${entry.repo}`);
+      }
+      if (evidence.type === "repository" && evidence.url === entry.url) hasRepositoryEvidence = true;
+      if (evidence.type !== "repository") hasSupportingEvidence = true;
+      if (evidenceUrls.has(evidence.url)) fail(`${evidenceLabel}.url duplicates another evidence URL`);
+      evidenceUrls.add(evidence.url);
+    }
+    if (!hasRepositoryEvidence) fail(`${label}: evidence must include repository URL ${entry.url}`);
+    if (!hasSupportingEvidence) fail(`${label}: evidence must include at least one non-repository upstream link`);
   }
   if (entry?.repo) {
     const repo = entry.repo.toLowerCase();

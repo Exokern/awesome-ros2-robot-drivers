@@ -24,3 +24,7 @@ What makes this a useful ROS 2 driver or hardware-interface entry?
 ## Notes
 
 License, supported distros, caveats, or upstream docs:
+
+## Evidence
+
+Links to README, package.xml, license, release, documentation, or other upstream evidence:

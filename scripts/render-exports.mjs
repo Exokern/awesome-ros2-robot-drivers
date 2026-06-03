@@ -16,7 +16,9 @@ function countBy(items, getKey) {
 }
 
 function csvEscape(value) {
-  const text = Array.isArray(value) ? value.join("; ") : String(value ?? "");
+  const text = Array.isArray(value)
+    ? value.map((item) => typeof item === "object" ? `${item.type}:${item.url}` : item).join("; ")
+    : String(value ?? "");
   return `"${text.replace(/"/g, '""')}"`;
 }
 
@@ -88,6 +90,7 @@ function renderEntriesCsv(data) {
     "review_status",
     "license",
     "last_checked",
+    "evidence",
     "notes",
   ];
   const header = fields.join(",");
