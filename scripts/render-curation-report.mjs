@@ -1,5 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
+import { QUALITY_GATE_THRESHOLDS, daysBetween, evaluateQualityGates } from "./quality-gates.mjs";
+
 const indexPath = new URL("../data/index.json", import.meta.url);
 const docsDir = new URL("../docs/", import.meta.url);
 const reportPath = new URL("../docs/curation-report.md", import.meta.url);
@@ -30,13 +32,6 @@ function markdownTable(headers, rows) {
   ].join("\n");
 }
 
-function daysBetween(startDate, endDate) {
-  const start = Date.parse(`${startDate}T00:00:00Z`);
-  const end = Date.parse(`${endDate}T00:00:00Z`);
-  if (Number.isNaN(start) || Number.isNaN(end)) return Number.NaN;
-  return Math.floor((end - start) / 86_400_000);
-}
-
 function renderStatusTable(title, counts, total) {
   const rows = [...counts.entries()]
     .sort(([a], [b]) => a.localeCompare(b))
@@ -57,12 +52,17 @@ export function renderCurationReport(data) {
   const entriesByCategory = new Map(data.categories.map((category) => [category.id, []]));
   for (const entry of data.entries) entriesByCategory.get(entry.category)?.push(entry);
 
+  const quality = evaluateQualityGates(data);
   const sourceCounts = countBy(data.entries, "source_status");
   const reviewCounts = countBy(data.entries, "review_status");
   const licenseCounts = countBy(data.entries, "license");
   const licenseFollowUps = data.entries.filter((entry) => entry.license === "NOASSERTION");
-  const staleEntries = data.entries.filter((entry) => daysBetween(entry.last_checked, data.reviewed_at) > 180);
-  const lowCoverageCategories = data.categories.filter((category) => (entriesByCategory.get(category.id) || []).length < 3);
+  const staleEntries = data.entries.filter((entry) => (
+    daysBetween(entry.last_checked, data.reviewed_at) > QUALITY_GATE_THRESHOLDS.maximumLastCheckedAgeDays
+  ));
+  const lowCoverageCategories = data.categories.filter((category) => (
+    (entriesByCategory.get(category.id) || []).length < QUALITY_GATE_THRESHOLDS.minimumEntriesPerCategory
+  ));
 
   const categoryRows = data.categories.map((category) => {
     const entries = entriesByCategory.get(category.id) || [];
@@ -87,6 +87,13 @@ export function renderCurationReport(data) {
     return [category.name, Number.isFinite(maxAge) ? `${maxAge} days` : "unknown"];
   });
 
+  const qualityGateRows = quality.gates.map((gate) => [
+    gate.name,
+    gate.threshold,
+    gate.actual,
+    gate.passed ? "pass" : "fail",
+  ]);
+
   return `# ROS 2 Driver Curation Report
 
 Generated from [data/index.json](../data/index.json). This report is a maintenance dashboard, not an endorsement or compatibility claim.
@@ -101,6 +108,10 @@ Generated from [data/index.json](../data/index.json). This report is a maintenan
 - Entries needing license follow-up: ${licenseFollowUps.length}
 - Entries older than 180 days since last check: ${staleEntries.length}
 - Categories below 3 entries: ${lowCoverageCategories.length}
+
+## Quality Gates
+
+${markdownTable(["Gate", "Threshold", "Current", "Status"], qualityGateRows)}
 
 ## Category Coverage
 

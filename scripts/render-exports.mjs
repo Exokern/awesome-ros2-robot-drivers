@@ -1,6 +1,8 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
+import { buildQualityMetrics, evaluateQualityGates } from "./quality-gates.mjs";
+
 const indexPath = new URL("../data/index.json", import.meta.url);
 const distDir = new URL("../dist/", import.meta.url);
 
@@ -49,25 +51,27 @@ function buildCategories(data) {
 }
 
 function buildSummary(data) {
-  const lowCoverageThreshold = 3;
-  const countsByCategory = categoryCounts(data);
+  const quality = evaluateQualityGates(data);
+  const qualityMetrics = buildQualityMetrics(data);
 
   return {
     schema_version: data.schema_version,
     reviewed_at: data.reviewed_at,
     entry_count: data.entries.length,
     category_count: data.categories.length,
-    counts_by_category: countsByCategory,
+    counts_by_category: qualityMetrics.counts_by_category,
     counts_by_source_status: countBy(data.entries, (entry) => entry.source_status),
     counts_by_review_status: countBy(data.entries, (entry) => entry.review_status),
     counts_by_license: countBy(data.entries, (entry) => entry.license),
-    license_follow_up_repos: data.entries
-      .filter((entry) => entry.license === "NOASSERTION")
-      .map((entry) => entry.repo)
-      .sort((a, b) => a.localeCompare(b)),
-    low_coverage_categories: data.categories
-      .filter((category) => countsByCategory[category.id] < lowCoverageThreshold)
-      .map((category) => category.id),
+    license_follow_up_repos: qualityMetrics.license_follow_up_repos,
+    low_coverage_categories: qualityMetrics.low_coverage_categories,
+    stale_entry_repos: qualityMetrics.stale_entry_repos,
+    oldest_review_age_days_by_category: qualityMetrics.oldest_review_age_days_by_category,
+    quality_gates: {
+      passed: quality.passed,
+      thresholds: quality.thresholds,
+      gates: quality.gates,
+    },
   };
 }
 

@@ -35,5 +35,53 @@
     "AuboRobot/aubo_ros2_driver",
     "Yaskawa-Global/motoros2"
   ],
-  "low_coverage_categories": []
+  "low_coverage_categories": [],
+  "stale_entry_repos": [],
+  "oldest_review_age_days_by_category": {
+    "industrial-manipulators": 0,
+    "mobile-bases-and-robots": 0,
+    "cameras-and-rgb-d": 0,
+    "lidar": 0,
+    "imu-and-positioning": 0,
+    "grippers-and-end-effectors": 0,
+    "actuators-and-motor-controllers": 0,
+    "control-and-hardware-interfaces": 0
+  },
+  "quality_gates": {
+    "passed": true,
+    "thresholds": {
+      "minimumEntriesPerCategory": 3,
+      "maximumLicenseFollowUps": 5,
+      "maximumLastCheckedAgeDays": 180
+    },
+    "gates": [
+      {
+        "id": "minimum-category-coverage",
+        "name": "Minimum category coverage",
+        "threshold": ">= 3 entries per category",
+        "actual": "0 categories below threshold",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "id": "license-follow-up-budget",
+        "name": "License follow-up budget",
+        "threshold": "<= 5 NOASSERTION entries",
+        "actual": "2 NOASSERTION entries",
+        "passed": true,
+        "failures": [
+          "AuboRobot/aubo_ros2_driver",
+          "Yaskawa-Global/motoros2"
+        ]
+      },
+      {
+        "id": "review-freshness",
+        "name": "Review freshness",
+        "threshold": "<= 180 days since last check",
+        "actual": "0 stale entries",
+        "passed": true,
+        "failures": []
+      }
+    ]
+  }
 }

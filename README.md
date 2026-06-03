@@ -30,6 +30,7 @@ Use this list to find maintained upstream driver projects before choosing a hard
 - [Selection Checklist](#selection-checklist)
 - [Review Rules](#review-rules)
 - [Data And Automation](#data-and-automation)
+- [Quality Gates](#quality-gates)
 - [Curation Report](#curation-report)
 - [Machine-Readable Exports](#machine-readable-exports)
 - [Related EXOKERN Spec](#related-exokern-spec)
@@ -342,6 +343,14 @@ npm run audit:github
 ```
 
 `npm run validate` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. `npm run export` refreshes only the machine-readable `dist/` outputs. `npm run audit:github` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata.
+
+## Quality Gates
+
+`npm run validate` fails if any standard gate falls out of range:
+
+- Every category must have at least 3 curated entries.
+- The index may have at most 5 `NOASSERTION` license follow-ups.
+- Every entry must have been checked within 180 days of `reviewed_at`.
 
 ## Curation Report
 

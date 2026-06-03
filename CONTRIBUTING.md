@@ -57,6 +57,8 @@ For `license`, prefer the SPDX value exposed by GitHub when it exists. If GitHub
 
 Use [docs/curation-report.md](docs/curation-report.md) to find weak categories, license follow-ups, and aging entries before proposing broad additions. Strong entries should improve the report, not just increase the count.
 
+`npm run validate` enforces the standard gates: every category needs at least 3 curated entries, the index may have at most 5 `NOASSERTION` license follow-ups, and every entry must have been checked within 180 days of `reviewed_at`.
+
 Good notes are specific:
 
 - "Confirm firmware and controller software requirements upstream."

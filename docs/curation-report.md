@@ -13,6 +13,14 @@ Generated from [data/index.json](../data/index.json). This report is a maintenan
 - Entries older than 180 days since last check: 0
 - Categories below 3 entries: 0
 
+## Quality Gates
+
+| Gate | Threshold | Current | Status |
+| --- | --- | --- | --- |
+| Minimum category coverage | >= 3 entries per category | 0 categories below threshold | pass |
+| License follow-up budget | <= 5 NOASSERTION entries | 2 NOASSERTION entries | pass |
+| Review freshness | <= 180 days since last check | 0 stale entries | pass |
+
 ## Category Coverage
 
 | Category | Entries | Official | Community | License Follow-Up |

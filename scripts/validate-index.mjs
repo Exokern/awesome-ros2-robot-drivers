@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 
+import { evaluateQualityGates } from "./quality-gates.mjs";
 import { renderCurationReport } from "./render-curation-report.mjs";
 import { buildExports } from "./render-exports.mjs";
 import { renderReadme } from "./render-readme.mjs";
@@ -109,6 +110,13 @@ for (const [index, entry] of (data.entries || []).entries()) {
 
 for (const category of categories.keys()) {
   if ((entriesByCategory.get(category) || []).length === 0) fail(`${category}: category has no entries`);
+}
+
+const quality = evaluateQualityGates(data);
+for (const gate of quality.gates) {
+  if (!gate.passed) {
+    fail(`quality gate failed: ${gate.name}; expected ${gate.threshold}, got ${gate.actual}`);
+  }
 }
 
 const renderedReadme = renderReadme(data);
