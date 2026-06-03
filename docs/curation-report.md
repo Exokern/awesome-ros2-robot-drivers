@@ -2,16 +2,16 @@
 
 Generated from [data/index.json](../data/index.json). This report is a maintenance dashboard, not an endorsement or compatibility claim.
 
-Last reviewed: 2026-06-02  
-Entries: 43  
-Categories: 8
+- Last reviewed: 2026-06-02
+- Entries: 48
+- Categories: 8
 
 ## Snapshot
 
-- Entries with visible SPDX-like license signal: 29
-- Entries needing license follow-up: 14
+- Entries with visible SPDX-like license signal: 33
+- Entries needing license follow-up: 15
 - Entries older than 180 days since last check: 0
-- Categories below 3 entries: 3
+- Categories below 3 entries: 0
 
 ## Category Coverage
 
@@ -21,33 +21,33 @@ Categories: 8
 | Mobile Bases And Robots | 8 | 7 | 1 | 0 |
 | Cameras And RGB-D | 7 | 5 | 2 | 2 |
 | LiDAR | 9 | 6 | 3 | 6 |
-| IMU And Positioning | 2 | 1 | 1 | 1 |
-| Grippers And End Effectors | 2 | 0 | 2 | 0 |
-| Actuators And Motor Controllers | 2 | 2 | 0 | 0 |
-| Control And Hardware Interfaces | 3 | 0 | 3 | 0 |
+| IMU And Positioning | 4 | 3 | 1 | 1 |
+| Grippers And End Effectors | 3 | 0 | 3 | 0 |
+| Actuators And Motor Controllers | 3 | 2 | 1 | 0 |
+| Control And Hardware Interfaces | 4 | 0 | 4 | 1 |
 
 ## Source Mix
 
 | Status | Entries |
 | --- | --- |
-| community | 13 (30%) |
-| official | 30 (70%) |
+| community | 16 (33%) |
+| official | 32 (67%) |
 
 ## Review Mix
 
 | Status | Entries |
 | --- | --- |
-| curated | 43 (100%) |
+| curated | 48 (100%) |
 
 ## License Mix
 
 | License | Entries |
 | --- | --- |
-| Apache-2.0 | 18 (42%) |
+| Apache-2.0 | 19 (40%) |
 | BSD-2-Clause | 1 (2%) |
-| BSD-3-Clause | 9 (21%) |
-| MIT | 1 (2%) |
-| NOASSERTION | 14 (33%) |
+| BSD-3-Clause | 9 (19%) |
+| MIT | 4 (8%) |
+| NOASSERTION | 15 (31%) |
 
 ## Review Age By Category
 
@@ -78,12 +78,11 @@ Categories: 8
 - [Ouster ROS](https://github.com/ouster-lidar/ouster-ros) - lidar; GitHub API did not expose an SPDX license; confirm firmware, sensor generation, and ROS 2 package support upstream.
 - [RoboSense LiDAR SDK](https://github.com/RoboSense-LiDAR/rslidar_sdk) - lidar; GitHub API did not expose an SPDX license; confirm sensor family, SDK mode, packet source, and ROS 2 instructions upstream.
 - [MicroStrain Inertial](https://github.com/LORD-MicroStrain/microstrain_inertial) - imu-and-positioning; GitHub API did not expose an SPDX license; confirm exact product family, transport, firmware, and ROS 2 branch support upstream.
+- [ROS 2 CANopen](https://github.com/ros-industrial/ros2_canopen) - control-and-hardware-interfaces; GitHub API did not expose an SPDX license; confirm supported CiA profiles, bus configuration, device EDS/DCF files, and ROS distro branch upstream.
 
 ## Low-Coverage Categories
 
-- [IMU And Positioning](../README.md#imu-and-positioning) - imu-and-positioning; 2 entries; add more curated repositories if strong upstream evidence exists.
-- [Grippers And End Effectors](../README.md#grippers-and-end-effectors) - grippers-and-end-effectors; 2 entries; add more curated repositories if strong upstream evidence exists.
-- [Actuators And Motor Controllers](../README.md#actuators-and-motor-controllers) - actuators-and-motor-controllers; 2 entries; add more curated repositories if strong upstream evidence exists.
+No entries currently need this follow-up.
 
 ## Aging Review Queue
 

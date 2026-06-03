@@ -91,9 +91,9 @@ export function renderCurationReport(data) {
 
 Generated from [data/index.json](../data/index.json). This report is a maintenance dashboard, not an endorsement or compatibility claim.
 
-Last reviewed: ${data.reviewed_at}  
-Entries: ${data.entries.length}  
-Categories: ${data.categories.length}
+- Last reviewed: ${data.reviewed_at}
+- Entries: ${data.entries.length}
+- Categories: ${data.categories.length}
 
 ## Snapshot
 

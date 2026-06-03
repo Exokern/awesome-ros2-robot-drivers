@@ -48,9 +48,9 @@ A curated index of ROS 2 robot, sensor, actuator, controller, and hardware-inter
 
 Use this list to find maintained upstream driver projects before choosing a hardware stack. It is not a compatibility guarantee, safety certification, installation guide, or endorsement by the original vendors unless the upstream repository says so.
 
-Last reviewed: ${data.reviewed_at}  
-Entries: ${data.entries.length}  
-Schema: ${data.schema_version}
+- Last reviewed: ${data.reviewed_at}
+- Entries: ${data.entries.length}
+- Schema: ${data.schema_version}
 
 ## How To Use This List
 

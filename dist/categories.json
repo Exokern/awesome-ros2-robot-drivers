@@ -79,13 +79,13 @@
     "id": "imu-and-positioning",
     "name": "IMU And Positioning",
     "description": "IMU, GNSS, inertial, and positioning sensor drivers used in robot state estimation.",
-    "entry_count": 2,
+    "entry_count": 4,
     "source_status_counts": {
       "community": 1,
-      "official": 1
+      "official": 3
     },
     "review_status_counts": {
-      "curated": 2
+      "curated": 4
     },
     "license_follow_up_count": 1,
     "license_follow_up_repos": [
@@ -96,34 +96,6 @@
     "id": "grippers-and-end-effectors",
     "name": "Grippers And End Effectors",
     "description": "Drivers for grippers, end effectors, and related actuator interfaces.",
-    "entry_count": 2,
-    "source_status_counts": {
-      "community": 2
-    },
-    "review_status_counts": {
-      "curated": 2
-    },
-    "license_follow_up_count": 0,
-    "license_follow_up_repos": []
-  },
-  {
-    "id": "actuators-and-motor-controllers",
-    "name": "Actuators And Motor Controllers",
-    "description": "Actuator SDKs, smart-servo interfaces, and motor-controller packages used in ROS 2 hardware bringup.",
-    "entry_count": 2,
-    "source_status_counts": {
-      "official": 2
-    },
-    "review_status_counts": {
-      "curated": 2
-    },
-    "license_follow_up_count": 0,
-    "license_follow_up_repos": []
-  },
-  {
-    "id": "control-and-hardware-interfaces",
-    "name": "Control And Hardware Interfaces",
-    "description": "Core ROS 2 control frameworks, controllers, and generic hardware-interface packages.",
     "entry_count": 3,
     "source_status_counts": {
       "community": 3
@@ -133,5 +105,36 @@
     },
     "license_follow_up_count": 0,
     "license_follow_up_repos": []
+  },
+  {
+    "id": "actuators-and-motor-controllers",
+    "name": "Actuators And Motor Controllers",
+    "description": "Actuator SDKs, smart-servo interfaces, and motor-controller packages used in ROS 2 hardware bringup.",
+    "entry_count": 3,
+    "source_status_counts": {
+      "community": 1,
+      "official": 2
+    },
+    "review_status_counts": {
+      "curated": 3
+    },
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
+  },
+  {
+    "id": "control-and-hardware-interfaces",
+    "name": "Control And Hardware Interfaces",
+    "description": "Core ROS 2 control frameworks, controllers, and generic hardware-interface packages.",
+    "entry_count": 4,
+    "source_status_counts": {
+      "community": 4
+    },
+    "review_status_counts": {
+      "curated": 4
+    },
+    "license_follow_up_count": 1,
+    "license_follow_up_repos": [
+      "ros-industrial/ros2_canopen"
+    ]
   }
 ]

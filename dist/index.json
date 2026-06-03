@@ -634,6 +634,40 @@
       "notes": "Confirm receiver sentence support, serial/network transport, frame IDs, and ROS distro branch upstream."
     },
     {
+      "name": "SBG ROS 2 Driver",
+      "repo": "SBG-Systems/sbg_ros2_driver",
+      "url": "https://github.com/SBG-Systems/sbg_ros2_driver",
+      "category": "imu-and-positioning",
+      "description": "ROS 2 driver for SBG Systems IMU, AHRS, and INS products.",
+      "hardware": [
+        "SBG Systems Ellipse",
+        "SBG Systems Quanta",
+        "SBG Systems IMU/AHRS/INS units"
+      ],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "MIT",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm exact sensor family, firmware, interface transport, and supported ROS distro upstream."
+    },
+    {
+      "name": "Fixposition Driver",
+      "repo": "fixposition/fixposition_driver",
+      "url": "https://github.com/fixposition/fixposition_driver",
+      "category": "imu-and-positioning",
+      "description": "ROS driver for Fixposition Vision-RTK visual inertial GNSS positioning sensors with ROS 2 support.",
+      "hardware": [
+        "Fixposition Vision-RTK 2"
+      ],
+      "ros2_native": true,
+      "source_status": "official",
+      "review_status": "curated",
+      "license": "MIT",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm exact sensor generation, Linux driver requirements, coordinate frames, and ROS 2 package support upstream."
+    },
+    {
       "name": "ROS 2 Robotiq Gripper",
       "repo": "PickNikRobotics/ros2_robotiq_gripper",
       "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper",
@@ -666,6 +700,22 @@
       "notes": "Confirm hardware transport, firmware assumptions, and ROS distro support upstream."
     },
     {
+      "name": "DH AG95 Gripper ROS 2",
+      "repo": "ian-chuang/dh_ag95_gripper_ros2",
+      "url": "https://github.com/ian-chuang/dh_ag95_gripper_ros2",
+      "category": "grippers-and-end-effectors",
+      "description": "ROS 2 driver for the DH Robotics AG95 gripper.",
+      "hardware": [
+        "DH Robotics AG95"
+      ],
+      "ros2_native": true,
+      "source_status": "community",
+      "review_status": "curated",
+      "license": "MIT",
+      "last_checked": "2026-06-02",
+      "notes": "Community-maintained entry; confirm AG95 hardware revision, transport wiring, ros2_control integration, and ROS distro support upstream."
+    },
+    {
       "name": "DYNAMIXEL Hardware Interface",
       "repo": "ROBOTIS-GIT/dynamixel_hardware_interface",
       "url": "https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface",
@@ -696,6 +746,22 @@
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
       "notes": "Confirm whether Workbench or the ros2_control hardware interface is the right integration path for the target ROS distro and controller."
+    },
+    {
+      "name": "ODrive ros2_control",
+      "repo": "Factor-Robotics/odrive_ros2_control",
+      "url": "https://github.com/Factor-Robotics/odrive_ros2_control",
+      "category": "actuators-and-motor-controllers",
+      "description": "ros2_control hardware interface for ODrive motor controllers.",
+      "hardware": [
+        "ODrive motor controllers"
+      ],
+      "ros2_native": true,
+      "source_status": "community",
+      "review_status": "curated",
+      "license": "Apache-2.0",
+      "last_checked": "2026-06-02",
+      "notes": "Confirm supported ODrive firmware version, control mode, wiring, and ROS distro branch upstream before using it in a robot."
     },
     {
       "name": "ros2_control",
@@ -744,6 +810,23 @@
       "license": "Apache-2.0",
       "last_checked": "2026-06-02",
       "notes": "Simulation bridge, not a physical device driver; use it to validate ros2_control hardware-interface behavior before hardware bringup."
+    },
+    {
+      "name": "ROS 2 CANopen",
+      "repo": "ros-industrial/ros2_canopen",
+      "url": "https://github.com/ros-industrial/ros2_canopen",
+      "category": "control-and-hardware-interfaces",
+      "description": "CANopen driver framework and ros2_control integration for ROS 2 hardware bringup.",
+      "hardware": [
+        "CANopen devices",
+        "CANopen motor controllers"
+      ],
+      "ros2_native": true,
+      "source_status": "community",
+      "review_status": "curated",
+      "license": "NOASSERTION",
+      "last_checked": "2026-06-02",
+      "notes": "GitHub API did not expose an SPDX license; confirm supported CiA profiles, bus configuration, device EDS/DCF files, and ROS distro branch upstream."
     }
   ]
 }

@@ -1,31 +1,31 @@
 {
   "schema_version": "0.2",
   "reviewed_at": "2026-06-02",
-  "entry_count": 43,
+  "entry_count": 48,
   "category_count": 8,
   "counts_by_category": {
     "industrial-manipulators": 10,
     "mobile-bases-and-robots": 8,
     "cameras-and-rgb-d": 7,
     "lidar": 9,
-    "imu-and-positioning": 2,
-    "grippers-and-end-effectors": 2,
-    "actuators-and-motor-controllers": 2,
-    "control-and-hardware-interfaces": 3
+    "imu-and-positioning": 4,
+    "grippers-and-end-effectors": 3,
+    "actuators-and-motor-controllers": 3,
+    "control-and-hardware-interfaces": 4
   },
   "counts_by_source_status": {
-    "community": 13,
-    "official": 30
+    "community": 16,
+    "official": 32
   },
   "counts_by_review_status": {
-    "curated": 43
+    "curated": 48
   },
   "counts_by_license": {
-    "Apache-2.0": 18,
+    "Apache-2.0": 19,
     "BSD-2-Clause": 1,
     "BSD-3-Clause": 9,
-    "MIT": 1,
-    "NOASSERTION": 14
+    "MIT": 4,
+    "NOASSERTION": 15
   },
   "license_follow_up_repos": [
     "AuboRobot/aubo_ros2_driver",
@@ -38,14 +38,11 @@
     "ros-drivers/urg_node",
     "ros-drivers/usb_cam",
     "ros-drivers/velodyne",
+    "ros-industrial/ros2_canopen",
     "ros-perception/image_pipeline",
     "TechmanRobotInc/tmr_ros2",
     "Yaskawa-Global/motoros2",
     "YDLIDAR/ydlidar_ros2_driver"
   ],
-  "low_coverage_categories": [
-    "imu-and-positioning",
-    "grippers-and-end-effectors",
-    "actuators-and-motor-controllers"
-  ]
+  "low_coverage_categories": []
 }

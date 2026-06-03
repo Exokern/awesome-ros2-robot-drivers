@@ -6,9 +6,9 @@ A curated index of ROS 2 robot, sensor, actuator, controller, and hardware-inter
 
 Use this list to find maintained upstream driver projects before choosing a hardware stack. It is not a compatibility guarantee, safety certification, installation guide, or endorsement by the original vendors unless the upstream repository says so.
 
-Last reviewed: 2026-06-02  
-Entries: 43  
-Schema: 0.2
+- Last reviewed: 2026-06-02
+- Entries: 48
+- Schema: 0.2
 
 ## How To Use This List
 
@@ -235,6 +235,16 @@ IMU, GNSS, inertial, and positioning sensor drivers used in robot state estimati
   - Source: community; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
   - Caveat: Confirm receiver sentence support, serial/network transport, frame IDs, and ROS distro branch upstream.
 
+- [SBG ROS 2 Driver](https://github.com/SBG-Systems/sbg_ros2_driver) - ROS 2 driver for SBG Systems IMU, AHRS, and INS products.
+  - Hardware: SBG Systems Ellipse, SBG Systems Quanta, SBG Systems IMU/AHRS/INS units.
+  - Source: official; review: curated; license: MIT; last checked: 2026-06-02.
+  - Caveat: Confirm exact sensor family, firmware, interface transport, and supported ROS distro upstream.
+
+- [Fixposition Driver](https://github.com/fixposition/fixposition_driver) - ROS driver for Fixposition Vision-RTK visual inertial GNSS positioning sensors with ROS 2 support.
+  - Hardware: Fixposition Vision-RTK 2.
+  - Source: official; review: curated; license: MIT; last checked: 2026-06-02.
+  - Caveat: Confirm exact sensor generation, Linux driver requirements, coordinate frames, and ROS 2 package support upstream.
+
 ## Grippers And End Effectors
 
 Drivers for grippers, end effectors, and related actuator interfaces.
@@ -249,6 +259,11 @@ Drivers for grippers, end effectors, and related actuator interfaces.
   - Source: community; review: curated; license: Apache-2.0; last checked: 2026-06-02.
   - Caveat: Confirm hardware transport, firmware assumptions, and ROS distro support upstream.
 
+- [DH AG95 Gripper ROS 2](https://github.com/ian-chuang/dh_ag95_gripper_ros2) - ROS 2 driver for the DH Robotics AG95 gripper.
+  - Hardware: DH Robotics AG95.
+  - Source: community; review: curated; license: MIT; last checked: 2026-06-02.
+  - Caveat: Community-maintained entry; confirm AG95 hardware revision, transport wiring, ros2_control integration, and ROS distro support upstream.
+
 ## Actuators And Motor Controllers
 
 Actuator SDKs, smart-servo interfaces, and motor-controller packages used in ROS 2 hardware bringup.
@@ -262,6 +277,11 @@ Actuator SDKs, smart-servo interfaces, and motor-controller packages used in ROS
   - Hardware: ROBOTIS DYNAMIXEL smart servos.
   - Source: official; review: curated; license: Apache-2.0; last checked: 2026-06-02.
   - Caveat: Confirm whether Workbench or the ros2_control hardware interface is the right integration path for the target ROS distro and controller.
+
+- [ODrive ros2_control](https://github.com/Factor-Robotics/odrive_ros2_control) - ros2_control hardware interface for ODrive motor controllers.
+  - Hardware: ODrive motor controllers.
+  - Source: community; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Confirm supported ODrive firmware version, control mode, wiring, and ROS distro branch upstream before using it in a robot.
 
 ## Control And Hardware Interfaces
 
@@ -281,6 +301,11 @@ Core ROS 2 control frameworks, controllers, and generic hardware-interface packa
   - Hardware: Gazebo simulated hardware interfaces.
   - Source: community; review: curated; license: Apache-2.0; last checked: 2026-06-02.
   - Caveat: Simulation bridge, not a physical device driver; use it to validate ros2_control hardware-interface behavior before hardware bringup.
+
+- [ROS 2 CANopen](https://github.com/ros-industrial/ros2_canopen) - CANopen driver framework and ros2_control integration for ROS 2 hardware bringup.
+  - Hardware: CANopen devices, CANopen motor controllers.
+  - Source: community; review: curated; license: NOASSERTION; last checked: 2026-06-02.
+  - Caveat: GitHub API did not expose an SPDX license; confirm supported CiA profiles, bus configuration, device EDS/DCF files, and ROS distro branch upstream.
 
 ## Selection Checklist
 
