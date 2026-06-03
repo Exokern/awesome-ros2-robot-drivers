@@ -25,10 +25,17 @@ function formatCount(count, total) {
 }
 
 function markdownTable(headers, rows) {
+  const tableRows = [headers, ...rows];
+  const widths = headers.map((_, columnIndex) => (
+    Math.max(...tableRows.map((row) => String(row[columnIndex] ?? "").length))
+  ));
+  const formatRow = (row) => `| ${row.map((cell, columnIndex) => String(cell ?? "").padEnd(widths[columnIndex])).join(" | ")} |`;
+  const divider = `| ${widths.map((width) => "-".repeat(Math.max(3, width))).join(" | ")} |`;
+
   return [
-    `| ${headers.join(" | ")} |`,
-    `| ${headers.map(() => "---").join(" | ")} |`,
-    ...rows.map((row) => `| ${row.join(" | ")} |`),
+    formatRow(headers),
+    divider,
+    ...rows.map(formatRow),
   ].join("\n");
 }
 
@@ -98,7 +105,9 @@ export function renderCurationReport(data) {
 
   return `# ROS 2 Driver Curation Report
 
-Generated from [data/index.json](../data/index.json). This report is a maintenance dashboard, not an endorsement or compatibility claim.
+Generated from [data/index.json](../data/index.json). Use this report to see coverage health, license follow-ups, stale-entry risk, and the next useful maintenance work.
+
+It is not an endorsement, compatibility claim, or hardware test report.
 
 - Last reviewed: ${data.reviewed_at}
 - Entries: ${data.entries.length}

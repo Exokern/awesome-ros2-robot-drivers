@@ -1,6 +1,16 @@
 # Curation Policy
 
-This repository is a curated engineering index, not a complete web directory. The list should stay useful for a robotics engineer choosing hardware or planning ROS 2 bringup.
+This repository is a curated engineering index for ROS 2 hardware bringup. It should help a robotics engineer find driver candidates, understand risk, and decide what to verify next.
+
+It is not a complete robotics directory, a vendor catalog, a course list, or a marketing surface.
+
+## Curation Principles
+
+- Keep the scope narrow: real ROS 2 driver, wrapper, bridge, controller, hardware-interface, and platform-stack repositories.
+- Prefer evidence over popularity: a famous repository still needs clear ROS 2 hardware relevance.
+- Make uncertainty useful: every caveat should tell a user what to verify before hardware work.
+- Preserve trust: do not claim hardware testing, compatibility, safety certification, or vendor endorsement without upstream evidence.
+- Keep generated output generated: contributors should edit metadata and renderers, not patch derived files by hand.
 
 ## Acceptance Rules
 
@@ -38,12 +48,18 @@ Use `source_status` to describe upstream ownership:
 - `vendor-adjacent` - maintained by a partner, integrator, or organization closely tied to the hardware.
 - `legacy` - retained for continuity even though upstream status is old or unclear.
 
-Use `review_status` to describe curation state:
+Use `review_status` to describe this index's review state:
 
 - `curated` - manually reviewed against this policy.
-- `candidate` - plausible entry, but evidence is incomplete.
+- `candidate` - plausible, but evidence is incomplete.
 - `needs-review` - useful entry whose metadata or upstream state needs attention.
 - `legacy` - retained for historical or still-useful reasons despite weak activity.
+
+## Evidence Standard
+
+Every entry stores structured `evidence` links in `data/index.json`. Evidence must include the repository URL and at least one supporting upstream source such as README, license, documentation, release, or `package.xml`.
+
+Use the smallest useful set of links. A strong entry usually has repository, README, license, and one to three package manifests. Avoid unrelated marketing pages or generic vendor websites unless they directly document driver support.
 
 ## License Evidence
 
@@ -51,11 +67,20 @@ Prefer the SPDX value exposed by GitHub when it exists. If GitHub reports `NOASS
 
 Use compound expressions such as `BSD-3-Clause OR Apache-2.0` when package-level evidence is mixed. Keep `NOASSERTION` only when evidence is missing, contradictory, or incomplete, and make the remaining uncertainty explicit in `notes`.
 
-## Evidence Links
+## Writing Caveats
 
-Every entry stores structured `evidence` links in `data/index.json`. Evidence must include the repository URL and at least one supporting upstream source such as README, license, documentation, release, or `package.xml`.
+Good caveats are specific and useful:
 
-Use the smallest useful set of links. A strong entry usually has repository, README, license, and one to three package manifests. Avoid unrelated marketing pages or generic vendor websites unless they directly document driver support.
+- "Confirm firmware and controller software requirements upstream."
+- "Check supported ROS 2 distro, branch, and model coverage before deployment."
+- "Framework entry, not a device-specific driver; verify the target hardware integration."
+
+Weak caveats should be rewritten:
+
+- "Works great."
+- "Best driver."
+- "Supports everything."
+- "Should be fine."
 
 ## Stale Or Broken Entries
 

@@ -1,6 +1,8 @@
 # ROS 2 Driver Curation Report
 
-Generated from [data/index.json](../data/index.json). This report is a maintenance dashboard, not an endorsement or compatibility claim.
+Generated from [data/index.json](../data/index.json). Use this report to see coverage health, license follow-ups, stale-entry risk, and the next useful maintenance work.
+
+It is not an endorsement, compatibility claim, or hardware test report.
 
 - Last reviewed: 2026-06-02
 - Entries: 48
@@ -15,65 +17,65 @@ Generated from [data/index.json](../data/index.json). This report is a maintenan
 
 ## Quality Gates
 
-| Gate | Threshold | Current | Status |
-| --- | --- | --- | --- |
-| Minimum curated category coverage | >= 3 curated entries per category | 0 categories below threshold | pass |
-| License follow-up budget | <= 5 NOASSERTION entries | 2 NOASSERTION entries | pass |
-| Review freshness | <= 180 days since last check | 0 stale entries | pass |
-| Evidence completeness | >= 2 evidence links per entry, including repository plus support | 0 entries missing required evidence | pass |
+| Gate                              | Threshold                                                        | Current                             | Status |
+| --------------------------------- | ---------------------------------------------------------------- | ----------------------------------- | ------ |
+| Minimum curated category coverage | >= 3 curated entries per category                                | 0 categories below threshold        | pass   |
+| License follow-up budget          | <= 5 NOASSERTION entries                                         | 2 NOASSERTION entries               | pass   |
+| Review freshness                  | <= 180 days since last check                                     | 0 stale entries                     | pass   |
+| Evidence completeness             | >= 2 evidence links per entry, including repository plus support | 0 entries missing required evidence | pass   |
 
 ## Category Coverage
 
-| Category | Entries | Curated | Official | Community | License Follow-Up |
-| --- | --- | --- | --- | --- | --- |
-| Industrial Manipulators | 10 | 10 | 9 | 1 | 2 |
-| Mobile Bases And Robots | 8 | 8 | 7 | 1 | 0 |
-| Cameras And RGB-D | 7 | 7 | 5 | 2 | 0 |
-| LiDAR | 9 | 9 | 6 | 3 | 0 |
-| IMU And Positioning | 4 | 4 | 3 | 1 | 0 |
-| Grippers And End Effectors | 3 | 3 | 0 | 3 | 0 |
-| Actuators And Motor Controllers | 3 | 3 | 2 | 1 | 0 |
-| Control And Hardware Interfaces | 4 | 4 | 0 | 4 | 0 |
+| Category                        | Entries | Curated | Official | Community | License Follow-Up |
+| ------------------------------- | ------- | ------- | -------- | --------- | ----------------- |
+| Industrial Manipulators         | 10      | 10      | 9        | 1         | 2                 |
+| Mobile Bases And Robots         | 8       | 8       | 7        | 1         | 0                 |
+| Cameras And RGB-D               | 7       | 7       | 5        | 2         | 0                 |
+| LiDAR                           | 9       | 9       | 6        | 3         | 0                 |
+| IMU And Positioning             | 4       | 4       | 3        | 1         | 0                 |
+| Grippers And End Effectors      | 3       | 3       | 0        | 3         | 0                 |
+| Actuators And Motor Controllers | 3       | 3       | 2        | 1         | 0                 |
+| Control And Hardware Interfaces | 4       | 4       | 0        | 4         | 0                 |
 
 ## Source Mix
 
-| Status | Entries |
-| --- | --- |
+| Status    | Entries  |
+| --------- | -------- |
 | community | 16 (33%) |
-| official | 32 (67%) |
+| official  | 32 (67%) |
 
 ## Review Mix
 
-| Status | Entries |
-| --- | --- |
+| Status  | Entries   |
+| ------- | --------- |
 | curated | 48 (100%) |
 
 ## License Mix
 
-| License | Entries |
-| --- | --- |
-| Apache-2.0 | 20 (42%) |
-| Apache-2.0 OR LGPL-3.0-only | 1 (2%) |
-| BSD-2-Clause | 1 (2%) |
-| BSD-3-Clause | 15 (31%) |
-| BSD-3-Clause OR Apache-2.0 | 1 (2%) |
-| BSD-3-Clause OR BSL-1.0 | 1 (2%) |
-| MIT | 6 (13%) |
-| MIT OR BSD-2-Clause | 1 (2%) |
-| NOASSERTION | 2 (4%) |
+| License                     | Entries  |
+| --------------------------- | -------- |
+| Apache-2.0                  | 20 (42%) |
+| Apache-2.0 OR LGPL-3.0-only | 1 (2%)   |
+| BSD-2-Clause                | 1 (2%)   |
+| BSD-3-Clause                | 15 (31%) |
+| BSD-3-Clause OR Apache-2.0  | 1 (2%)   |
+| BSD-3-Clause OR BSL-1.0     | 1 (2%)   |
+| MIT                         | 6 (13%)  |
+| MIT OR BSD-2-Clause         | 1 (2%)   |
+| NOASSERTION                 | 2 (4%)   |
 
 ## Review Age By Category
 
-| Category | Oldest Last-Checked Age |
-| --- | --- |
-| Industrial Manipulators | 0 days |
-| Mobile Bases And Robots | 0 days |
-| Cameras And RGB-D | 0 days |
-| LiDAR | 0 days |
-| IMU And Positioning | 0 days |
-| Grippers And End Effectors | 0 days |
-| Actuators And Motor Controllers | 0 days |
-| Control And Hardware Interfaces | 0 days |
+| Category                        | Oldest Last-Checked Age |
+| ------------------------------- | ----------------------- |
+| Industrial Manipulators         | 0 days                  |
+| Mobile Bases And Robots         | 0 days                  |
+| Cameras And RGB-D               | 0 days                  |
+| LiDAR                           | 0 days                  |
+| IMU And Positioning             | 0 days                  |
+| Grippers And End Effectors      | 0 days                  |
+| Actuators And Motor Controllers | 0 days                  |
+| Control And Hardware Interfaces | 0 days                  |
 
 ## License Follow-Up Queue
 

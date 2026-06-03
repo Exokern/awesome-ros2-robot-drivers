@@ -2,7 +2,7 @@
   "name": "awesome-ros2-robot-drivers",
   "version": "0.1.0",
   "private": false,
-  "description": "Curated list of ROS 2 robot, sensor, actuator, and hardware-interface drivers.",
+  "description": "Curated ROS 2 driver index for robot hardware selection and bringup.",
   "license": "CC0-1.0",
   "repository": {
     "type": "git",

@@ -1,5 +1,11 @@
 ## Summary
 
+What changed?
+
+## User Impact
+
+What will a robotics user be able to decide, verify, or avoid because of this change?
+
 ## Entry Type
 
 - [ ] New driver entry
@@ -18,6 +24,7 @@
 - [ ] Category and status fields follow `docs/curation-policy.md`
 - [ ] `evidence` links include the repository and at least one supporting upstream source
 - [ ] License evidence was checked using GitHub metadata, `LICENSE`/`COPYING`, or `package.xml`
+- [ ] Caveat explains what a user still needs to verify
 - [ ] No compatibility, safety, or hardware-test claim is made without upstream evidence
 
 ## Evidence

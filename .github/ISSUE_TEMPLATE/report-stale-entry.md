@@ -5,6 +5,8 @@ title: "Review: "
 labels: review-needed
 ---
 
+Thanks for keeping the index useful. Stale-entry reports should help users avoid outdated hardware decisions or broken bringup paths.
+
 ## Entry
 
 Repository URL from the list:
@@ -20,7 +22,12 @@ What changed upstream?
 - [ ] License evidence changed or is missing
 - [ ] Hardware target or supported models changed
 - [ ] Branch, distro, firmware, SDK, or controller requirements changed
+- [ ] Transport, fieldbus, wiring, or platform assumptions changed
 - [ ] Other metadata is stale
+
+## User impact
+
+What could a user misunderstand or choose incorrectly if this entry stays as-is?
 
 ## Evidence
 

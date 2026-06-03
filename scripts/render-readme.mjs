@@ -48,7 +48,30 @@ function renderEntry(entry) {
   ].join("\n");
 }
 
-function renderAtAGlance(data, entriesByCategory) {
+function renderStartHere() {
+  return [
+    "## Start Here",
+    "",
+    markdownTable(
+      ["If you need to...", "Start with..."],
+      [
+        ["Compare hardware before purchase", "Search the matching category and read each entry caveat."],
+        ["Check whether a driver already exists", "Run `npm run find -- --q <hardware-or-repo>`."],
+        ["Build a shortlist for bringup", "Prefer official sources, clear ROS 2 support, and recent checks."],
+        ["Add a missing driver", "Suggest it with upstream evidence, or open a focused PR."],
+        ["Consume this index in another tool", "Use the generated `dist/` exports."],
+      ],
+    ),
+    "",
+    "```bash",
+    "npm run find -- --q realsense",
+    "npm run find -- --category lidar",
+    "npm run find -- --hardware \"Universal Robots\"",
+    "```",
+  ].join("\n");
+}
+
+function renderCoverage(data, entriesByCategory) {
   const sourceCounts = countBy(data.entries, "source_status");
   const reviewCounts = countBy(data.entries, "review_status");
   const licenseFollowUps = data.entries.filter((entry) => entry.license === "NOASSERTION").length;
@@ -78,11 +101,13 @@ function renderAtAGlance(data, entriesByCategory) {
   });
 
   return [
-    "## At A Glance",
+    "## What Is Covered",
+    "",
+    "The index is intentionally narrow: ROS 2 driver, wrapper, bridge, controller, hardware-interface, and platform-stack repositories that help with real hardware bringup.",
     "",
     markdownTable(["Signal", "Current"], signalRows),
     "",
-    "### Coverage",
+    "### Category Coverage",
     "",
     markdownTable(["Category", "Entries", "Curated", "Official", "Community", "License Follow-Up"], coverageRows),
   ].join("\n");
@@ -110,7 +135,9 @@ export function renderReadme(data) {
 
 A curated index of ROS 2 robot, sensor, actuator, controller, and hardware-interface driver repositories.
 
-Use this list to find maintained upstream driver projects before choosing a hardware stack. It is not a compatibility guarantee, safety certification, installation guide, or endorsement by the original vendors unless the upstream repository says so.
+Use it before buying hardware, planning bringup, or debugging a stack: find upstream ROS 2 driver repositories, compare ownership and license signals, and see the main caveats to verify before deployment.
+
+This is a curation index, not a hardware test report. Always confirm ROS 2 distribution, firmware, controller, transport, safety, and license requirements in the upstream project.
 
 - Last reviewed: ${data.reviewed_at}
 - Entries: ${data.entries.length}
@@ -118,38 +145,34 @@ Use this list to find maintained upstream driver projects before choosing a hard
 
 ## Contents
 
-- [At A Glance](#at-a-glance)
-- [How To Use This List](#how-to-use-this-list)
-- [Fast Paths](#fast-paths)
+- [Start Here](#start-here)
+- [What This Helps You Do](#what-this-helps-you-do)
+- [What Is Covered](#what-is-covered)
 - [Selection Guide](#selection-guide)
 - [Suggest A Driver](#suggest-a-driver)
 ${categoryLinks}
 - [Selection Checklist](#selection-checklist)
 - [Review Rules](#review-rules)
 - [Curation Policy](#curation-policy)
-- [Data And Automation](#data-and-automation)
+- [Data For Tools](#data-for-tools)
+- [Maintenance Model](#maintenance-model)
 - [Quality Gates](#quality-gates)
 - [Curation Report](#curation-report)
 - [Machine-Readable Exports](#machine-readable-exports)
 - [Local Search](#local-search)
 - [Related EXOKERN Spec](#related-exokern-spec)
 
-${renderAtAGlance(data, entriesByCategory)}
+${renderStartHere()}
 
-## How To Use This List
+## What This Helps You Do
 
-- Start with the hardware category that matches your robot, sensor, gripper, actuator, or controller.
-- Open the upstream repository and confirm supported ROS 2 distro, hardware revision, firmware/controller requirements, and license before using it.
-- Treat each caveat as a review prompt, not as a blocker or approval.
-- Prefer entries with clear upstream ownership, active maintenance, visible licensing, and explicit ROS 2 support.
+- Find maintained upstream driver projects before committing to a robot, sensor, gripper, actuator, or controller.
+- Separate official vendor repositories from community-maintained integrations.
+- Catch common bringup risks early: unclear distro support, firmware requirements, controller options, transport assumptions, stale branches, and license uncertainty.
+- Use one machine-readable index instead of scraping a long Markdown list.
+- Contribute corrections without turning the repo into a generic robotics link dump.
 
-## Fast Paths
-
-- Choosing hardware: start with the selection guide, then inspect the matching hardware category below.
-- Checking a specific repository or hardware name: run \`npm run find -- --q <repo-or-hardware>\` before adding or selecting a driver.
-- Suggesting a missing driver: use the suggestion path below and include upstream evidence.
-- Updating an entry: change \`data/index.json\`, run \`npm run generate\`, then run \`npm run check\`.
-- Consuming the index in tooling: use \`dist/search-index.json\`, \`dist/hardware-map.json\`, or \`dist/entries.csv\`.
+${renderCoverage(data, entriesByCategory)}
 
 ## Selection Guide
 
@@ -192,7 +215,7 @@ Entries that are ROS 1 only, archived, experimental, or unclear should be labele
 
 Use [docs/curation-policy.md](docs/curation-policy.md) for acceptance rules, category selection, status semantics, license evidence, stale-entry handling, and merge expectations.
 
-## Data And Automation
+## Data For Tools
 
 The canonical metadata lives in [data/index.json](data/index.json) and is documented by [data/schema.json](data/schema.json). The README, curation report, and export files are generated from that file so contributors only maintain one source of truth.
 
@@ -209,6 +232,14 @@ npm run audit:evidence:artifacts
 \`\`\`
 
 \`npm run validate\` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. \`npm run smoke\` checks package exports, search output, JSON query output, and the hardware lookup map. \`npm run lint:awesome\` checks README conformance with Awesome-list rules. \`npm run export\` refreshes only the machine-readable \`dist/\` outputs. \`npm run find\` queries the canonical index locally by text, category, hardware, source status, review status, and license. \`npm run audit:github\` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. \`npm run audit:evidence\` checks that every structured evidence link resolves through GitHub. The \`:artifacts\` audit variants also write JSON and CSV snapshots under \`audit-results/\`.
+
+## Maintenance Model
+
+The source of truth is \`data/index.json\`. The README, curation report, and \`dist/\` exports are generated from that metadata.
+
+Weekly audits check upstream repository metadata and evidence links. Every entry needs repository evidence plus at least one supporting upstream link.
+
+Caveats are part of the product: they tell a user what still needs verification before hardware work.
 
 ## Quality Gates
 
