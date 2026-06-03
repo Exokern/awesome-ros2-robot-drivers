@@ -33,6 +33,7 @@
   ],
   "scripts": {
     "audit:github": "node scripts/audit-github-metadata.mjs",
+    "audit:github:artifacts": "node scripts/audit-github-metadata.mjs --output-dir audit-results",
     "export": "node scripts/render-exports.mjs",
     "generate": "node scripts/generate.mjs",
     "report": "node scripts/render-curation-report.mjs",

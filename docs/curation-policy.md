@@ -69,6 +69,12 @@ Move an entry toward `needs-review` or `legacy` when:
 
 Do not delete a useful but old entry without replacing it or explaining why it no longer belongs. Stable, slow-moving drivers can stay when the caveat is explicit.
 
+## GitHub Metadata Audit
+
+Run `npm run audit:github` to check that indexed upstream repositories are still reachable, unarchived, not disabled, and aligned with GitHub repository-level license metadata when GitHub exposes it.
+
+Run `npm run audit:github:artifacts` when you need an auditable snapshot. It writes `audit-results/github-metadata-audit.json` and `audit-results/github-metadata-audit.csv`. The scheduled GitHub Action uploads those files as workflow artifacts instead of committing time-dependent audit output.
+
 ## Merge Expectations
 
 Every pull request that changes curation data should:
