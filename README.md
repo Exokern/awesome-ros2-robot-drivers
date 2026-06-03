@@ -1,4 +1,4 @@
-# Awesome ROS 2 Robot Drivers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome ROS 2 Robot Drivers [![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
 
 [![Validate](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml/badge.svg)](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml)
 
