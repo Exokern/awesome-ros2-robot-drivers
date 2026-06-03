@@ -13,6 +13,16 @@
     "actuators-and-motor-controllers": 3,
     "control-and-hardware-interfaces": 4
   },
+  "curated_counts_by_category": {
+    "industrial-manipulators": 10,
+    "mobile-bases-and-robots": 8,
+    "cameras-and-rgb-d": 7,
+    "lidar": 9,
+    "imu-and-positioning": 4,
+    "grippers-and-end-effectors": 3,
+    "actuators-and-motor-controllers": 3,
+    "control-and-hardware-interfaces": 4
+  },
   "counts_by_source_status": {
     "community": 16,
     "official": 32
@@ -58,8 +68,8 @@
     "gates": [
       {
         "id": "minimum-category-coverage",
-        "name": "Minimum category coverage",
-        "threshold": ">= 3 entries per category",
+        "name": "Minimum curated category coverage",
+        "threshold": ">= 3 curated entries per category",
         "actual": "0 categories below threshold",
         "passed": true,
         "failures": []

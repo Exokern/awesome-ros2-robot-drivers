@@ -15,12 +15,76 @@ function formatStatus(value) {
   return value.replace(/-/g, " ");
 }
 
+function countBy(entries, key) {
+  const counts = new Map();
+  for (const entry of entries) {
+    const value = entry[key] || "unknown";
+    counts.set(value, (counts.get(value) || 0) + 1);
+  }
+  return counts;
+}
+
+function markdownTable(headers, rows) {
+  const tableRows = [headers, ...rows];
+  const widths = headers.map((_, columnIndex) => (
+    Math.max(...tableRows.map((row) => String(row[columnIndex] ?? "").length))
+  ));
+  const formatRow = (row) => `| ${row.map((cell, columnIndex) => String(cell ?? "").padEnd(widths[columnIndex])).join(" | ")} |`;
+  const divider = `| ${widths.map((width) => "-".repeat(Math.max(3, width))).join(" | ")} |`;
+
+  return [
+    formatRow(headers),
+    divider,
+    ...rows.map(formatRow),
+  ].join("\n");
+}
+
 function renderEntry(entry) {
   return [
     `- [${entry.name}](${entry.url}) - ${entry.description}`,
     `  - Hardware: ${formatList(entry.hardware)}.`,
     `  - Source: ${formatStatus(entry.source_status)}; review: ${formatStatus(entry.review_status)}; license: ${entry.license}; last checked: ${entry.last_checked}.`,
     `  - Caveat: ${entry.notes}`,
+  ].join("\n");
+}
+
+function renderAtAGlance(data, entriesByCategory) {
+  const sourceCounts = countBy(data.entries, "source_status");
+  const reviewCounts = countBy(data.entries, "review_status");
+  const licenseFollowUps = data.entries.filter((entry) => entry.license === "NOASSERTION").length;
+
+  const signalRows = [
+    ["Curated entries", String(reviewCounts.get("curated") || 0)],
+    ["Hardware categories", String(data.categories.length)],
+    ["Official upstream sources", String(sourceCounts.get("official") || 0)],
+    ["Community-maintained sources", String(sourceCounts.get("community") || 0)],
+    ["License follow-ups", String(licenseFollowUps)],
+    ["Review freshness gate", "180 days"],
+  ];
+
+  const coverageRows = data.categories.map((category) => {
+    const entries = entriesByCategory.get(category.id) || [];
+    const categorySourceCounts = countBy(entries, "source_status");
+    const curatedCount = entries.filter((entry) => entry.review_status === "curated").length;
+    const categoryLicenseFollowUps = entries.filter((entry) => entry.license === "NOASSERTION").length;
+    return [
+      category.name,
+      String(entries.length),
+      String(curatedCount),
+      String(categorySourceCounts.get("official") || 0),
+      String(categorySourceCounts.get("community") || 0),
+      String(categoryLicenseFollowUps),
+    ];
+  });
+
+  return [
+    "## At A Glance",
+    "",
+    markdownTable(["Signal", "Current"], signalRows),
+    "",
+    "### Coverage",
+    "",
+    markdownTable(["Category", "Entries", "Curated", "Official", "Community", "License Follow-Up"], coverageRows),
   ].join("\n");
 }
 
@@ -40,7 +104,7 @@ export function renderReadme(data) {
     ].join("\n");
   }).join("\n\n");
 
-  return `# ROS 2 Robot Drivers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+  return `# Awesome ROS 2 Robot Drivers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 [![Validate](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml/badge.svg)](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml)
 
@@ -54,8 +118,11 @@ Use this list to find maintained upstream driver projects before choosing a hard
 
 ## Contents
 
+- [At A Glance](#at-a-glance)
 - [How To Use This List](#how-to-use-this-list)
+- [Fast Paths](#fast-paths)
 - [Selection Guide](#selection-guide)
+- [Suggest A Driver](#suggest-a-driver)
 ${categoryLinks}
 - [Selection Checklist](#selection-checklist)
 - [Review Rules](#review-rules)
@@ -67,6 +134,8 @@ ${categoryLinks}
 - [Local Search](#local-search)
 - [Related EXOKERN Spec](#related-exokern-spec)
 
+${renderAtAGlance(data, entriesByCategory)}
+
 ## How To Use This List
 
 - Start with the hardware category that matches your robot, sensor, gripper, actuator, or controller.
@@ -74,9 +143,23 @@ ${categoryLinks}
 - Treat each caveat as a review prompt, not as a blocker or approval.
 - Prefer entries with clear upstream ownership, active maintenance, visible licensing, and explicit ROS 2 support.
 
+## Fast Paths
+
+- Choosing hardware: start with the selection guide, then inspect the matching hardware category below.
+- Checking a specific repository or hardware name: run \`npm run find -- --q <repo-or-hardware>\` before adding or selecting a driver.
+- Suggesting a missing driver: use the suggestion path below and include upstream evidence.
+- Updating an entry: change \`data/index.json\`, run \`npm run generate\`, then run \`npm run check\`.
+- Consuming the index in tooling: use \`dist/search-index.json\`, \`dist/hardware-map.json\`, or \`dist/entries.csv\`.
+
 ## Selection Guide
 
 Use [docs/selection-guide.md](docs/selection-guide.md) for a practical workflow before choosing hardware or planning bringup.
+
+## Suggest A Driver
+
+Good suggestions are narrow, evidence-backed, and tied to ROS 2 hardware bringup. A strong suggestion includes the upstream GitHub repository, target hardware, ROS 2 role, license evidence, supported distro or branch notes, and one caveat a user still needs to verify.
+
+Use the [suggest-driver issue template](https://github.com/Exokern/awesome-ros2-robot-drivers/issues/new?template=suggest-driver.md) for quick proposals. Use a pull request when you can update \`data/index.json\` directly and regenerate the derived files.
 
 ${sections}
 
@@ -134,6 +217,7 @@ npm run audit:evidence:artifacts
 - Every category must have at least 3 curated entries.
 - The index may have at most 5 \`NOASSERTION\` license follow-ups.
 - Every entry must have been checked within 180 days of \`reviewed_at\`.
+- Every entry must include repository evidence plus at least one supporting upstream link.
 
 ## Curation Report
 

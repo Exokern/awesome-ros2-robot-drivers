@@ -115,6 +115,7 @@ function buildSummary(data) {
     entry_count: data.entries.length,
     category_count: data.categories.length,
     counts_by_category: qualityMetrics.counts_by_category,
+    curated_counts_by_category: qualityMetrics.curated_counts_by_category,
     counts_by_source_status: countBy(data.entries, (entry) => entry.source_status),
     counts_by_review_status: countBy(data.entries, (entry) => entry.review_status),
     counts_by_license: countBy(data.entries, (entry) => entry.license),

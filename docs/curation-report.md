@@ -11,29 +11,29 @@ Generated from [data/index.json](../data/index.json). This report is a maintenan
 - Entries with visible SPDX-like license signal: 46
 - Entries needing license follow-up: 2
 - Entries older than 180 days since last check: 0
-- Categories below 3 entries: 0
+- Categories below 3 curated entries: 0
 
 ## Quality Gates
 
 | Gate | Threshold | Current | Status |
 | --- | --- | --- | --- |
-| Minimum category coverage | >= 3 entries per category | 0 categories below threshold | pass |
+| Minimum curated category coverage | >= 3 curated entries per category | 0 categories below threshold | pass |
 | License follow-up budget | <= 5 NOASSERTION entries | 2 NOASSERTION entries | pass |
 | Review freshness | <= 180 days since last check | 0 stale entries | pass |
 | Evidence completeness | >= 2 evidence links per entry, including repository plus support | 0 entries missing required evidence | pass |
 
 ## Category Coverage
 
-| Category | Entries | Official | Community | License Follow-Up |
-| --- | --- | --- | --- | --- |
-| Industrial Manipulators | 10 | 9 | 1 | 2 |
-| Mobile Bases And Robots | 8 | 7 | 1 | 0 |
-| Cameras And RGB-D | 7 | 5 | 2 | 0 |
-| LiDAR | 9 | 6 | 3 | 0 |
-| IMU And Positioning | 4 | 3 | 1 | 0 |
-| Grippers And End Effectors | 3 | 0 | 3 | 0 |
-| Actuators And Motor Controllers | 3 | 2 | 1 | 0 |
-| Control And Hardware Interfaces | 4 | 0 | 4 | 0 |
+| Category | Entries | Curated | Official | Community | License Follow-Up |
+| --- | --- | --- | --- | --- | --- |
+| Industrial Manipulators | 10 | 10 | 9 | 1 | 2 |
+| Mobile Bases And Robots | 8 | 8 | 7 | 1 | 0 |
+| Cameras And RGB-D | 7 | 7 | 5 | 2 | 0 |
+| LiDAR | 9 | 9 | 6 | 3 | 0 |
+| IMU And Positioning | 4 | 4 | 3 | 1 | 0 |
+| Grippers And End Effectors | 3 | 3 | 0 | 3 | 0 |
+| Actuators And Motor Controllers | 3 | 3 | 2 | 1 | 0 |
+| Control And Hardware Interfaces | 4 | 4 | 0 | 4 | 0 |
 
 ## Source Mix
 

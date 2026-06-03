@@ -12,11 +12,11 @@ export function daysBetween(startDate, endDate) {
   return Math.floor((end - start) / 86_400_000);
 }
 
-function categoryCounts(data) {
+function categoryCounts(data, includeEntry = () => true) {
   return Object.fromEntries(
     (data.categories || []).map((category) => [
       category.id,
-      (data.entries || []).filter((entry) => entry.category === category.id).length,
+      (data.entries || []).filter((entry) => entry.category === category.id && includeEntry(entry)).length,
     ]),
   );
 }
@@ -43,17 +43,19 @@ function hasRequiredEvidence(entry) {
 
 export function buildQualityMetrics(data) {
   const countsByCategory = categoryCounts(data);
+  const curatedCountsByCategory = categoryCounts(data, (entry) => entry.review_status === "curated");
   const licenseFollowUps = (data.entries || []).filter((entry) => entry.license === "NOASSERTION");
   const evidenceFollowUps = (data.entries || []).filter((entry) => !hasRequiredEvidence(entry));
   const staleEntries = (data.entries || []).filter((entry) => (
     daysBetween(entry.last_checked, data.reviewed_at) > QUALITY_GATE_THRESHOLDS.maximumLastCheckedAgeDays
   ));
   const lowCoverageCategories = (data.categories || []).filter((category) => (
-    countsByCategory[category.id] < QUALITY_GATE_THRESHOLDS.minimumEntriesPerCategory
+    curatedCountsByCategory[category.id] < QUALITY_GATE_THRESHOLDS.minimumEntriesPerCategory
   ));
 
   return {
     counts_by_category: countsByCategory,
+    curated_counts_by_category: curatedCountsByCategory,
     entries_with_visible_license_signal: (data.entries || []).length - licenseFollowUps.length,
     entries_with_required_evidence: (data.entries || []).length - evidenceFollowUps.length,
     license_follow_up_repos: licenseFollowUps.map((entry) => entry.repo).sort((a, b) => a.localeCompare(b)),
@@ -69,8 +71,8 @@ export function evaluateQualityGates(data) {
   const gates = [
     {
       id: "minimum-category-coverage",
-      name: "Minimum category coverage",
-      threshold: `>= ${QUALITY_GATE_THRESHOLDS.minimumEntriesPerCategory} entries per category`,
+      name: "Minimum curated category coverage",
+      threshold: `>= ${QUALITY_GATE_THRESHOLDS.minimumEntriesPerCategory} curated entries per category`,
       actual: `${metrics.low_coverage_categories.length} categories below threshold`,
       passed: metrics.low_coverage_categories.length === 0,
       failures: metrics.low_coverage_categories,

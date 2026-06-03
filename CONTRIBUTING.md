@@ -8,7 +8,9 @@ For the full review standard, see [docs/curation-policy.md](docs/curation-policy
 
 ## Add Or Update An Entry
 
-Open a pull request that updates the canonical metadata:
+If you know a driver that is missing but do not want to edit the index, open a [driver suggestion issue](https://github.com/Exokern/awesome-ros2-robot-drivers/issues/new?template=suggest-driver.md) with the upstream repository, target hardware, ROS 2 role, license evidence, and any caveats you already know.
+
+If you are ready to update the list, open a pull request that updates the canonical metadata:
 
 - `data/index.json`
 
@@ -22,6 +24,8 @@ npm run check
 Do not edit generated README, curation-report, or `dist/` export output by hand. If generated output is wrong, fix the metadata or the renderer.
 
 Before adding a driver, run `npm run find -- --q <hardware-or-repo>` or filter with `--category`, `--hardware`, `--source`, and `--review` to check for duplicates and related entries.
+
+Small metadata fixes are welcome. Prefer one focused change per pull request: one new driver, one stale-entry update, one license fix, or one documentation/tooling improvement.
 
 ## Entry Requirements
 

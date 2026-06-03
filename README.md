@@ -1,4 +1,4 @@
-# ROS 2 Robot Drivers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome ROS 2 Robot Drivers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 [![Validate](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml/badge.svg)](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml)
 
@@ -12,8 +12,11 @@ Use this list to find maintained upstream driver projects before choosing a hard
 
 ## Contents
 
+- [At A Glance](#at-a-glance)
 - [How To Use This List](#how-to-use-this-list)
+- [Fast Paths](#fast-paths)
 - [Selection Guide](#selection-guide)
+- [Suggest A Driver](#suggest-a-driver)
 - [Industrial Manipulators](#industrial-manipulators)
 - [Mobile Bases And Robots](#mobile-bases-and-robots)
 - [Cameras And RGB-D](#cameras-and-rgb-d)
@@ -32,6 +35,30 @@ Use this list to find maintained upstream driver projects before choosing a hard
 - [Local Search](#local-search)
 - [Related EXOKERN Spec](#related-exokern-spec)
 
+## At A Glance
+
+| Signal                       | Current  |
+| ---------------------------- | -------- |
+| Curated entries              | 48       |
+| Hardware categories          | 8        |
+| Official upstream sources    | 32       |
+| Community-maintained sources | 16       |
+| License follow-ups           | 2        |
+| Review freshness gate        | 180 days |
+
+### Coverage
+
+| Category                        | Entries | Curated | Official | Community | License Follow-Up |
+| ------------------------------- | ------- | ------- | -------- | --------- | ----------------- |
+| Industrial Manipulators         | 10      | 10      | 9        | 1         | 2                 |
+| Mobile Bases And Robots         | 8       | 8       | 7        | 1         | 0                 |
+| Cameras And RGB-D               | 7       | 7       | 5        | 2         | 0                 |
+| LiDAR                           | 9       | 9       | 6        | 3         | 0                 |
+| IMU And Positioning             | 4       | 4       | 3        | 1         | 0                 |
+| Grippers And End Effectors      | 3       | 3       | 0        | 3         | 0                 |
+| Actuators And Motor Controllers | 3       | 3       | 2        | 1         | 0                 |
+| Control And Hardware Interfaces | 4       | 4       | 0        | 4         | 0                 |
+
 ## How To Use This List
 
 - Start with the hardware category that matches your robot, sensor, gripper, actuator, or controller.
@@ -39,9 +66,23 @@ Use this list to find maintained upstream driver projects before choosing a hard
 - Treat each caveat as a review prompt, not as a blocker or approval.
 - Prefer entries with clear upstream ownership, active maintenance, visible licensing, and explicit ROS 2 support.
 
+## Fast Paths
+
+- Choosing hardware: start with the selection guide, then inspect the matching hardware category below.
+- Checking a specific repository or hardware name: run `npm run find -- --q <repo-or-hardware>` before adding or selecting a driver.
+- Suggesting a missing driver: use the suggestion path below and include upstream evidence.
+- Updating an entry: change `data/index.json`, run `npm run generate`, then run `npm run check`.
+- Consuming the index in tooling: use `dist/search-index.json`, `dist/hardware-map.json`, or `dist/entries.csv`.
+
 ## Selection Guide
 
 Use [docs/selection-guide.md](docs/selection-guide.md) for a practical workflow before choosing hardware or planning bringup.
+
+## Suggest A Driver
+
+Good suggestions are narrow, evidence-backed, and tied to ROS 2 hardware bringup. A strong suggestion includes the upstream GitHub repository, target hardware, ROS 2 role, license evidence, supported distro or branch notes, and one caveat a user still needs to verify.
+
+Use the [suggest-driver issue template](https://github.com/Exokern/awesome-ros2-robot-drivers/issues/new?template=suggest-driver.md) for quick proposals. Use a pull request when you can update `data/index.json` directly and regenerate the derived files.
 
 ## Industrial Manipulators
 
@@ -369,6 +410,7 @@ npm run audit:evidence:artifacts
 - Every category must have at least 3 curated entries.
 - The index may have at most 5 `NOASSERTION` license follow-ups.
 - Every entry must have been checked within 180 days of `reviewed_at`.
+- Every entry must include repository evidence plus at least one supporting upstream link.
 
 ## Curation Report
 

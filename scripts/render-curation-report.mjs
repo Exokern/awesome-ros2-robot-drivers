@@ -61,16 +61,18 @@ export function renderCurationReport(data) {
     daysBetween(entry.last_checked, data.reviewed_at) > QUALITY_GATE_THRESHOLDS.maximumLastCheckedAgeDays
   ));
   const lowCoverageCategories = data.categories.filter((category) => (
-    (entriesByCategory.get(category.id) || []).length < QUALITY_GATE_THRESHOLDS.minimumEntriesPerCategory
+    (entriesByCategory.get(category.id) || []).filter((entry) => entry.review_status === "curated").length < QUALITY_GATE_THRESHOLDS.minimumEntriesPerCategory
   ));
 
   const categoryRows = data.categories.map((category) => {
     const entries = entriesByCategory.get(category.id) || [];
     const categorySourceCounts = countBy(entries, "source_status");
+    const curatedCount = entries.filter((entry) => entry.review_status === "curated").length;
     const noAssertionCount = entries.filter((entry) => entry.license === "NOASSERTION").length;
     return [
       category.name,
       String(entries.length),
+      String(curatedCount),
       String(categorySourceCounts.get("official") || 0),
       String(categorySourceCounts.get("community") || 0),
       String(noAssertionCount),
@@ -107,7 +109,7 @@ Generated from [data/index.json](../data/index.json). This report is a maintenan
 - Entries with visible SPDX-like license signal: ${data.entries.length - licenseFollowUps.length}
 - Entries needing license follow-up: ${licenseFollowUps.length}
 - Entries older than 180 days since last check: ${staleEntries.length}
-- Categories below 3 entries: ${lowCoverageCategories.length}
+- Categories below 3 curated entries: ${lowCoverageCategories.length}
 
 ## Quality Gates
 
@@ -115,7 +117,7 @@ ${markdownTable(["Gate", "Threshold", "Current", "Status"], qualityGateRows)}
 
 ## Category Coverage
 
-${markdownTable(["Category", "Entries", "Official", "Community", "License Follow-Up"], categoryRows)}
+${markdownTable(["Category", "Entries", "Curated", "Official", "Community", "License Follow-Up"], categoryRows)}
 
 ${renderStatusTable("Source Mix", sourceCounts, data.entries.length)}
 
@@ -139,7 +141,7 @@ ${renderFollowUpList(lowCoverageCategories.map((category) => ({
   name: category.name,
   url: `../README.md#${category.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
   category: category.id,
-  notes: `${(entriesByCategory.get(category.id) || []).length} entries; add more curated repositories if strong upstream evidence exists.`,
+  notes: `${(entriesByCategory.get(category.id) || []).filter((entry) => entry.review_status === "curated").length} curated entries; add more curated repositories if strong upstream evidence exists.`,
 })))}
 
 ## Aging Review Queue
