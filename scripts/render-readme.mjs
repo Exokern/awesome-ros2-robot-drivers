@@ -69,6 +69,7 @@ ${categoryLinks}
 - [Quality Gates](#quality-gates)
 - [Curation Report](#curation-report)
 - [Machine-Readable Exports](#machine-readable-exports)
+- [Local Search](#local-search)
 - [Related EXOKERN Spec](#related-exokern-spec)
 - [Contributing](#contributing)
 
@@ -110,11 +111,12 @@ The canonical metadata lives in [data/index.json](data/index.json) and is docume
 \`\`\`bash
 npm run generate
 npm run validate
+npm run find -- --q lidar
 npm run audit:github
 npm run audit:github:artifacts
 \`\`\`
 
-\`npm run validate\` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. \`npm run export\` refreshes only the machine-readable \`dist/\` outputs. \`npm run audit:github\` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. \`npm run audit:github:artifacts\` also writes JSON and CSV snapshots under \`audit-results/\`.
+\`npm run validate\` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. \`npm run export\` refreshes only the machine-readable \`dist/\` outputs. \`npm run find\` queries the canonical index locally by text, category, hardware, source status, review status, and license. \`npm run audit:github\` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. \`npm run audit:github:artifacts\` also writes JSON and CSV snapshots under \`audit-results/\`.
 
 ## Quality Gates
 
@@ -136,6 +138,12 @@ Generated exports live in [dist/](dist/):
 - [dist/categories.json](dist/categories.json) - category metadata with entry counts and license follow-up counts.
 - [dist/summary.json](dist/summary.json) - aggregate counts, quality gates, evidence metrics, license follow-up repositories, and low-coverage categories.
 - [dist/entries.csv](dist/entries.csv) - spreadsheet-friendly entry table with evidence links.
+- [dist/search-index.json](dist/search-index.json) - compact search records for client-side search, registry overlays, and downstream tooling.
+- [dist/hardware-map.json](dist/hardware-map.json) - hardware-target lookup map for finding all indexed entries tied to a robot, sensor, actuator, controller, or interface.
+
+## Local Search
+
+Use \`npm run find -- --q realsense\`, \`npm run find -- --category lidar\`, or \`npm run find -- --hardware "Universal Robots"\` to query the index before choosing hardware or adding duplicate entries. Add \`--json\` for scripts and downstream tools.
 
 ## Related EXOKERN Spec
 

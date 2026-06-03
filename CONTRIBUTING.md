@@ -21,6 +21,8 @@ npm run validate
 
 Do not edit generated README, curation-report, or `dist/` export output by hand. If generated output is wrong, fix the metadata or the renderer.
 
+Before adding a driver, run `npm run find -- --q <hardware-or-repo>` or filter with `--category`, `--hardware`, `--source`, and `--review` to check for duplicates and related entries.
+
 ## Entry Requirements
 
 Entries should have:

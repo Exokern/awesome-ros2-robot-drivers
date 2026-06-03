@@ -1,0 +1,758 @@
+[
+  {
+    "hardware": "2WD mobile robots",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "LinoRobot 2",
+        "repo": "linorobot/linorobot2",
+        "url": "https://github.com/linorobot/linorobot2",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "4WD mobile robots",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "LinoRobot 2",
+        "repo": "linorobot/linorobot2",
+        "url": "https://github.com/linorobot/linorobot2",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "AgileX Hunter",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Hunter ROS 2",
+        "repo": "agilexrobotics/hunter_ros2",
+        "url": "https://github.com/agilexrobotics/hunter_ros2",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "AgileX Scout",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Scout ROS 2",
+        "repo": "agilexrobotics/scout_ros2",
+        "url": "https://github.com/agilexrobotics/scout_ros2",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "AUBO robot arms",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "AUBO ROS 2 Driver",
+        "repo": "AuboRobot/aubo_ros2_driver",
+        "url": "https://github.com/AuboRobot/aubo_ros2_driver",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "camera pipelines",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Image Pipeline",
+        "repo": "ros-perception/image_pipeline",
+        "url": "https://github.com/ros-perception/image_pipeline",
+        "category": "cameras-and-rgb-d"
+      }
+    ]
+  },
+  {
+    "hardware": "CANopen devices",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ROS 2 CANopen",
+        "repo": "ros-industrial/ros2_canopen",
+        "url": "https://github.com/ros-industrial/ros2_canopen",
+        "category": "control-and-hardware-interfaces"
+      }
+    ]
+  },
+  {
+    "hardware": "CANopen motor controllers",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ROS 2 CANopen",
+        "repo": "ros-industrial/ros2_canopen",
+        "url": "https://github.com/ros-industrial/ros2_canopen",
+        "category": "control-and-hardware-interfaces"
+      }
+    ]
+  },
+  {
+    "hardware": "Clearpath robot platforms",
+    "entry_count": 2,
+    "entries": [
+      {
+        "name": "Clearpath Common",
+        "repo": "clearpathrobotics/clearpath_common",
+        "url": "https://github.com/clearpathrobotics/clearpath_common",
+        "category": "mobile-bases-and-robots"
+      },
+      {
+        "name": "Clearpath Robot",
+        "repo": "clearpathrobotics/clearpath_robot",
+        "url": "https://github.com/clearpathrobotics/clearpath_robot",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "DH Robotics AG95",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "DH AG95 Gripper ROS 2",
+        "repo": "ian-chuang/dh_ag95_gripper_ros2",
+        "url": "https://github.com/ian-chuang/dh_ag95_gripper_ros2",
+        "category": "grippers-and-end-effectors"
+      }
+    ]
+  },
+  {
+    "hardware": "Doosan robots",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Doosan Robot 2",
+        "repo": "DoosanRobotics/doosan-robot2",
+        "url": "https://github.com/DoosanRobotics/doosan-robot2",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "FANUC robots",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "FANUC ROS 2 Driver",
+        "repo": "FANUC-CORPORATION/fanuc_driver",
+        "url": "https://github.com/FANUC-CORPORATION/fanuc_driver",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "Fixposition Vision-RTK 2",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Fixposition Driver",
+        "repo": "fixposition/fixposition_driver",
+        "url": "https://github.com/fixposition/fixposition_driver",
+        "category": "imu-and-positioning"
+      }
+    ]
+  },
+  {
+    "hardware": "Franka research robots",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Franka ROS 2",
+        "repo": "frankarobotics/franka_ros2",
+        "url": "https://github.com/frankarobotics/franka_ros2",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "Gazebo simulated hardware interfaces",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "gz_ros2_control",
+        "repo": "ros-controls/gz_ros2_control",
+        "url": "https://github.com/ros-controls/gz_ros2_control",
+        "category": "control-and-hardware-interfaces"
+      }
+    ]
+  },
+  {
+    "hardware": "generic hardware interfaces",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ros2_control",
+        "repo": "ros-controls/ros2_control",
+        "url": "https://github.com/ros-controls/ros2_control",
+        "category": "control-and-hardware-interfaces"
+      }
+    ]
+  },
+  {
+    "hardware": "generic ROS 2 controllers",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ros2_controllers",
+        "repo": "ros-controls/ros2_controllers",
+        "url": "https://github.com/ros-controls/ros2_controllers",
+        "category": "control-and-hardware-interfaces"
+      }
+    ]
+  },
+  {
+    "hardware": "Hokuyo URG LiDAR",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Hokuyo URG Node",
+        "repo": "ros-drivers/urg_node",
+        "url": "https://github.com/ros-drivers/urg_node",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Husarion ROSbot 2",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ROSbot ROS",
+        "repo": "husarion/rosbot_ros",
+        "url": "https://github.com/husarion/rosbot_ros",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "Husarion ROSbot 3",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ROSbot ROS",
+        "repo": "husarion/rosbot_ros",
+        "url": "https://github.com/husarion/rosbot_ros",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "Husarion ROSbot XL",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ROSbot ROS",
+        "repo": "husarion/rosbot_ros",
+        "url": "https://github.com/husarion/rosbot_ros",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "Intel RealSense cameras",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "RealSense ROS",
+        "repo": "realsenseai/realsense-ros",
+        "url": "https://github.com/realsenseai/realsense-ros",
+        "category": "cameras-and-rgb-d"
+      }
+    ]
+  },
+  {
+    "hardware": "Kinova Gen3",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Kinova ROS 2 Kortex",
+        "repo": "Kinovarobotics/ros2_kortex",
+        "url": "https://github.com/Kinovarobotics/ros2_kortex",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "KUKA industrial arms",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "KUKA RSI Driver",
+        "repo": "fzi-forschungszentrum-informatik/kuka_rsi_driver",
+        "url": "https://github.com/fzi-forschungszentrum-informatik/kuka_rsi_driver",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "Livox LiDAR sensors",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Livox ROS Driver 2",
+        "repo": "Livox-SDK/livox_ros_driver2",
+        "url": "https://github.com/Livox-SDK/livox_ros_driver2",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Luxonis DepthAI sensors",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "DepthAI ROS",
+        "repo": "luxonis/depthai-ros",
+        "url": "https://github.com/luxonis/depthai-ros",
+        "category": "cameras-and-rgb-d"
+      }
+    ]
+  },
+  {
+    "hardware": "Luxonis OAK cameras",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "DepthAI ROS",
+        "repo": "luxonis/depthai-ros",
+        "url": "https://github.com/luxonis/depthai-ros",
+        "category": "cameras-and-rgb-d"
+      }
+    ]
+  },
+  {
+    "hardware": "Mecanum mobile robots",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "LinoRobot 2",
+        "repo": "linorobot/linorobot2",
+        "url": "https://github.com/linorobot/linorobot2",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "MicroStrain C-series sensors",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "MicroStrain Inertial",
+        "repo": "LORD-MicroStrain/microstrain_inertial",
+        "url": "https://github.com/LORD-MicroStrain/microstrain_inertial",
+        "category": "imu-and-positioning"
+      }
+    ]
+  },
+  {
+    "hardware": "MicroStrain G-series sensors",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "MicroStrain Inertial",
+        "repo": "LORD-MicroStrain/microstrain_inertial",
+        "url": "https://github.com/LORD-MicroStrain/microstrain_inertial",
+        "category": "imu-and-positioning"
+      }
+    ]
+  },
+  {
+    "hardware": "NMEA GNSS receivers",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "NMEA NavSat Driver",
+        "repo": "ros-drivers/nmea_navsat_driver",
+        "url": "https://github.com/ros-drivers/nmea_navsat_driver",
+        "category": "imu-and-positioning"
+      }
+    ]
+  },
+  {
+    "hardware": "NMEA GPS receivers",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "NMEA NavSat Driver",
+        "repo": "ros-drivers/nmea_navsat_driver",
+        "url": "https://github.com/ros-drivers/nmea_navsat_driver",
+        "category": "imu-and-positioning"
+      }
+    ]
+  },
+  {
+    "hardware": "ODrive motor controllers",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ODrive ros2_control",
+        "repo": "Factor-Robotics/odrive_ros2_control",
+        "url": "https://github.com/Factor-Robotics/odrive_ros2_control",
+        "category": "actuators-and-motor-controllers"
+      }
+    ]
+  },
+  {
+    "hardware": "Orbbec depth cameras",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Orbbec SDK ROS 2",
+        "repo": "orbbec/OrbbecSDK_ROS2",
+        "url": "https://github.com/orbbec/OrbbecSDK_ROS2",
+        "category": "cameras-and-rgb-d"
+      }
+    ]
+  },
+  {
+    "hardware": "Ouster OS-series LiDAR",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ROS 2 Ouster Drivers",
+        "repo": "ros-drivers/ros2_ouster_drivers",
+        "url": "https://github.com/ros-drivers/ros2_ouster_drivers",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Ouster OS0",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Ouster ROS",
+        "repo": "ouster-lidar/ouster-ros",
+        "url": "https://github.com/ouster-lidar/ouster-ros",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Ouster OS1",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Ouster ROS",
+        "repo": "ouster-lidar/ouster-ros",
+        "url": "https://github.com/ouster-lidar/ouster-ros",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Ouster OS2",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Ouster ROS",
+        "repo": "ouster-lidar/ouster-ros",
+        "url": "https://github.com/ouster-lidar/ouster-ros",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Ouster OSDome",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Ouster ROS",
+        "repo": "ouster-lidar/ouster-ros",
+        "url": "https://github.com/ouster-lidar/ouster-ros",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "RoboSense LiDAR sensors",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "RoboSense LiDAR SDK",
+        "repo": "RoboSense-LiDAR/rslidar_sdk",
+        "url": "https://github.com/RoboSense-LiDAR/rslidar_sdk",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Robotiq grippers",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ROS 2 Robotiq Gripper",
+        "repo": "PickNikRobotics/ros2_robotiq_gripper",
+        "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper",
+        "category": "grippers-and-end-effectors"
+      }
+    ]
+  },
+  {
+    "hardware": "Robotiq Hand-E",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Robotiq Hand-E Driver",
+        "repo": "AGH-CEAI/robotiq_hande_driver",
+        "url": "https://github.com/AGH-CEAI/robotiq_hande_driver",
+        "category": "grippers-and-end-effectors"
+      }
+    ]
+  },
+  {
+    "hardware": "ROBOTIS DYNAMIXEL smart servos",
+    "entry_count": 2,
+    "entries": [
+      {
+        "name": "DYNAMIXEL Hardware Interface",
+        "repo": "ROBOTIS-GIT/dynamixel_hardware_interface",
+        "url": "https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface",
+        "category": "actuators-and-motor-controllers"
+      },
+      {
+        "name": "DYNAMIXEL Workbench",
+        "repo": "ROBOTIS-GIT/dynamixel-workbench",
+        "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench",
+        "category": "actuators-and-motor-controllers"
+      }
+    ]
+  },
+  {
+    "hardware": "SBG Systems Ellipse",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "SBG ROS 2 Driver",
+        "repo": "SBG-Systems/sbg_ros2_driver",
+        "url": "https://github.com/SBG-Systems/sbg_ros2_driver",
+        "category": "imu-and-positioning"
+      }
+    ]
+  },
+  {
+    "hardware": "SBG Systems IMU/AHRS/INS units",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "SBG ROS 2 Driver",
+        "repo": "SBG-Systems/sbg_ros2_driver",
+        "url": "https://github.com/SBG-Systems/sbg_ros2_driver",
+        "category": "imu-and-positioning"
+      }
+    ]
+  },
+  {
+    "hardware": "SBG Systems Quanta",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "SBG ROS 2 Driver",
+        "repo": "SBG-Systems/sbg_ros2_driver",
+        "url": "https://github.com/SBG-Systems/sbg_ros2_driver",
+        "category": "imu-and-positioning"
+      }
+    ]
+  },
+  {
+    "hardware": "SICK LiDAR sensors",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "SICK Scan XD",
+        "repo": "SICKAG/sick_scan_xd",
+        "url": "https://github.com/SICKAG/sick_scan_xd",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "SICK radar devices",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "SICK Scan XD",
+        "repo": "SICKAG/sick_scan_xd",
+        "url": "https://github.com/SICKAG/sick_scan_xd",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Slamtec RPLIDAR",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "SLLIDAR ROS 2",
+        "repo": "Slamtec/sllidar_ros2",
+        "url": "https://github.com/Slamtec/sllidar_ros2",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Slamtec SLLIDAR",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "SLLIDAR ROS 2",
+        "repo": "Slamtec/sllidar_ros2",
+        "url": "https://github.com/Slamtec/sllidar_ros2",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Stereolabs ZED cameras",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "ZED ROS 2 Wrapper",
+        "repo": "stereolabs/zed-ros2-wrapper",
+        "url": "https://github.com/stereolabs/zed-ros2-wrapper",
+        "category": "cameras-and-rgb-d"
+      }
+    ]
+  },
+  {
+    "hardware": "Techman robots",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "TM ROS 2",
+        "repo": "TechmanRobotInc/tmr_ros2",
+        "url": "https://github.com/TechmanRobotInc/tmr_ros2",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "TurtleBot 4",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "TurtleBot 4 Robot",
+        "repo": "turtlebot/turtlebot4_robot",
+        "url": "https://github.com/turtlebot/turtlebot4_robot",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "TurtleBot3",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "TurtleBot3",
+        "repo": "ROBOTIS-GIT/turtlebot3",
+        "url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+        "category": "mobile-bases-and-robots"
+      }
+    ]
+  },
+  {
+    "hardware": "UFACTORY xArm",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "xArm ROS 2",
+        "repo": "xArm-Developer/xarm_ros2",
+        "url": "https://github.com/xArm-Developer/xarm_ros2",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "Universal Robots CB3",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Universal Robots ROS 2 Driver",
+        "repo": "UniversalRobots/Universal_Robots_ROS2_Driver",
+        "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "Universal Robots e-Series",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Universal Robots ROS 2 Driver",
+        "repo": "UniversalRobots/Universal_Robots_ROS2_Driver",
+        "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "V4L2 USB cameras",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "USB Cam",
+        "repo": "ros-drivers/usb_cam",
+        "url": "https://github.com/ros-drivers/usb_cam",
+        "category": "cameras-and-rgb-d"
+      }
+    ]
+  },
+  {
+    "hardware": "Velodyne 3D LiDAR",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Velodyne",
+        "repo": "ros-drivers/velodyne",
+        "url": "https://github.com/ros-drivers/velodyne",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Yaskawa Motoman controllers",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "MotoROS2",
+        "repo": "Yaskawa-Global/motoros2",
+        "url": "https://github.com/Yaskawa-Global/motoros2",
+        "category": "industrial-manipulators"
+      }
+    ]
+  },
+  {
+    "hardware": "YDLIDAR 2D LiDAR sensors",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "YDLIDAR ROS 2 Driver",
+        "repo": "YDLIDAR/ydlidar_ros2_driver",
+        "url": "https://github.com/YDLIDAR/ydlidar_ros2_driver",
+        "category": "lidar"
+      }
+    ]
+  },
+  {
+    "hardware": "Zivid 3D cameras",
+    "entry_count": 1,
+    "entries": [
+      {
+        "name": "Zivid ROS",
+        "repo": "zivid/zivid-ros",
+        "url": "https://github.com/zivid/zivid-ros",
+        "category": "cameras-and-rgb-d"
+      }
+    ]
+  }
+]

@@ -17,6 +17,8 @@
     "./index": "./dist/index.json",
     "./summary": "./dist/summary.json",
     "./categories": "./dist/categories.json",
+    "./hardware-map": "./dist/hardware-map.json",
+    "./search-index": "./dist/search-index.json",
     "./entries.csv": "./dist/entries.csv",
     "./schema": "./data/schema.json",
     "./package.json": "./package.json"
@@ -35,6 +37,7 @@
     "audit:github": "node scripts/audit-github-metadata.mjs",
     "audit:github:artifacts": "node scripts/audit-github-metadata.mjs --output-dir audit-results",
     "export": "node scripts/render-exports.mjs",
+    "find": "node scripts/query-index.mjs",
     "generate": "node scripts/generate.mjs",
     "report": "node scripts/render-curation-report.mjs",
     "validate": "node scripts/validate-index.mjs",

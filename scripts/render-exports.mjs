@@ -26,13 +26,12 @@ function renderJson(value) {
   return `${JSON.stringify(value, null, 2)}\n`;
 }
 
-function categoryCounts(data) {
-  return Object.fromEntries(
-    data.categories.map((category) => [
-      category.id,
-      data.entries.filter((entry) => entry.category === category.id).length,
-    ]),
-  );
+function normalizeSearchText(value) {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/[^a-z0-9.+#-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function buildCategories(data) {
@@ -50,6 +49,60 @@ function buildCategories(data) {
         .sort((a, b) => a.localeCompare(b)),
     };
   });
+}
+
+function buildSearchIndex(data) {
+  return data.entries.map((entry) => {
+    const searchParts = [
+      entry.name,
+      entry.repo,
+      entry.category,
+      entry.description,
+      ...entry.hardware,
+      entry.source_status,
+      entry.review_status,
+      entry.license,
+      entry.notes,
+    ];
+
+    return {
+      name: entry.name,
+      repo: entry.repo,
+      url: entry.url,
+      category: entry.category,
+      hardware: entry.hardware,
+      ros2_native: entry.ros2_native,
+      source_status: entry.source_status,
+      review_status: entry.review_status,
+      license: entry.license,
+      last_checked: entry.last_checked,
+      evidence_count: entry.evidence.length,
+      search_text: normalizeSearchText(searchParts.join(" ")),
+    };
+  });
+}
+
+function buildHardwareMap(data) {
+  const entriesByHardware = new Map();
+  for (const entry of data.entries) {
+    for (const hardware of entry.hardware) {
+      if (!entriesByHardware.has(hardware)) entriesByHardware.set(hardware, []);
+      entriesByHardware.get(hardware).push({
+        name: entry.name,
+        repo: entry.repo,
+        url: entry.url,
+        category: entry.category,
+      });
+    }
+  }
+
+  return [...entriesByHardware.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([hardware, entries]) => ({
+      hardware,
+      entry_count: entries.length,
+      entries: entries.sort((a, b) => a.name.localeCompare(b.name)),
+    }));
 }
 
 function buildSummary(data) {
@@ -102,7 +155,9 @@ export function buildExports(data) {
   return {
     "dist/categories.json": renderJson(buildCategories(data)),
     "dist/entries.csv": renderEntriesCsv(data),
+    "dist/hardware-map.json": renderJson(buildHardwareMap(data)),
     "dist/index.json": renderJson(data),
+    "dist/search-index.json": renderJson(buildSearchIndex(data)),
     "dist/summary.json": renderJson(buildSummary(data)),
   };
 }
