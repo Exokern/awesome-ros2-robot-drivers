@@ -89,9 +89,9 @@
       "ros2_native": true,
       "source_status": "official",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm license, controller options, and supported robot models upstream."
+      "notes": "Package manifests expose Apache-2.0; confirm controller options, supported robot models, and ROS distro support upstream."
     },
     {
       "name": "Kinova ROS 2 Kortex",
@@ -105,9 +105,9 @@
       "ros2_native": true,
       "source_status": "official",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm licensing, firmware, and supported distros upstream."
+      "notes": "Repository license and package manifests indicate BSD/BSD-3-Clause licensing; confirm firmware, API version, and supported distros upstream."
     },
     {
       "name": "xArm ROS 2",
@@ -155,7 +155,7 @@
       "review_status": "curated",
       "license": "NOASSERTION",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm controller generation, MotoPlus requirements, and license upstream."
+      "notes": "GitHub API did not expose an SPDX license and no package.xml files were found in the default branch; confirm license, controller generation, and MotoPlus requirements upstream."
     },
     {
       "name": "KUKA RSI Driver",
@@ -185,9 +185,9 @@
       "ros2_native": true,
       "source_status": "official",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; verify current branch, distro support, and model coverage upstream."
+      "notes": "Repository license and package manifests expose BSD-3-Clause; verify current branch, distro support, and model coverage upstream."
     },
     {
       "name": "AUBO ROS 2 Driver",
@@ -203,7 +203,7 @@
       "review_status": "curated",
       "license": "NOASSERTION",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm supported controller versions, models, and distro branches upstream."
+      "notes": "Most package manifests indicate BSD/BSD-3-Clause, but one manifest still reports TODO; confirm complete licensing, controller versions, models, and distro branches upstream."
     },
     {
       "name": "TurtleBot3",
@@ -430,9 +430,9 @@
       "ros2_native": true,
       "source_status": "community",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; inspect package license files and camera-specific V4L2 behavior upstream."
+      "notes": "Repository license and package manifest indicate BSD-style licensing; inspect camera-specific V4L2 behavior upstream."
     },
     {
       "name": "Image Pipeline",
@@ -446,9 +446,9 @@
       "ros2_native": true,
       "source_status": "community",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "BSD-3-Clause OR Apache-2.0",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; inspect package-level licenses and distro docs upstream."
+      "notes": "Package manifests indicate BSD licensing for most packages and Apache 2.0 for tracetools_image_pipeline; inspect package-level licenses and distro docs upstream."
     },
     {
       "name": "Velodyne",
@@ -462,9 +462,9 @@
       "ros2_native": true,
       "source_status": "community",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm ROS 2 branch status, model coverage, and license upstream."
+      "notes": "Repository license and package manifests indicate BSD-style licensing; confirm ROS 2 branch status and model coverage upstream."
     },
     {
       "name": "Hokuyo URG Node",
@@ -478,9 +478,9 @@
       "ros2_native": true,
       "source_status": "community",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm ROS 2 branch, urg_c dependency, model coverage, and license upstream."
+      "notes": "Repository license and package manifest indicate BSD-style licensing; confirm ROS 2 branch, urg_c dependency, and model coverage upstream."
     },
     {
       "name": "YDLIDAR ROS 2 Driver",
@@ -494,9 +494,9 @@
       "ros2_native": true,
       "source_status": "official",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm exact sensor model, SDK version, serial/USB setup, and license upstream."
+      "notes": "Package manifest exposes MIT; confirm exact sensor model, SDK version, and serial/USB setup upstream."
     },
     {
       "name": "SICK Scan XD",
@@ -544,9 +544,9 @@
       "ros2_native": true,
       "source_status": "official",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm device model, Livox SDK version, and ROS 2 branch instructions upstream."
+      "notes": "Repository license text indicates MIT for livox_ros_driver2; confirm device model, Livox SDK version, and ROS 2 branch instructions upstream."
     },
     {
       "name": "Ouster ROS",
@@ -563,9 +563,9 @@
       "ros2_native": true,
       "source_status": "official",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "BSD-3-Clause OR BSL-1.0",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm firmware, sensor generation, and ROS 2 package support upstream."
+      "notes": "Repository license file indicates BSD-3-Clause with BSL-1.0 for bundled optional-lite code; confirm firmware, sensor generation, and ROS 2 package support upstream."
     },
     {
       "name": "RoboSense LiDAR SDK",
@@ -579,9 +579,9 @@
       "ros2_native": true,
       "source_status": "official",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "BSD-3-Clause",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm sensor family, SDK mode, packet source, and ROS 2 instructions upstream."
+      "notes": "Repository license file indicates BSD-3-Clause; confirm sensor family, SDK mode, packet source, and ROS 2 instructions upstream."
     },
     {
       "name": "ROS 2 Ouster Drivers",
@@ -612,9 +612,9 @@
       "ros2_native": true,
       "source_status": "official",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "MIT OR BSD-2-Clause",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm exact product family, transport, firmware, and ROS 2 branch support upstream."
+      "notes": "Package license files indicate MIT for the driver/messages/examples and BSD-2-Clause for the RQT package; confirm exact product family, transport, firmware, and ROS 2 branch support upstream."
     },
     {
       "name": "NMEA NavSat Driver",
@@ -824,9 +824,9 @@
       "ros2_native": true,
       "source_status": "community",
       "review_status": "curated",
-      "license": "NOASSERTION",
+      "license": "Apache-2.0 OR LGPL-3.0-only",
       "last_checked": "2026-06-02",
-      "notes": "GitHub API did not expose an SPDX license; confirm supported CiA profiles, bus configuration, device EDS/DCF files, and ROS distro branch upstream."
+      "notes": "Package license files indicate Apache-2.0 for most packages and LGPL-3.0-only for canopen_402_driver; confirm supported CiA profiles, bus configuration, device EDS/DCF files, and ROS distro branch upstream."
     }
   ]
 }

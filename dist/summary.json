@@ -21,28 +21,19 @@
     "curated": 48
   },
   "counts_by_license": {
-    "Apache-2.0": 19,
+    "Apache-2.0": 20,
+    "Apache-2.0 OR LGPL-3.0-only": 1,
     "BSD-2-Clause": 1,
-    "BSD-3-Clause": 9,
-    "MIT": 4,
-    "NOASSERTION": 15
+    "BSD-3-Clause": 15,
+    "BSD-3-Clause OR Apache-2.0": 1,
+    "BSD-3-Clause OR BSL-1.0": 1,
+    "MIT": 6,
+    "MIT OR BSD-2-Clause": 1,
+    "NOASSERTION": 2
   },
   "license_follow_up_repos": [
     "AuboRobot/aubo_ros2_driver",
-    "FANUC-CORPORATION/fanuc_driver",
-    "Kinovarobotics/ros2_kortex",
-    "Livox-SDK/livox_ros_driver2",
-    "LORD-MicroStrain/microstrain_inertial",
-    "ouster-lidar/ouster-ros",
-    "RoboSense-LiDAR/rslidar_sdk",
-    "ros-drivers/urg_node",
-    "ros-drivers/usb_cam",
-    "ros-drivers/velodyne",
-    "ros-industrial/ros2_canopen",
-    "ros-perception/image_pipeline",
-    "TechmanRobotInc/tmr_ros2",
-    "Yaskawa-Global/motoros2",
-    "YDLIDAR/ydlidar_ros2_driver"
+    "Yaskawa-Global/motoros2"
   ],
   "low_coverage_categories": []
 }

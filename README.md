@@ -51,13 +51,13 @@ Robot-arm drivers, controller bridges, and ros2_control integrations for industr
 
 - [FANUC ROS 2 Driver](https://github.com/FANUC-CORPORATION/fanuc_driver) - FANUC-maintained ROS 2 driver project for FANUC robot controllers.
   - Hardware: FANUC robots.
-  - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm license, controller options, and supported robot models upstream.
+  - Source: official; review: curated; license: Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Package manifests expose Apache-2.0; confirm controller options, supported robot models, and ROS distro support upstream.
 
 - [Kinova ROS 2 Kortex](https://github.com/Kinovarobotics/ros2_kortex) - ROS 2 driver packages for Kinova Gen3 arms using the Kortex API.
   - Hardware: Kinova Gen3.
-  - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm licensing, firmware, and supported distros upstream.
+  - Source: official; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
+  - Caveat: Repository license and package manifests indicate BSD/BSD-3-Clause licensing; confirm firmware, API version, and supported distros upstream.
 
 - [xArm ROS 2](https://github.com/xArm-Developer/xarm_ros2) - ROS 2 packages for UFACTORY xArm robot arms.
   - Hardware: UFACTORY xArm.
@@ -72,7 +72,7 @@ Robot-arm drivers, controller bridges, and ros2_control integrations for industr
 - [MotoROS2](https://github.com/Yaskawa-Global/motoros2) - ROS 2 node for MotoPlus-compatible Yaskawa Motoman robot controllers.
   - Hardware: Yaskawa Motoman controllers.
   - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm controller generation, MotoPlus requirements, and license upstream.
+  - Caveat: GitHub API did not expose an SPDX license and no package.xml files were found in the default branch; confirm license, controller generation, and MotoPlus requirements upstream.
 
 - [KUKA RSI Driver](https://github.com/fzi-forschungszentrum-informatik/kuka_rsi_driver) - ros2_control driver for KUKA arms using the Robot Sensor Interface.
   - Hardware: KUKA industrial arms.
@@ -81,13 +81,13 @@ Robot-arm drivers, controller bridges, and ros2_control integrations for industr
 
 - [TM ROS 2](https://github.com/TechmanRobotInc/tmr_ros2) - Experimental ROS 2 driver packages for Techman robots.
   - Hardware: Techman robots.
-  - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; verify current branch, distro support, and model coverage upstream.
+  - Source: official; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
+  - Caveat: Repository license and package manifests expose BSD-3-Clause; verify current branch, distro support, and model coverage upstream.
 
 - [AUBO ROS 2 Driver](https://github.com/AuboRobot/aubo_ros2_driver) - ROS 2 driver repository for AUBO robot arms.
   - Hardware: AUBO robot arms.
   - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm supported controller versions, models, and distro branches upstream.
+  - Caveat: Most package manifests indicate BSD/BSD-3-Clause, but one manifest still reports TODO; confirm complete licensing, controller versions, models, and distro branches upstream.
 
 ## Mobile Bases And Robots
 
@@ -164,13 +164,13 @@ Camera, RGB-D, and image pipeline packages used for perception bringup.
 
 - [USB Cam](https://github.com/ros-drivers/usb_cam) - ROS driver for Video4Linux USB cameras.
   - Hardware: V4L2 USB cameras.
-  - Source: community; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; inspect package license files and camera-specific V4L2 behavior upstream.
+  - Source: community; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
+  - Caveat: Repository license and package manifest indicate BSD-style licensing; inspect camera-specific V4L2 behavior upstream.
 
 - [Image Pipeline](https://github.com/ros-perception/image_pipeline) - ROS image processing pipeline packages used by many camera stacks.
   - Hardware: camera pipelines.
-  - Source: community; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; inspect package-level licenses and distro docs upstream.
+  - Source: community; review: curated; license: BSD-3-Clause OR Apache-2.0; last checked: 2026-06-02.
+  - Caveat: Package manifests indicate BSD licensing for most packages and Apache 2.0 for tracetools_image_pipeline; inspect package-level licenses and distro docs upstream.
 
 ## LiDAR
 
@@ -178,18 +178,18 @@ Camera, RGB-D, and image pipeline packages used for perception bringup.
 
 - [Velodyne](https://github.com/ros-drivers/velodyne) - ROS support for Velodyne 3D LiDARs.
   - Hardware: Velodyne 3D LiDAR.
-  - Source: community; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm ROS 2 branch status, model coverage, and license upstream.
+  - Source: community; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
+  - Caveat: Repository license and package manifests indicate BSD-style licensing; confirm ROS 2 branch status and model coverage upstream.
 
 - [Hokuyo URG Node](https://github.com/ros-drivers/urg_node) - ROS wrapper for the Hokuyo urg_c library and Hokuyo URG LiDAR devices.
   - Hardware: Hokuyo URG LiDAR.
-  - Source: community; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm ROS 2 branch, urg_c dependency, model coverage, and license upstream.
+  - Source: community; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
+  - Caveat: Repository license and package manifest indicate BSD-style licensing; confirm ROS 2 branch, urg_c dependency, and model coverage upstream.
 
 - [YDLIDAR ROS 2 Driver](https://github.com/YDLIDAR/ydlidar_ros2_driver) - ROS 2 driver package for YDLIDAR 2D LiDAR sensors.
   - Hardware: YDLIDAR 2D LiDAR sensors.
-  - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm exact sensor model, SDK version, serial/USB setup, and license upstream.
+  - Source: official; review: curated; license: MIT; last checked: 2026-06-02.
+  - Caveat: Package manifest exposes MIT; confirm exact sensor model, SDK version, and serial/USB setup upstream.
 
 - [SICK Scan XD](https://github.com/SICKAG/sick_scan_xd) - Driver for a broad range of SICK LiDAR and radar devices with ROS support.
   - Hardware: SICK LiDAR sensors, SICK radar devices.
@@ -203,18 +203,18 @@ Camera, RGB-D, and image pipeline packages used for perception bringup.
 
 - [Livox ROS Driver 2](https://github.com/Livox-SDK/livox_ros_driver2) - ROS and ROS 2 driver repository for Livox LiDAR devices.
   - Hardware: Livox LiDAR sensors.
-  - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm device model, Livox SDK version, and ROS 2 branch instructions upstream.
+  - Source: official; review: curated; license: MIT; last checked: 2026-06-02.
+  - Caveat: Repository license text indicates MIT for livox_ros_driver2; confirm device model, Livox SDK version, and ROS 2 branch instructions upstream.
 
 - [Ouster ROS](https://github.com/ouster-lidar/ouster-ros) - Official ROS drivers for Ouster OS and OSDome sensors.
   - Hardware: Ouster OS0, Ouster OS1, Ouster OS2, Ouster OSDome.
-  - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm firmware, sensor generation, and ROS 2 package support upstream.
+  - Source: official; review: curated; license: BSD-3-Clause OR BSL-1.0; last checked: 2026-06-02.
+  - Caveat: Repository license file indicates BSD-3-Clause with BSL-1.0 for bundled optional-lite code; confirm firmware, sensor generation, and ROS 2 package support upstream.
 
 - [RoboSense LiDAR SDK](https://github.com/RoboSense-LiDAR/rslidar_sdk) - RoboSense LiDAR SDK repository with ROS and ROS 2 support.
   - Hardware: RoboSense LiDAR sensors.
-  - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm sensor family, SDK mode, packet source, and ROS 2 instructions upstream.
+  - Source: official; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
+  - Caveat: Repository license file indicates BSD-3-Clause; confirm sensor family, SDK mode, packet source, and ROS 2 instructions upstream.
 
 - [ROS 2 Ouster Drivers](https://github.com/ros-drivers/ros2_ouster_drivers) - ROS 2 drivers for Ouster OS-series LiDAR sensors.
   - Hardware: Ouster OS-series LiDAR.
@@ -227,8 +227,8 @@ IMU, GNSS, inertial, and positioning sensor drivers used in robot state estimati
 
 - [MicroStrain Inertial](https://github.com/LORD-MicroStrain/microstrain_inertial) - ROS driver for MicroStrain inertial and positioning products.
   - Hardware: MicroStrain G-series sensors, MicroStrain C-series sensors.
-  - Source: official; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm exact product family, transport, firmware, and ROS 2 branch support upstream.
+  - Source: official; review: curated; license: MIT OR BSD-2-Clause; last checked: 2026-06-02.
+  - Caveat: Package license files indicate MIT for the driver/messages/examples and BSD-2-Clause for the RQT package; confirm exact product family, transport, firmware, and ROS 2 branch support upstream.
 
 - [NMEA NavSat Driver](https://github.com/ros-drivers/nmea_navsat_driver) - ROS driver for NMEA GPS and GNSS devices that output satellite navigation data.
   - Hardware: NMEA GPS receivers, NMEA GNSS receivers.
@@ -304,8 +304,8 @@ Core ROS 2 control frameworks, controllers, and generic hardware-interface packa
 
 - [ROS 2 CANopen](https://github.com/ros-industrial/ros2_canopen) - CANopen driver framework and ros2_control integration for ROS 2 hardware bringup.
   - Hardware: CANopen devices, CANopen motor controllers.
-  - Source: community; review: curated; license: NOASSERTION; last checked: 2026-06-02.
-  - Caveat: GitHub API did not expose an SPDX license; confirm supported CiA profiles, bus configuration, device EDS/DCF files, and ROS distro branch upstream.
+  - Source: community; review: curated; license: Apache-2.0 OR LGPL-3.0-only; last checked: 2026-06-02.
+  - Caveat: Package license files indicate Apache-2.0 for most packages and LGPL-3.0-only for canopen_402_driver; confirm supported CiA profiles, bus configuration, device EDS/DCF files, and ROS distro branch upstream.
 
 ## Selection Checklist
 
@@ -326,6 +326,7 @@ Main-list entries must have:
 - A visible hardware target or generic hardware-interface role.
 - Recent activity, or a specific reason to keep a stable but slow-moving driver.
 - A visible license, `NOASSERTION`, or a clear upstream licensing caveat.
+- Package-level license evidence when GitHub does not expose a repository SPDX value.
 - No claim that EXOKERN or this list has tested the driver on hardware.
 
 Entries that are ROS 1 only, archived, experimental, or unclear should be labeled with a caveat instead of being presented as production-ready.

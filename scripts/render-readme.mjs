@@ -91,6 +91,7 @@ Main-list entries must have:
 - A visible hardware target or generic hardware-interface role.
 - Recent activity, or a specific reason to keep a stable but slow-moving driver.
 - A visible license, \`NOASSERTION\`, or a clear upstream licensing caveat.
+- Package-level license evidence when GitHub does not expose a repository SPDX value.
 - No claim that EXOKERN or this list has tested the driver on hardware.
 
 Entries that are ROS 1 only, archived, experimental, or unclear should be labeled with a caveat instead of being presented as production-ready.

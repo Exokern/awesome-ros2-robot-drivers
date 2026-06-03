@@ -11,12 +11,9 @@
     "review_status_counts": {
       "curated": 10
     },
-    "license_follow_up_count": 5,
+    "license_follow_up_count": 2,
     "license_follow_up_repos": [
       "AuboRobot/aubo_ros2_driver",
-      "FANUC-CORPORATION/fanuc_driver",
-      "Kinovarobotics/ros2_kortex",
-      "TechmanRobotInc/tmr_ros2",
       "Yaskawa-Global/motoros2"
     ]
   },
@@ -47,11 +44,8 @@
     "review_status_counts": {
       "curated": 7
     },
-    "license_follow_up_count": 2,
-    "license_follow_up_repos": [
-      "ros-drivers/usb_cam",
-      "ros-perception/image_pipeline"
-    ]
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
   },
   {
     "id": "lidar",
@@ -65,15 +59,8 @@
     "review_status_counts": {
       "curated": 9
     },
-    "license_follow_up_count": 6,
-    "license_follow_up_repos": [
-      "Livox-SDK/livox_ros_driver2",
-      "ouster-lidar/ouster-ros",
-      "RoboSense-LiDAR/rslidar_sdk",
-      "ros-drivers/urg_node",
-      "ros-drivers/velodyne",
-      "YDLIDAR/ydlidar_ros2_driver"
-    ]
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
   },
   {
     "id": "imu-and-positioning",
@@ -87,10 +74,8 @@
     "review_status_counts": {
       "curated": 4
     },
-    "license_follow_up_count": 1,
-    "license_follow_up_repos": [
-      "LORD-MicroStrain/microstrain_inertial"
-    ]
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
   },
   {
     "id": "grippers-and-end-effectors",
@@ -132,9 +117,7 @@
     "review_status_counts": {
       "curated": 4
     },
-    "license_follow_up_count": 1,
-    "license_follow_up_repos": [
-      "ros-industrial/ros2_canopen"
-    ]
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
   }
 ]

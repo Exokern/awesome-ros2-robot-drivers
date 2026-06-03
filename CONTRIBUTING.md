@@ -53,6 +53,8 @@ Use `source_status` to describe upstream ownership:
 
 Use upstream README files, package manifests, releases, official documentation, license files, and repository metadata as evidence. If a repository has a `robot_skill.yaml`, mention it in the pull request. If it does not, do not invent compatibility claims.
 
+For `license`, prefer the SPDX value exposed by GitHub when it exists. If GitHub reports `NOASSERTION`, inspect upstream `LICENSE`, `COPYING`, and `package.xml` files. Use a compound expression such as `BSD-3-Clause OR Apache-2.0` when package-level evidence is mixed. Keep `NOASSERTION` only when the evidence is missing, contradictory, or incomplete, and explain that caveat in `notes`.
+
 Use [docs/curation-report.md](docs/curation-report.md) to find weak categories, license follow-ups, and aging entries before proposing broad additions. Strong entries should improve the report, not just increase the count.
 
 Good notes are specific:
