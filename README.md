@@ -346,12 +346,13 @@ The canonical metadata lives in [data/index.json](data/index.json) and is docume
 ```bash
 npm run generate
 npm run validate
+npm run smoke
 npm run find -- --q lidar
 npm run audit:github
 npm run audit:github:artifacts
 ```
 
-`npm run validate` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. `npm run export` refreshes only the machine-readable `dist/` outputs. `npm run find` queries the canonical index locally by text, category, hardware, source status, review status, and license. `npm run audit:github` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. `npm run audit:github:artifacts` also writes JSON and CSV snapshots under `audit-results/`.
+`npm run validate` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. `npm run smoke` checks package exports, search output, JSON query output, and the hardware lookup map. `npm run export` refreshes only the machine-readable `dist/` outputs. `npm run find` queries the canonical index locally by text, category, hardware, source status, review status, and license. `npm run audit:github` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. `npm run audit:github:artifacts` also writes JSON and CSV snapshots under `audit-results/`.
 
 ## Quality Gates
 

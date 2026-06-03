@@ -40,8 +40,9 @@
     "find": "node scripts/query-index.mjs",
     "generate": "node scripts/generate.mjs",
     "report": "node scripts/render-curation-report.mjs",
+    "smoke": "node scripts/smoke-local-tools.mjs",
     "validate": "node scripts/validate-index.mjs",
-    "check": "npm run validate"
+    "check": "npm run validate && npm run smoke"
   },
   "keywords": [
     "awesome",
