@@ -536,7 +536,7 @@
     "license": "BSD-3-Clause",
     "last_checked": "2026-06-02",
     "evidence_count": 4,
-    "search_text": "robosense lidar sdk robosense-lidar rslidar sdk lidar robosense lidar sdk repository with ros and ros 2 support. robosense lidar sensors official curated bsd-3-clause repository license file indicates bsd-3-clause confirm sensor family sdk mode packet source and ros 2 instructions upstream."
+    "search_text": "robosense lidar sdk robosense-lidar rslidar sdk lidar sdk repository for robosense lidar devices with ros and ros 2 support. robosense lidar sensors official curated bsd-3-clause repository license file indicates bsd-3-clause confirm sensor family sdk mode packet source and ros 2 instructions upstream."
   },
   {
     "name": "ROS 2 Ouster Drivers",

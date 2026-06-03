@@ -39,10 +39,11 @@
     "export": "node scripts/render-exports.mjs",
     "find": "node scripts/query-index.mjs",
     "generate": "node scripts/generate.mjs",
+    "lint:awesome": "awesome-lint",
     "report": "node scripts/render-curation-report.mjs",
     "smoke": "node scripts/smoke-local-tools.mjs",
     "validate": "node scripts/validate-index.mjs",
-    "check": "npm run validate && npm run smoke"
+    "check": "npm run validate && npm run smoke && npm run lint:awesome"
   },
   "keywords": [
     "awesome",
@@ -51,5 +52,8 @@
     "ros2",
     "drivers",
     "robot-drivers"
-  ]
+  ],
+  "devDependencies": {
+    "awesome-lint": "2.3.0"
+  }
 }

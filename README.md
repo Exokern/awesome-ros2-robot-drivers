@@ -1,4 +1,4 @@
-# Awesome ROS 2 Robot Drivers
+# Awesome ROS 2 Robot Drivers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 [![Validate](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml/badge.svg)](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml)
 
@@ -10,15 +10,9 @@ Use this list to find maintained upstream driver projects before choosing a hard
 - Entries: 48
 - Schema: 0.3
 
-## How To Use This List
-
-- Start with the hardware category that matches your robot, sensor, gripper, actuator, or controller.
-- Open the upstream repository and confirm supported ROS 2 distro, hardware revision, firmware/controller requirements, and license before using it.
-- Treat each caveat as a review prompt, not as a blocker or approval.
-- Prefer entries with clear upstream ownership, active maintenance, visible licensing, and explicit ROS 2 support.
-
 ## Contents
 
+- [How To Use This List](#how-to-use-this-list)
 - [Industrial Manipulators](#industrial-manipulators)
 - [Mobile Bases And Robots](#mobile-bases-and-robots)
 - [Cameras And RGB-D](#cameras-and-rgb-d)
@@ -36,7 +30,13 @@ Use this list to find maintained upstream driver projects before choosing a hard
 - [Machine-Readable Exports](#machine-readable-exports)
 - [Local Search](#local-search)
 - [Related EXOKERN Spec](#related-exokern-spec)
-- [Contributing](#contributing)
+
+## How To Use This List
+
+- Start with the hardware category that matches your robot, sensor, gripper, actuator, or controller.
+- Open the upstream repository and confirm supported ROS 2 distro, hardware revision, firmware/controller requirements, and license before using it.
+- Treat each caveat as a review prompt, not as a blocker or approval.
+- Prefer entries with clear upstream ownership, active maintenance, visible licensing, and explicit ROS 2 support.
 
 ## Industrial Manipulators
 
@@ -214,7 +214,7 @@ Camera, RGB-D, and image pipeline packages used for perception bringup.
   - Source: official; review: curated; license: BSD-3-Clause OR BSL-1.0; last checked: 2026-06-02.
   - Caveat: Repository license file indicates BSD-3-Clause with BSL-1.0 for bundled optional-lite code; confirm firmware, sensor generation, and ROS 2 package support upstream.
 
-- [RoboSense LiDAR SDK](https://github.com/RoboSense-LiDAR/rslidar_sdk) - RoboSense LiDAR SDK repository with ROS and ROS 2 support.
+- [RoboSense LiDAR SDK](https://github.com/RoboSense-LiDAR/rslidar_sdk) - SDK repository for RoboSense LiDAR devices with ROS and ROS 2 support.
   - Hardware: RoboSense LiDAR sensors.
   - Source: official; review: curated; license: BSD-3-Clause; last checked: 2026-06-02.
   - Caveat: Repository license file indicates BSD-3-Clause; confirm sensor family, SDK mode, packet source, and ROS 2 instructions upstream.
@@ -330,7 +330,7 @@ Main-list entries must have:
 - Recent activity, or a specific reason to keep a stable but slow-moving driver.
 - A visible license, `NOASSERTION`, or a clear upstream licensing caveat.
 - Package-level license evidence when GitHub does not expose a repository SPDX value.
-- Structured `evidence` links in [data/index.json](data/index.json), including the repository and at least one supporting upstream source.
+- Structured `evidence` links in `data/index.json`, including the repository and at least one supporting upstream source.
 - No claim that EXOKERN or this list has tested the driver on hardware.
 
 Entries that are ROS 1 only, archived, experimental, or unclear should be labeled with a caveat instead of being presented as production-ready.
@@ -347,12 +347,13 @@ The canonical metadata lives in [data/index.json](data/index.json) and is docume
 npm run generate
 npm run validate
 npm run smoke
+npm run lint:awesome
 npm run find -- --q lidar
 npm run audit:github
 npm run audit:github:artifacts
 ```
 
-`npm run validate` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. `npm run smoke` checks package exports, search output, JSON query output, and the hardware lookup map. `npm run export` refreshes only the machine-readable `dist/` outputs. `npm run find` queries the canonical index locally by text, category, hardware, source status, review status, and license. `npm run audit:github` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. `npm run audit:github:artifacts` also writes JSON and CSV snapshots under `audit-results/`.
+`npm run validate` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. `npm run smoke` checks package exports, search output, JSON query output, and the hardware lookup map. `npm run lint:awesome` checks README conformance with Awesome-list rules. `npm run export` refreshes only the machine-readable `dist/` outputs. `npm run find` queries the canonical index locally by text, category, hardware, source status, review status, and license. `npm run audit:github` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. `npm run audit:github:artifacts` also writes JSON and CSV snapshots under `audit-results/`.
 
 ## Quality Gates
 
@@ -368,14 +369,19 @@ The generated [curation report](docs/curation-report.md) summarizes category cov
 
 ## Machine-Readable Exports
 
-Generated exports live in [dist/](dist/):
+Generated exports live in `dist/`:
 
-- [dist/index.json](dist/index.json) - generated copy of the canonical index for consumers that should not read source files directly.
-- [dist/categories.json](dist/categories.json) - category metadata with entry counts and license follow-up counts.
-- [dist/summary.json](dist/summary.json) - aggregate counts, quality gates, evidence metrics, license follow-up repositories, and low-coverage categories.
-- [dist/entries.csv](dist/entries.csv) - spreadsheet-friendly entry table with evidence links.
-- [dist/search-index.json](dist/search-index.json) - compact search records for client-side search, registry overlays, and downstream tooling.
-- [dist/hardware-map.json](dist/hardware-map.json) - hardware-target lookup map for finding all indexed entries tied to a robot, sensor, actuator, controller, or interface.
+`dist/index.json` is the generated copy of the canonical index for consumers that should not read source files directly.
+
+`dist/categories.json` contains category metadata with entry counts and license follow-up counts.
+
+`dist/summary.json` contains aggregate counts, quality gates, evidence metrics, license follow-up repositories, and low-coverage categories.
+
+`dist/entries.csv` is the spreadsheet-friendly entry table with evidence links.
+
+`dist/search-index.json` contains compact search records for client-side search, registry overlays, and downstream tooling.
+
+`dist/hardware-map.json` is the hardware-target lookup map for finding all indexed entries tied to a robot, sensor, actuator, controller, or interface.
 
 ## Local Search
 
@@ -387,4 +393,4 @@ For deeper compatibility metadata, use the [EXOKERN Robot Skill Spec](https://gi
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/curation-policy.md](docs/curation-policy.md). Pull requests should update [data/index.json](data/index.json), run `npm run generate`, and pass `npm run validate`.
+See `CONTRIBUTING.md` and `docs/curation-policy.md`. Pull requests should update `data/index.json`, run `npm run generate`, and pass `npm run validate`.

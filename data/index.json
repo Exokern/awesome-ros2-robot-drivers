@@ -1324,7 +1324,7 @@
       "repo": "RoboSense-LiDAR/rslidar_sdk",
       "url": "https://github.com/RoboSense-LiDAR/rslidar_sdk",
       "category": "lidar",
-      "description": "RoboSense LiDAR SDK repository with ROS and ROS 2 support.",
+      "description": "SDK repository for RoboSense LiDAR devices with ROS and ROS 2 support.",
       "hardware": [
         "RoboSense LiDAR sensors"
       ],

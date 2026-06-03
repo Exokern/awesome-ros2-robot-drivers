@@ -18,6 +18,7 @@ Then regenerate the readable list:
 npm run generate
 npm run validate
 npm run smoke
+npm run lint:awesome
 ```
 
 Do not edit generated README, curation-report, or `dist/` export output by hand. If generated output is wrong, fix the metadata or the renderer.
