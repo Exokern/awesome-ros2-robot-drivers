@@ -1,0 +1,786 @@
+[
+  {
+    "name": "Universal Robots ROS 2 Driver",
+    "repo": "UniversalRobots/Universal_Robots_ROS2_Driver",
+    "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "Universal Robots CB3",
+      "Universal Robots e-Series"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "universal robots ros 2 driver universalrobots universal robots ros2 driver industrial-manipulators official ros 2 driver for universal robots cb3 and e-series arms including controller communication and bringup packages. universal robots cb3 universal robots e-series official curated bsd-3-clause verify exact polyscope external-control and ros distro support upstream before deployment."
+  },
+  {
+    "name": "Franka ROS 2",
+    "repo": "frankarobotics/franka_ros2",
+    "url": "https://github.com/frankarobotics/franka_ros2",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "Franka research robots"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "franka ros 2 frankarobotics franka ros2 industrial-manipulators ros 2 integration packages for franka research robots. franka research robots official curated apache-2.0 confirm exact arm generation libfranka version and supported ros distro upstream."
+  },
+  {
+    "name": "FANUC ROS 2 Driver",
+    "repo": "FANUC-CORPORATION/fanuc_driver",
+    "url": "https://github.com/FANUC-CORPORATION/fanuc_driver",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "FANUC robots"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 5,
+    "search_text": "fanuc ros 2 driver fanuc-corporation fanuc driver industrial-manipulators fanuc-maintained ros 2 driver project for fanuc robot controllers. fanuc robots official curated apache-2.0 package manifests expose apache-2.0 confirm controller options supported robot models and ros distro support upstream."
+  },
+  {
+    "name": "Kinova ROS 2 Kortex",
+    "repo": "Kinovarobotics/ros2_kortex",
+    "url": "https://github.com/Kinovarobotics/ros2_kortex",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "Kinova Gen3"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "kinova ros 2 kortex kinovarobotics ros2 kortex industrial-manipulators ros 2 driver packages for kinova gen3 arms using the kortex api. kinova gen3 official curated bsd-3-clause repository license and package manifests indicate bsd bsd-3-clause licensing confirm firmware api version and supported distros upstream."
+  },
+  {
+    "name": "xArm ROS 2",
+    "repo": "xArm-Developer/xarm_ros2",
+    "url": "https://github.com/xArm-Developer/xarm_ros2",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "UFACTORY xArm"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "xarm ros 2 xarm-developer xarm ros2 industrial-manipulators ros 2 packages for ufactory xarm robot arms. ufactory xarm official curated bsd-3-clause confirm model coverage controller firmware and branch distro mapping upstream."
+  },
+  {
+    "name": "Doosan Robot 2",
+    "repo": "DoosanRobotics/doosan-robot2",
+    "url": "https://github.com/DoosanRobotics/doosan-robot2",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "Doosan robots"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "doosan robot 2 doosanrobotics doosan-robot2 industrial-manipulators ros 2 packages for doosan robot arms. doosan robots official curated bsd-3-clause confirm controller software requirements and model coverage upstream."
+  },
+  {
+    "name": "MotoROS2",
+    "repo": "Yaskawa-Global/motoros2",
+    "url": "https://github.com/Yaskawa-Global/motoros2",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "Yaskawa Motoman controllers"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "NOASSERTION",
+    "last_checked": "2026-06-02",
+    "evidence_count": 2,
+    "search_text": "motoros2 yaskawa-global motoros2 industrial-manipulators ros 2 node for motoplus-compatible yaskawa motoman robot controllers. yaskawa motoman controllers official curated noassertion github api did not expose an spdx license and no package.xml files were found in the default branch confirm license controller generation and motoplus requirements upstream."
+  },
+  {
+    "name": "KUKA RSI Driver",
+    "repo": "fzi-forschungszentrum-informatik/kuka_rsi_driver",
+    "url": "https://github.com/fzi-forschungszentrum-informatik/kuka_rsi_driver",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "KUKA industrial arms"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "kuka rsi driver fzi-forschungszentrum-informatik kuka rsi driver industrial-manipulators ros2 control driver for kuka arms using the robot sensor interface. kuka industrial arms community curated bsd-3-clause hardware use depends on kuka rsi availability and controller configuration."
+  },
+  {
+    "name": "TM ROS 2",
+    "repo": "TechmanRobotInc/tmr_ros2",
+    "url": "https://github.com/TechmanRobotInc/tmr_ros2",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "Techman robots"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "tm ros 2 techmanrobotinc tmr ros2 industrial-manipulators experimental ros 2 driver packages for techman robots. techman robots official curated bsd-3-clause repository license and package manifests expose bsd-3-clause verify current branch distro support and model coverage upstream."
+  },
+  {
+    "name": "AUBO ROS 2 Driver",
+    "repo": "AuboRobot/aubo_ros2_driver",
+    "url": "https://github.com/AuboRobot/aubo_ros2_driver",
+    "category": "industrial-manipulators",
+    "hardware": [
+      "AUBO robot arms"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "NOASSERTION",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "aubo ros 2 driver auborobot aubo ros2 driver industrial-manipulators ros 2 driver repository for aubo robot arms. aubo robot arms official curated noassertion most package manifests indicate bsd bsd-3-clause but one manifest still reports todo confirm complete licensing controller versions models and distro branches upstream."
+  },
+  {
+    "name": "TurtleBot3",
+    "repo": "ROBOTIS-GIT/turtlebot3",
+    "url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+    "category": "mobile-bases-and-robots",
+    "hardware": [
+      "TurtleBot3"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "turtlebot3 robotis-git turtlebot3 mobile-bases-and-robots ros packages for turtlebot3 mobile robots including ros 2 branches and platform bringup. turtlebot3 official curated apache-2.0 check branch and distro documentation before use because ros 1 and ros 2 material coexist upstream."
+  },
+  {
+    "name": "Clearpath Common",
+    "repo": "clearpathrobotics/clearpath_common",
+    "url": "https://github.com/clearpathrobotics/clearpath_common",
+    "category": "mobile-bases-and-robots",
+    "hardware": [
+      "Clearpath robot platforms"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "clearpath common clearpathrobotics clearpath common mobile-bases-and-robots shared ros 2 packages used across clearpath robot platforms. clearpath robot platforms official curated bsd-3-clause use upstream platform docs to map this common package stack to a specific clearpath robot."
+  },
+  {
+    "name": "Clearpath Robot",
+    "repo": "clearpathrobotics/clearpath_robot",
+    "url": "https://github.com/clearpathrobotics/clearpath_robot",
+    "category": "mobile-bases-and-robots",
+    "hardware": [
+      "Clearpath robot platforms"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "clearpath robot clearpathrobotics clearpath robot mobile-bases-and-robots ros 2 platform stack for clearpath robots paired with clearpath configuration and common packages. clearpath robot platforms official curated bsd-3-clause confirm exact robot model generated configuration firmware and distro branch upstream."
+  },
+  {
+    "name": "TurtleBot 4 Robot",
+    "repo": "turtlebot/turtlebot4_robot",
+    "url": "https://github.com/turtlebot/turtlebot4_robot",
+    "category": "mobile-bases-and-robots",
+    "hardware": [
+      "TurtleBot 4"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "turtlebot 4 robot turtlebot turtlebot4 robot mobile-bases-and-robots ros 2 robot packages for turtlebot 4 platform bringup. turtlebot 4 official curated apache-2.0 confirm robot image create3 base firmware sensor configuration and ros distro branch upstream."
+  },
+  {
+    "name": "LinoRobot 2",
+    "repo": "linorobot/linorobot2",
+    "url": "https://github.com/linorobot/linorobot2",
+    "category": "mobile-bases-and-robots",
+    "hardware": [
+      "2WD mobile robots",
+      "4WD mobile robots",
+      "Mecanum mobile robots"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "linorobot 2 linorobot linorobot2 mobile-bases-and-robots ros 2 platform packages for custom 2wd 4wd and mecanum mobile robots. 2wd mobile robots 4wd mobile robots mecanum mobile robots community curated apache-2.0 confirm base electronics motor driver firmware and branch distro mapping upstream."
+  },
+  {
+    "name": "ROSbot ROS",
+    "repo": "husarion/rosbot_ros",
+    "url": "https://github.com/husarion/rosbot_ros",
+    "category": "mobile-bases-and-robots",
+    "hardware": [
+      "Husarion ROSbot XL",
+      "Husarion ROSbot 3",
+      "Husarion ROSbot 2"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "rosbot ros husarion rosbot ros mobile-bases-and-robots ros packages for husarion rosbot mobile robots. husarion rosbot xl husarion rosbot 3 husarion rosbot 2 official curated apache-2.0 confirm exact rosbot model os image firmware and ros distro branch upstream."
+  },
+  {
+    "name": "Scout ROS 2",
+    "repo": "agilexrobotics/scout_ros2",
+    "url": "https://github.com/agilexrobotics/scout_ros2",
+    "category": "mobile-bases-and-robots",
+    "hardware": [
+      "AgileX Scout"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "scout ros 2 agilexrobotics scout ros2 mobile-bases-and-robots ros 2 support package for agilex scout ugv platforms. agilex scout official curated apache-2.0 confirm can interface sdk requirements model variant and ros distro branch upstream."
+  },
+  {
+    "name": "Hunter ROS 2",
+    "repo": "agilexrobotics/hunter_ros2",
+    "url": "https://github.com/agilexrobotics/hunter_ros2",
+    "category": "mobile-bases-and-robots",
+    "hardware": [
+      "AgileX Hunter"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 5,
+    "search_text": "hunter ros 2 agilexrobotics hunter ros2 mobile-bases-and-robots ros 2 support package for agilex hunter ugv platforms. agilex hunter official curated apache-2.0 confirm can interface sdk requirements model variant and ros distro branch upstream."
+  },
+  {
+    "name": "RealSense ROS",
+    "repo": "realsenseai/realsense-ros",
+    "url": "https://github.com/realsenseai/realsense-ros",
+    "category": "cameras-and-rgb-d",
+    "hardware": [
+      "Intel RealSense cameras"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "realsense ros realsenseai realsense-ros cameras-and-rgb-d ros wrapper for intel realsense cameras. intel realsense cameras official curated apache-2.0 confirm supported camera models librealsense version and ros distro branch upstream."
+  },
+  {
+    "name": "ZED ROS 2 Wrapper",
+    "repo": "stereolabs/zed-ros2-wrapper",
+    "url": "https://github.com/stereolabs/zed-ros2-wrapper",
+    "category": "cameras-and-rgb-d",
+    "hardware": [
+      "Stereolabs ZED cameras"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "zed ros 2 wrapper stereolabs zed-ros2-wrapper cameras-and-rgb-d ros 2 wrapper for stereolabs zed cameras and the zed sdk. stereolabs zed cameras official curated apache-2.0 confirm zed sdk version cuda platform requirements camera model coverage and ros distro support upstream."
+  },
+  {
+    "name": "DepthAI ROS",
+    "repo": "luxonis/depthai-ros",
+    "url": "https://github.com/luxonis/depthai-ros",
+    "category": "cameras-and-rgb-d",
+    "hardware": [
+      "Luxonis DepthAI sensors",
+      "Luxonis OAK cameras"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "MIT",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "depthai ros luxonis depthai-ros cameras-and-rgb-d official ros driver packages for luxonis depthai and oak sensors. luxonis depthai sensors luxonis oak cameras official curated mit confirm device model firmware depthai library version and branch distro mapping upstream."
+  },
+  {
+    "name": "Zivid ROS",
+    "repo": "zivid/zivid-ros",
+    "url": "https://github.com/zivid/zivid-ros",
+    "category": "cameras-and-rgb-d",
+    "hardware": [
+      "Zivid 3D cameras"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "zivid ros zivid zivid-ros cameras-and-rgb-d official ros driver for zivid 3d cameras. zivid 3d cameras official curated bsd-3-clause confirm supported zivid sdk version camera model and ros distro support upstream."
+  },
+  {
+    "name": "Orbbec SDK ROS 2",
+    "repo": "orbbec/OrbbecSDK_ROS2",
+    "url": "https://github.com/orbbec/OrbbecSDK_ROS2",
+    "category": "cameras-and-rgb-d",
+    "hardware": [
+      "Orbbec depth cameras"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "orbbec sdk ros 2 orbbec orbbecsdk ros2 cameras-and-rgb-d ros 2 wrapper for orbbec depth cameras using the orbbec sdk. orbbec depth cameras official curated apache-2.0 confirm supported camera models sdk version usb requirements and distro branches upstream."
+  },
+  {
+    "name": "USB Cam",
+    "repo": "ros-drivers/usb_cam",
+    "url": "https://github.com/ros-drivers/usb_cam",
+    "category": "cameras-and-rgb-d",
+    "hardware": [
+      "V4L2 USB cameras"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "usb cam ros-drivers usb cam cameras-and-rgb-d ros driver for video4linux usb cameras. v4l2 usb cameras community curated bsd-3-clause repository license and package manifest indicate bsd-style licensing inspect camera-specific v4l2 behavior upstream."
+  },
+  {
+    "name": "Image Pipeline",
+    "repo": "ros-perception/image_pipeline",
+    "url": "https://github.com/ros-perception/image_pipeline",
+    "category": "cameras-and-rgb-d",
+    "hardware": [
+      "camera pipelines"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "BSD-3-Clause OR Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "image pipeline ros-perception image pipeline cameras-and-rgb-d ros image processing pipeline packages used by many camera stacks. camera pipelines community curated bsd-3-clause or apache-2.0 package manifests indicate bsd licensing for most packages and apache 2.0 for tracetools image pipeline inspect package-level licenses and distro docs upstream."
+  },
+  {
+    "name": "Velodyne",
+    "repo": "ros-drivers/velodyne",
+    "url": "https://github.com/ros-drivers/velodyne",
+    "category": "lidar",
+    "hardware": [
+      "Velodyne 3D LiDAR"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "velodyne ros-drivers velodyne lidar ros support for velodyne 3d lidars. velodyne 3d lidar community curated bsd-3-clause repository license and package manifests indicate bsd-style licensing confirm ros 2 branch status and model coverage upstream."
+  },
+  {
+    "name": "Hokuyo URG Node",
+    "repo": "ros-drivers/urg_node",
+    "url": "https://github.com/ros-drivers/urg_node",
+    "category": "lidar",
+    "hardware": [
+      "Hokuyo URG LiDAR"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "hokuyo urg node ros-drivers urg node lidar ros wrapper for the hokuyo urg c library and hokuyo urg lidar devices. hokuyo urg lidar community curated bsd-3-clause repository license and package manifest indicate bsd-style licensing confirm ros 2 branch urg c dependency and model coverage upstream."
+  },
+  {
+    "name": "YDLIDAR ROS 2 Driver",
+    "repo": "YDLIDAR/ydlidar_ros2_driver",
+    "url": "https://github.com/YDLIDAR/ydlidar_ros2_driver",
+    "category": "lidar",
+    "hardware": [
+      "YDLIDAR 2D LiDAR sensors"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "MIT",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "ydlidar ros 2 driver ydlidar ydlidar ros2 driver lidar ros 2 driver package for ydlidar 2d lidar sensors. ydlidar 2d lidar sensors official curated mit package manifest exposes mit confirm exact sensor model sdk version and serial usb setup upstream."
+  },
+  {
+    "name": "SICK Scan XD",
+    "repo": "SICKAG/sick_scan_xd",
+    "url": "https://github.com/SICKAG/sick_scan_xd",
+    "category": "lidar",
+    "hardware": [
+      "SICK LiDAR sensors",
+      "SICK radar devices"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 5,
+    "search_text": "sick scan xd sickag sick scan xd lidar driver for a broad range of sick lidar and radar devices with ros support. sick lidar sensors sick radar devices official curated apache-2.0 confirm exact sensor family launch configuration fieldbus network setup and ros 2 support notes upstream."
+  },
+  {
+    "name": "SLLIDAR ROS 2",
+    "repo": "Slamtec/sllidar_ros2",
+    "url": "https://github.com/Slamtec/sllidar_ros2",
+    "category": "lidar",
+    "hardware": [
+      "Slamtec SLLIDAR",
+      "Slamtec RPLIDAR"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-2-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "sllidar ros 2 slamtec sllidar ros2 lidar ros 2 driver repository for slamtec sllidar rplidar sensors. slamtec sllidar slamtec rplidar official curated bsd-2-clause check upstream model coverage serial usb setup and maintenance status before deployment."
+  },
+  {
+    "name": "Livox ROS Driver 2",
+    "repo": "Livox-SDK/livox_ros_driver2",
+    "url": "https://github.com/Livox-SDK/livox_ros_driver2",
+    "category": "lidar",
+    "hardware": [
+      "Livox LiDAR sensors"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "MIT",
+    "last_checked": "2026-06-02",
+    "evidence_count": 3,
+    "search_text": "livox ros driver 2 livox-sdk livox ros driver2 lidar ros and ros 2 driver repository for livox lidar devices. livox lidar sensors official curated mit repository license text indicates mit for livox ros driver2 confirm device model livox sdk version and ros 2 branch instructions upstream."
+  },
+  {
+    "name": "Ouster ROS",
+    "repo": "ouster-lidar/ouster-ros",
+    "url": "https://github.com/ouster-lidar/ouster-ros",
+    "category": "lidar",
+    "hardware": [
+      "Ouster OS0",
+      "Ouster OS1",
+      "Ouster OS2",
+      "Ouster OSDome"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause OR BSL-1.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "ouster ros ouster-lidar ouster-ros lidar official ros drivers for ouster os and osdome sensors. ouster os0 ouster os1 ouster os2 ouster osdome official curated bsd-3-clause or bsl-1.0 repository license file indicates bsd-3-clause with bsl-1.0 for bundled optional-lite code confirm firmware sensor generation and ros 2 package support upstream."
+  },
+  {
+    "name": "RoboSense LiDAR SDK",
+    "repo": "RoboSense-LiDAR/rslidar_sdk",
+    "url": "https://github.com/RoboSense-LiDAR/rslidar_sdk",
+    "category": "lidar",
+    "hardware": [
+      "RoboSense LiDAR sensors"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "robosense lidar sdk robosense-lidar rslidar sdk lidar sdk repository for robosense lidar devices with ros and ros 2 support. robosense lidar sensors official curated bsd-3-clause repository license file indicates bsd-3-clause confirm sensor family sdk mode packet source and ros 2 instructions upstream."
+  },
+  {
+    "name": "ROS 2 Ouster Drivers",
+    "repo": "ros-drivers/ros2_ouster_drivers",
+    "url": "https://github.com/ros-drivers/ros2_ouster_drivers",
+    "category": "lidar",
+    "hardware": [
+      "Ouster OS-series LiDAR"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 5,
+    "search_text": "ros 2 ouster drivers ros-drivers ros2 ouster drivers lidar ros 2 drivers for ouster os-series lidar sensors. ouster os-series lidar community curated apache-2.0 check upstream activity and model firmware support before use."
+  },
+  {
+    "name": "MicroStrain Inertial",
+    "repo": "LORD-MicroStrain/microstrain_inertial",
+    "url": "https://github.com/LORD-MicroStrain/microstrain_inertial",
+    "category": "imu-and-positioning",
+    "hardware": [
+      "MicroStrain G-series sensors",
+      "MicroStrain C-series sensors"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "MIT OR BSD-2-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "microstrain inertial lord-microstrain microstrain inertial imu-and-positioning ros driver for microstrain inertial and positioning products. microstrain g-series sensors microstrain c-series sensors official curated mit or bsd-2-clause package license files indicate mit for the driver messages examples and bsd-2-clause for the rqt package confirm exact product family transport firmware and ros 2 branch support upstream."
+  },
+  {
+    "name": "NMEA NavSat Driver",
+    "repo": "ros-drivers/nmea_navsat_driver",
+    "url": "https://github.com/ros-drivers/nmea_navsat_driver",
+    "category": "imu-and-positioning",
+    "hardware": [
+      "NMEA GPS receivers",
+      "NMEA GNSS receivers"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "nmea navsat driver ros-drivers nmea navsat driver imu-and-positioning ros driver for nmea gps and gnss devices that output satellite navigation data. nmea gps receivers nmea gnss receivers community curated bsd-3-clause confirm receiver sentence support serial network transport frame ids and ros distro branch upstream."
+  },
+  {
+    "name": "SBG ROS 2 Driver",
+    "repo": "SBG-Systems/sbg_ros2_driver",
+    "url": "https://github.com/SBG-Systems/sbg_ros2_driver",
+    "category": "imu-and-positioning",
+    "hardware": [
+      "SBG Systems Ellipse",
+      "SBG Systems Quanta",
+      "SBG Systems IMU/AHRS/INS units"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "MIT",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "sbg ros 2 driver sbg-systems sbg ros2 driver imu-and-positioning ros 2 driver for sbg systems imu ahrs and ins products. sbg systems ellipse sbg systems quanta sbg systems imu ahrs ins units official curated mit confirm exact sensor family firmware interface transport and supported ros distro upstream."
+  },
+  {
+    "name": "Fixposition Driver",
+    "repo": "fixposition/fixposition_driver",
+    "url": "https://github.com/fixposition/fixposition_driver",
+    "category": "imu-and-positioning",
+    "hardware": [
+      "Fixposition Vision-RTK 2"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "MIT",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "fixposition driver fixposition fixposition driver imu-and-positioning ros driver for fixposition vision-rtk visual inertial gnss positioning sensors with ros 2 support. fixposition vision-rtk 2 official curated mit confirm exact sensor generation linux driver requirements coordinate frames and ros 2 package support upstream."
+  },
+  {
+    "name": "ROS 2 Robotiq Gripper",
+    "repo": "PickNikRobotics/ros2_robotiq_gripper",
+    "url": "https://github.com/PickNikRobotics/ros2_robotiq_gripper",
+    "category": "grippers-and-end-effectors",
+    "hardware": [
+      "Robotiq grippers"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "BSD-3-Clause",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "ros 2 robotiq gripper picknikrobotics ros2 robotiq gripper grippers-and-end-effectors ros 2 integration for robotiq grippers. robotiq grippers community curated bsd-3-clause confirm exact gripper model transport and controller integration upstream."
+  },
+  {
+    "name": "Robotiq Hand-E Driver",
+    "repo": "AGH-CEAI/robotiq_hande_driver",
+    "url": "https://github.com/AGH-CEAI/robotiq_hande_driver",
+    "category": "grippers-and-end-effectors",
+    "hardware": [
+      "Robotiq Hand-E"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "robotiq hand-e driver agh-ceai robotiq hande driver grippers-and-end-effectors ros 2 driver for the robotiq hand-e gripper. robotiq hand-e community curated apache-2.0 confirm hardware transport firmware assumptions and ros distro support upstream."
+  },
+  {
+    "name": "DH AG95 Gripper ROS 2",
+    "repo": "ian-chuang/dh_ag95_gripper_ros2",
+    "url": "https://github.com/ian-chuang/dh_ag95_gripper_ros2",
+    "category": "grippers-and-end-effectors",
+    "hardware": [
+      "DH Robotics AG95"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "MIT",
+    "last_checked": "2026-06-02",
+    "evidence_count": 5,
+    "search_text": "dh ag95 gripper ros 2 ian-chuang dh ag95 gripper ros2 grippers-and-end-effectors ros 2 driver for the dh robotics ag95 gripper. dh robotics ag95 community curated mit community-maintained entry confirm ag95 hardware revision transport wiring ros2 control integration and ros distro support upstream."
+  },
+  {
+    "name": "DYNAMIXEL Hardware Interface",
+    "repo": "ROBOTIS-GIT/dynamixel_hardware_interface",
+    "url": "https://github.com/ROBOTIS-GIT/dynamixel_hardware_interface",
+    "category": "actuators-and-motor-controllers",
+    "hardware": [
+      "ROBOTIS DYNAMIXEL smart servos"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 4,
+    "search_text": "dynamixel hardware interface robotis-git dynamixel hardware interface actuators-and-motor-controllers ros 2 hardware interface for controlling robotis dynamixel motors through ros2 control. robotis dynamixel smart servos official curated apache-2.0 confirm supported actuator models serial or controller transport ros2 control plugin configuration and ros distro branch upstream."
+  },
+  {
+    "name": "DYNAMIXEL Workbench",
+    "repo": "ROBOTIS-GIT/dynamixel-workbench",
+    "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench",
+    "category": "actuators-and-motor-controllers",
+    "hardware": [
+      "ROBOTIS DYNAMIXEL smart servos"
+    ],
+    "ros2_native": true,
+    "source_status": "official",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 5,
+    "search_text": "dynamixel workbench robotis-git dynamixel-workbench actuators-and-motor-controllers ros packages for dynamixel controllers managers toolbox utilities messages and tutorials with ros 2 branches. robotis dynamixel smart servos official curated apache-2.0 confirm whether workbench or the ros2 control hardware interface is the right integration path for the target ros distro and controller."
+  },
+  {
+    "name": "ODrive ros2_control",
+    "repo": "Factor-Robotics/odrive_ros2_control",
+    "url": "https://github.com/Factor-Robotics/odrive_ros2_control",
+    "category": "actuators-and-motor-controllers",
+    "hardware": [
+      "ODrive motor controllers"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "odrive ros2 control factor-robotics odrive ros2 control actuators-and-motor-controllers ros2 control hardware interface for odrive motor controllers. odrive motor controllers community curated apache-2.0 confirm supported odrive firmware version control mode wiring and ros distro branch upstream before using it in a robot."
+  },
+  {
+    "name": "ros2_control",
+    "repo": "ros-controls/ros2_control",
+    "url": "https://github.com/ros-controls/ros2_control",
+    "category": "control-and-hardware-interfaces",
+    "hardware": [
+      "generic hardware interfaces"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "ros2 control ros-controls ros2 control control-and-hardware-interfaces generic framework for ros 2 controllers and hardware interfaces. generic hardware interfaces community curated apache-2.0 framework entry not a device-specific driver use it to evaluate hardware-interface architecture."
+  },
+  {
+    "name": "ros2_controllers",
+    "repo": "ros-controls/ros2_controllers",
+    "url": "https://github.com/ros-controls/ros2_controllers",
+    "category": "control-and-hardware-interfaces",
+    "hardware": [
+      "generic ROS 2 controllers"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "ros2 controllers ros-controls ros2 controllers control-and-hardware-interfaces generic controller packages that accompany ros2 control. generic ros 2 controllers community curated apache-2.0 framework entry not a device-specific driver verify controller availability for the target ros distro."
+  },
+  {
+    "name": "gz_ros2_control",
+    "repo": "ros-controls/gz_ros2_control",
+    "url": "https://github.com/ros-controls/gz_ros2_control",
+    "category": "control-and-hardware-interfaces",
+    "hardware": [
+      "Gazebo simulated hardware interfaces"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "Apache-2.0",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "gz ros2 control ros-controls gz ros2 control control-and-hardware-interfaces gazebo integration layer that exposes simulated hardware to ros2 control. gazebo simulated hardware interfaces community curated apache-2.0 simulation bridge not a physical device driver use it to validate ros2 control hardware-interface behavior before hardware bringup."
+  },
+  {
+    "name": "ROS 2 CANopen",
+    "repo": "ros-industrial/ros2_canopen",
+    "url": "https://github.com/ros-industrial/ros2_canopen",
+    "category": "control-and-hardware-interfaces",
+    "hardware": [
+      "CANopen devices",
+      "CANopen motor controllers"
+    ],
+    "ros2_native": true,
+    "source_status": "community",
+    "review_status": "curated",
+    "license": "Apache-2.0 OR LGPL-3.0-only",
+    "last_checked": "2026-06-02",
+    "evidence_count": 6,
+    "search_text": "ros 2 canopen ros-industrial ros2 canopen control-and-hardware-interfaces canopen driver framework and ros2 control integration for ros 2 hardware bringup. canopen devices canopen motor controllers community curated apache-2.0 or lgpl-3.0-only package license files indicate apache-2.0 for most packages and lgpl-3.0-only for canopen 402 driver confirm supported cia profiles bus configuration device eds dcf files and ros distro branch upstream."
+  }
+]

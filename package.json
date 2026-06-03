@@ -4,9 +4,48 @@
   "private": false,
   "description": "Curated list of ROS 2 robot, sensor, actuator, and hardware-interface drivers.",
   "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Exokern/awesome-ros2-robot-drivers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Exokern/awesome-ros2-robot-drivers/issues"
+  },
+  "homepage": "https://github.com/Exokern/awesome-ros2-robot-drivers#readme",
   "type": "module",
+  "exports": {
+    "./index": "./dist/index.json",
+    "./summary": "./dist/summary.json",
+    "./categories": "./dist/categories.json",
+    "./hardware-map": "./dist/hardware-map.json",
+    "./search-index": "./dist/search-index.json",
+    "./entries.csv": "./dist/entries.csv",
+    "./schema": "./data/schema.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "CONTRIBUTING.md",
+    "README.md",
+    "LICENSE",
+    "data/",
+    "dist/",
+    "docs/",
+    "scripts/",
+    "templates/"
+  ],
   "scripts": {
-    "validate": "node scripts/validate-index.mjs"
+    "audit:evidence": "node scripts/audit-evidence-links.mjs",
+    "audit:evidence:artifacts": "node scripts/audit-evidence-links.mjs --output-dir audit-results",
+    "audit:github": "node scripts/audit-github-metadata.mjs",
+    "audit:github:artifacts": "node scripts/audit-github-metadata.mjs --output-dir audit-results",
+    "export": "node scripts/render-exports.mjs",
+    "find": "node scripts/query-index.mjs",
+    "generate": "node scripts/generate.mjs",
+    "lint:awesome": "awesome-lint",
+    "report": "node scripts/render-curation-report.mjs",
+    "smoke": "node scripts/smoke-local-tools.mjs",
+    "validate": "node scripts/validate-index.mjs",
+    "check": "npm run validate && npm run smoke && npm run lint:awesome"
   },
   "keywords": [
     "awesome",
@@ -15,6 +54,8 @@
     "ros2",
     "drivers",
     "robot-drivers"
-  ]
+  ],
+  "devDependencies": {
+    "awesome-lint": "2.3.0"
+  }
 }
-

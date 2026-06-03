@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.3",
+  "reviewed_at": "2026-06-02",
+  "entry_count": 48,
+  "category_count": 8,
+  "counts_by_category": {
+    "industrial-manipulators": 10,
+    "mobile-bases-and-robots": 8,
+    "cameras-and-rgb-d": 7,
+    "lidar": 9,
+    "imu-and-positioning": 4,
+    "grippers-and-end-effectors": 3,
+    "actuators-and-motor-controllers": 3,
+    "control-and-hardware-interfaces": 4
+  },
+  "counts_by_source_status": {
+    "community": 16,
+    "official": 32
+  },
+  "counts_by_review_status": {
+    "curated": 48
+  },
+  "counts_by_license": {
+    "Apache-2.0": 20,
+    "Apache-2.0 OR LGPL-3.0-only": 1,
+    "BSD-2-Clause": 1,
+    "BSD-3-Clause": 15,
+    "BSD-3-Clause OR Apache-2.0": 1,
+    "BSD-3-Clause OR BSL-1.0": 1,
+    "MIT": 6,
+    "MIT OR BSD-2-Clause": 1,
+    "NOASSERTION": 2
+  },
+  "license_follow_up_repos": [
+    "AuboRobot/aubo_ros2_driver",
+    "Yaskawa-Global/motoros2"
+  ],
+  "low_coverage_categories": [],
+  "stale_entry_repos": [],
+  "oldest_review_age_days_by_category": {
+    "industrial-manipulators": 0,
+    "mobile-bases-and-robots": 0,
+    "cameras-and-rgb-d": 0,
+    "lidar": 0,
+    "imu-and-positioning": 0,
+    "grippers-and-end-effectors": 0,
+    "actuators-and-motor-controllers": 0,
+    "control-and-hardware-interfaces": 0
+  },
+  "quality_gates": {
+    "passed": true,
+    "thresholds": {
+      "minimumEntriesPerCategory": 3,
+      "maximumLicenseFollowUps": 5,
+      "maximumLastCheckedAgeDays": 180,
+      "minimumEvidenceLinksPerEntry": 2
+    },
+    "gates": [
+      {
+        "id": "minimum-category-coverage",
+        "name": "Minimum category coverage",
+        "threshold": ">= 3 entries per category",
+        "actual": "0 categories below threshold",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "id": "license-follow-up-budget",
+        "name": "License follow-up budget",
+        "threshold": "<= 5 NOASSERTION entries",
+        "actual": "2 NOASSERTION entries",
+        "passed": true,
+        "failures": [
+          "AuboRobot/aubo_ros2_driver",
+          "Yaskawa-Global/motoros2"
+        ]
+      },
+      {
+        "id": "review-freshness",
+        "name": "Review freshness",
+        "threshold": "<= 180 days since last check",
+        "actual": "0 stale entries",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "id": "evidence-completeness",
+        "name": "Evidence completeness",
+        "threshold": ">= 2 evidence links per entry, including repository plus support",
+        "actual": "0 entries missing required evidence",
+        "passed": true,
+        "failures": []
+      }
+    ]
+  }
+}

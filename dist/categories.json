@@ -1,0 +1,123 @@
+[
+  {
+    "id": "industrial-manipulators",
+    "name": "Industrial Manipulators",
+    "description": "Robot-arm drivers, controller bridges, and ros2_control integrations for industrial and collaborative manipulators.",
+    "entry_count": 10,
+    "source_status_counts": {
+      "community": 1,
+      "official": 9
+    },
+    "review_status_counts": {
+      "curated": 10
+    },
+    "license_follow_up_count": 2,
+    "license_follow_up_repos": [
+      "AuboRobot/aubo_ros2_driver",
+      "Yaskawa-Global/motoros2"
+    ]
+  },
+  {
+    "id": "mobile-bases-and-robots",
+    "name": "Mobile Bases And Robots",
+    "description": "Drivers and platform package stacks for mobile robots and base platforms.",
+    "entry_count": 8,
+    "source_status_counts": {
+      "community": 1,
+      "official": 7
+    },
+    "review_status_counts": {
+      "curated": 8
+    },
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
+  },
+  {
+    "id": "cameras-and-rgb-d",
+    "name": "Cameras And RGB-D",
+    "description": "Camera, RGB-D, and image pipeline packages used for perception bringup.",
+    "entry_count": 7,
+    "source_status_counts": {
+      "community": 2,
+      "official": 5
+    },
+    "review_status_counts": {
+      "curated": 7
+    },
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
+  },
+  {
+    "id": "lidar",
+    "name": "LiDAR",
+    "description": "2D and 3D LiDAR drivers and sensor wrappers.",
+    "entry_count": 9,
+    "source_status_counts": {
+      "community": 3,
+      "official": 6
+    },
+    "review_status_counts": {
+      "curated": 9
+    },
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
+  },
+  {
+    "id": "imu-and-positioning",
+    "name": "IMU And Positioning",
+    "description": "IMU, GNSS, inertial, and positioning sensor drivers used in robot state estimation.",
+    "entry_count": 4,
+    "source_status_counts": {
+      "community": 1,
+      "official": 3
+    },
+    "review_status_counts": {
+      "curated": 4
+    },
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
+  },
+  {
+    "id": "grippers-and-end-effectors",
+    "name": "Grippers And End Effectors",
+    "description": "Drivers for grippers, end effectors, and related actuator interfaces.",
+    "entry_count": 3,
+    "source_status_counts": {
+      "community": 3
+    },
+    "review_status_counts": {
+      "curated": 3
+    },
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
+  },
+  {
+    "id": "actuators-and-motor-controllers",
+    "name": "Actuators And Motor Controllers",
+    "description": "Actuator SDKs, smart-servo interfaces, and motor-controller packages used in ROS 2 hardware bringup.",
+    "entry_count": 3,
+    "source_status_counts": {
+      "community": 1,
+      "official": 2
+    },
+    "review_status_counts": {
+      "curated": 3
+    },
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
+  },
+  {
+    "id": "control-and-hardware-interfaces",
+    "name": "Control And Hardware Interfaces",
+    "description": "Core ROS 2 control frameworks, controllers, and generic hardware-interface packages.",
+    "entry_count": 4,
+    "source_status_counts": {
+      "community": 4
+    },
+    "review_status_counts": {
+      "curated": 4
+    },
+    "license_follow_up_count": 0,
+    "license_follow_up_repos": []
+  }
+]

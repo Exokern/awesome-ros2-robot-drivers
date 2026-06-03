@@ -1,0 +1,28 @@
+name: GitHub Metadata Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 7 * * 1"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm run audit:github:artifacts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - run: npm run audit:evidence:artifacts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curation-audits
+          path: audit-results/

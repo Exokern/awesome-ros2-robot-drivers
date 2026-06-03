@@ -9,9 +9,15 @@ labels: suggestion
 
 https://github.com/
 
+Before suggesting a new entry, please search the existing list or run `npm run find -- --q <hardware-or-repo>` locally if you have the repo checked out.
+
 ## Hardware
 
 Robot, sensor, gripper, actuator, or controller target:
+
+## ROS 2 role
+
+Driver, wrapper, bridge, hardware interface, controller, or platform stack:
 
 ## Why it belongs
 
@@ -21,3 +27,6 @@ What makes this a useful ROS 2 driver or hardware-interface entry?
 
 License, supported distros, caveats, or upstream docs:
 
+## Evidence
+
+Links to README, package.xml, license, release, documentation, or other upstream evidence:
