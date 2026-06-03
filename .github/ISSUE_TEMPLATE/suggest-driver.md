@@ -9,6 +9,8 @@ labels: suggestion
 
 https://github.com/
 
+Before suggesting a new entry, please search the existing list or run `npm run find -- --q <hardware-or-repo>` locally if you have the repo checked out.
+
 ## Hardware
 
 Robot, sensor, gripper, actuator, or controller target:

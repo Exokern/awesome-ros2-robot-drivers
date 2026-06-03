@@ -9,8 +9,9 @@
 
 ## Checks
 
-- [ ] `npm run validate`
 - [ ] `npm run generate` was run after editing `data/index.json`
+- [ ] `npm run check`
+- [ ] `npm run audit:evidence` was run after adding or changing evidence links
 - [ ] Entry is a GitHub repository root URL with no trailing slash
 - [ ] Entry is driver/hardware-interface/controller related
 - [ ] Canonical metadata in `data/index.json` was updated

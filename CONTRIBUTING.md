@@ -16,9 +16,7 @@ Then regenerate the readable list:
 
 ```bash
 npm run generate
-npm run validate
-npm run smoke
-npm run lint:awesome
+npm run check
 ```
 
 Do not edit generated README, curation-report, or `dist/` export output by hand. If generated output is wrong, fix the metadata or the renderer.
@@ -70,7 +68,7 @@ For `license`, prefer the SPDX value exposed by GitHub when it exists. If GitHub
 
 Use [docs/curation-report.md](docs/curation-report.md) to find weak categories, license follow-ups, and aging entries before proposing broad additions. Strong entries should improve the report, not just increase the count.
 
-`npm run validate` enforces the standard gates: every category needs at least 3 curated entries, the index may have at most 5 `NOASSERTION` license follow-ups, and every entry must have been checked within 180 days of `reviewed_at`.
+`npm run check` enforces the standard gates: every category needs at least 3 curated entries, the index may have at most 5 `NOASSERTION` license follow-ups, every entry must have been checked within 180 days of `reviewed_at`, local search/package smoke tests must pass, and the README must stay Awesome-list compliant.
 
 Good notes are specific:
 
