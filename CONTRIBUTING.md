@@ -4,6 +4,8 @@ This repository curates ROS 2 driver repositories. It is not a place for marketi
 
 The goal is a high-signal index that a robotics engineer can use before choosing hardware or planning bringup.
 
+For the full review standard, see [docs/curation-policy.md](docs/curation-policy.md).
+
 ## Add Or Update An Entry
 
 Open a pull request that updates the canonical metadata:
@@ -30,6 +32,8 @@ Entries should have:
 - A visible license, `NOASSERTION`, or a direct caveat when licensing is unclear.
 - A concise caveat covering branch, distro, firmware, controller, hardware, license, or maintenance uncertainty.
 - No claim that EXOKERN or this list has tested the driver on hardware.
+
+Use [docs/curation-policy.md](docs/curation-policy.md) when deciding category placement, status fields, stale-entry handling, and merge readiness.
 
 ## Review Status
 

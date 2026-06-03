@@ -64,6 +64,7 @@ Use this list to find maintained upstream driver projects before choosing a hard
 ${categoryLinks}
 - [Selection Checklist](#selection-checklist)
 - [Review Rules](#review-rules)
+- [Curation Policy](#curation-policy)
 - [Data And Automation](#data-and-automation)
 - [Quality Gates](#quality-gates)
 - [Curation Report](#curation-report)
@@ -96,6 +97,10 @@ Main-list entries must have:
 - No claim that EXOKERN or this list has tested the driver on hardware.
 
 Entries that are ROS 1 only, archived, experimental, or unclear should be labeled with a caveat instead of being presented as production-ready.
+
+## Curation Policy
+
+Use [docs/curation-policy.md](docs/curation-policy.md) for acceptance rules, category selection, status semantics, license evidence, stale-entry handling, and merge expectations.
 
 ## Data And Automation
 
@@ -136,7 +141,7 @@ For deeper compatibility metadata, use the [EXOKERN Robot Skill Spec](https://gi
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Pull requests should update [data/index.json](data/index.json), run \`npm run generate\`, and pass \`npm run validate\`.
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/curation-policy.md](docs/curation-policy.md). Pull requests should update [data/index.json](data/index.json), run \`npm run generate\`, and pass \`npm run validate\`.
 `;
 }
 
