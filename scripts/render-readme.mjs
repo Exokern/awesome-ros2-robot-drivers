@@ -52,6 +52,8 @@ function renderQuickSearch() {
   return [
     "## Quick Search",
     "",
+    "Use the GitHub Pages directory linked above for browser search and filtering, or query the canonical index locally:",
+    "",
     "```bash",
     "npm run find -- --q realsense",
     "npm run find -- --category lidar",
@@ -120,14 +122,22 @@ export function renderReadme(data) {
 
   return `# Awesome ROS 2 Robot Drivers [![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
 
-[![Validate](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml/badge.svg)](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml)
+[![Validate](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml/badge.svg)](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/validate.yml) [![Metadata audit](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/audit.yml/badge.svg)](https://github.com/Exokern/awesome-ros2-robot-drivers/actions/workflows/audit.yml) [![CC0](https://img.shields.io/badge/data-CC0--1.0-161b22.svg)](LICENSE)
 
-Find ROS 2 driver repositories for robot arms, mobile bases, cameras, LiDAR, IMUs, grippers, actuators, controllers, and hardware interfaces.
+An evidence-backed directory of ROS 2 drivers for real robot hardware.
 
-Use this before buying hardware or planning bringup. Each entry points to the upstream repository and calls out the main thing to verify before deployment.
+Search ${data.entries.length} curated upstream repositories across ${data.categories.length} hardware categories before buying hardware or planning bringup. Every entry records the target hardware, upstream ownership, license evidence, review date, and the first deployment risk to verify.
 
-- Last reviewed: ${data.reviewed_at}
-- Entries: ${data.entries.length}
+**[Search the directory](https://exokern.github.io/awesome-ros2-robot-drivers/)** · [Download JSON](dist/index.json) · [Download CSV](dist/entries.csv) · [Suggest a driver](#suggest-a-driver)
+
+${markdownTable(["Scope", "Current index"], [
+    ["Curated repositories", String(data.entries.length)],
+    ["Hardware categories", String(data.categories.length)],
+    ["Official upstream sources", String(data.entries.filter((entry) => entry.source_status === "official").length)],
+    ["Last full review", data.reviewed_at],
+  ])}
+
+This is a discovery and decision-support index, not a compatibility guarantee or hardware test report.
 
 ${renderQuickSearch()}
 
@@ -193,9 +203,10 @@ npm run audit:github
 npm run audit:evidence
 npm run audit:github:artifacts
 npm run audit:evidence:artifacts
+npm run site:check
 \`\`\`
 
-\`npm run validate\` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. \`npm run smoke\` checks package exports, search output, JSON query output, and the hardware lookup map. \`npm run lint:awesome\` checks README conformance with Awesome-list rules. \`npm run export\` refreshes only the machine-readable \`dist/\` outputs. \`npm run find\` queries the canonical index locally by text, category, hardware, source status, review status, and license. \`npm run audit:github\` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. \`npm run audit:evidence\` checks that every structured evidence link resolves through GitHub. The \`:artifacts\` audit variants also write JSON and CSV snapshots under \`audit-results/\`.
+\`npm run validate\` checks schema version, category coverage, duplicate repositories, GitHub root URLs, clean metadata fields, README drift, curation-report drift, and export drift. \`npm run smoke\` checks package exports, search output, JSON query output, and the hardware lookup map. \`npm run lint:awesome\` checks README conformance with Awesome-list rules. \`npm run site:check\` builds and verifies the GitHub Pages directory. \`npm run export\` refreshes only the machine-readable \`dist/\` outputs. \`npm run find\` queries the canonical index locally by text, category, hardware, source status, review status, and license. \`npm run audit:github\` checks that upstream repositories are still reachable, unarchived, and aligned with indexed license metadata. \`npm run audit:evidence\` checks that every structured evidence link resolves through GitHub. The \`:artifacts\` audit variants also write JSON and CSV snapshots under \`audit-results/\`.
 
 ## Maintenance Model
 

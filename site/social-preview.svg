@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f7f7f4"/>
+  <rect x="70" y="70" width="1060" height="490" fill="#eeede8"/>
+  <text x="110" y="130" fill="#26251e" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="2">EXOKERN</text>
+  <text x="110" y="184" fill="#666258" font-family="Courier New, monospace" font-size="17">CURATED ROS 2 HARDWARE DIRECTORY</text>
+  <text x="110" y="300" fill="#26251e" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="400">Find the driver before you</text>
+  <text x="110" y="374" fill="#26251e" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="400">choose the hardware.</text>
+  <line x1="110" y1="444" x2="1090" y2="444" stroke="#bcb8ad"/>
+  <text x="110" y="495" fill="#57544c" font-family="Arial, Helvetica, sans-serif" font-size="23">Evidence-backed ROS 2 driver discovery.</text>
+  <rect x="1065" y="478" width="14" height="14" fill="#f54e00"/>
+</svg>
