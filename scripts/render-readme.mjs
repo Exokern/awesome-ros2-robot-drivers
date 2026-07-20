@@ -137,7 +137,7 @@ ${markdownTable(["Scope", "Current index"], [
     ["Last full review", data.reviewed_at],
   ])}
 
-This is a discovery and decision-support index, not a compatibility guarantee or hardware test report.
+This is a public discovery and decision-support index, not a compatibility guarantee, endorsement, or hardware test report. A listed repository remains subject to its upstream documentation, version support, licensing, and local workcell validation.
 
 ${renderQuickSearch()}
 
@@ -251,7 +251,7 @@ Use \`npm run find -- --q realsense\`, \`npm run find -- --category lidar\`, or 
 
 ## Related EXOKERN Spec
 
-For deeper compatibility metadata, use the [EXOKERN Robot Skill Spec](https://github.com/Exokern/robot-skill-spec). This awesome list should not duplicate that schema. If an upstream project ships a \`robot_skill.yaml\`, link it in the entry metadata or pull request evidence; if not, use [templates/robot_skill.yaml](templates/robot_skill.yaml) as a starting point for a future overlay.
+The [EXOKERN Robot Skill Spec](https://github.com/Exokern/robot-skill-spec) defines review metadata for task, compatibility, interfaces, evidence, and operating limits. The two public projects are complementary; neither executes robot software. This awesome list should not duplicate that schema. If an upstream project ships a \`robot_skill.yaml\`, link it in the entry metadata or pull request evidence; if not, use [templates/robot_skill.yaml](templates/robot_skill.yaml) as a starting point for a future overlay.
 
 ## Contributing
 

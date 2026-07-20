@@ -12,28 +12,45 @@
     <meta property="og:image" content="https://exokern.github.io/awesome-ros2-robot-drivers/social-preview.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://exokern.github.io/awesome-ros2-robot-drivers/">
+    <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="favicon-light.png" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="favicon-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/jetbrains-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="exokern-wordmark.png" as="image">
+    <script>
+      (() => {
+        const stored = localStorage.getItem("exokern-theme") || "system";
+        const dark = stored === "dark" || (stored === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        document.documentElement.dataset.themePreference = stored;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#171713" : "#f7f7f4");
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css">
     <title>Awesome ROS 2 Robot Drivers</title>
   </head>
   <body>
     <a class="skip-link" href="#directory">Skip to directory</a>
 
-    <header class="site-header">
-      <a class="exokern-link" href="https://exokern.com" aria-label="EXOKERN home">
-        <img src="exokern-wordmark.png" alt="EXOKERN" width="1079" height="129">
-      </a>
-      <span class="header-divider" aria-hidden="true"></span>
-      <a class="index-name" href="./">ROS 2 driver index</a>
-      <nav aria-label="Project links">
-        <a href="https://github.com/Exokern/awesome-ros2-robot-drivers/blob/main/docs/selection-guide.md">Selection guide</a>
-        <a class="github-link" href="https://github.com/Exokern/awesome-ros2-robot-drivers">GitHub <span aria-hidden="true">↗</span></a>
-      </nav>
-    </header>
+    <div class="site-nav-wrap">
+      <header class="site-header">
+        <a class="exokern-link" href="https://exokern.com" aria-label="EXOKERN home">
+          <img src="exokern-wordmark.png" alt="EXOKERN" width="1079" height="129">
+        </a>
+        <a class="index-name" href="./">ROS 2 Driver Index</a>
+        <nav aria-label="Project links">
+          <a href="https://github.com/Exokern/awesome-ros2-robot-drivers/blob/main/docs/selection-guide.md">Selection guide</a>
+          <a class="github-link" href="https://github.com/Exokern/awesome-ros2-robot-drivers">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+    </div>
 
     <main>
       <section class="hero" aria-labelledby="page-title">
-        <p class="overline">Curated ROS 2 hardware directory</p>
+        <p class="overline"><span class="status-dot" aria-hidden="true"></span> Public index · Evidence-backed discovery</p>
         <div class="hero-grid">
           <div>
             <h1 id="page-title">Find the driver before you choose the hardware.</h1>
@@ -90,8 +107,24 @@
     </main>
 
     <footer>
-      <p>Maintained by <a href="https://exokern.com">EXOKERN</a> for the ROS 2 community.</p>
-      <p><a href="https://github.com/Exokern/awesome-ros2-robot-drivers/blob/main/LICENSE">CC0-1.0</a></p>
+      <div class="footer-brand">
+        <img src="exokern-wordmark.png" alt="EXOKERN" width="1079" height="129">
+        <p>Public technical work for inspectable robot integration decisions.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Exokern/awesome-ros2-robot-drivers">Driver index repository</a>
+        <a href="https://exokern.github.io/robot-skill-spec/">Robot Skill Spec</a>
+        <a href="https://skills.exokern.com">Skill registry</a>
+        <a href="https://exokern.com">exokern.com</a>
+      </div>
+      <div class="footer-meta">
+        <p>Public index · CC0-1.0</p>
+        <div class="theme-control" role="group" aria-label="Color theme">
+          <button type="button" data-theme-option="system">System</button>
+          <button type="button" data-theme-option="light">Light</button>
+          <button type="button" data-theme-option="dark">Dark</button>
+        </div>
+      </div>
     </footer>
 
     <noscript>JavaScript is required for browser search. The complete index remains available in the <a href="https://github.com/Exokern/awesome-ros2-robot-drivers#readme">GitHub README</a>.</noscript>

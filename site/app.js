@@ -16,6 +16,22 @@ const elements = {
 let indexData;
 let categoryNames = new Map();
 
+function resolvedTheme(preference) {
+  return preference === "system"
+    ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    : preference;
+}
+
+function applyTheme(preference) {
+  const theme = resolvedTheme(preference);
+  document.documentElement.dataset.theme = theme;
+  document.documentElement.dataset.themePreference = preference;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#171713" : "#f7f7f4");
+  document.querySelectorAll("[data-theme-option]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.themeOption === preference));
+  });
+}
+
 function normalize(value) {
   return String(value ?? "")
     .toLowerCase()
@@ -277,4 +293,15 @@ async function start() {
   }
 }
 
+document.querySelectorAll("[data-theme-option]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const preference = button.dataset.themeOption;
+    localStorage.setItem("exokern-theme", preference);
+    applyTheme(preference);
+  });
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+  if ((localStorage.getItem("exokern-theme") || "system") === "system") applyTheme("system");
+});
+applyTheme(localStorage.getItem("exokern-theme") || "system");
 start();
