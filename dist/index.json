@@ -125,7 +125,7 @@
         },
         {
           "type": "manifest",
-          "url": "https://github.com/frankarobotics/franka_ros2/blob/humble/franka_gazebo_bringup/package.xml"
+          "url": "https://github.com/frankarobotics/franka_ros2/blob/humble/franka_gazebo/franka_gazebo_bringup/package.xml"
         }
       ]
     },

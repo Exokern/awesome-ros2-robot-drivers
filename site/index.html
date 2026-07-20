@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f7f4">
+    <meta name="description" content="Search an evidence-backed directory of ROS 2 drivers for robot arms, mobile bases, cameras, LiDAR, IMUs, grippers, actuators, and hardware interfaces.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Awesome ROS 2 Robot Drivers">
+    <meta property="og:description" content="Find curated ROS 2 hardware drivers before buying hardware or planning bringup.">
+    <meta property="og:url" content="https://exokern.github.io/awesome-ros2-robot-drivers/">
+    <meta property="og:image" content="https://exokern.github.io/awesome-ros2-robot-drivers/social-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://exokern.github.io/awesome-ros2-robot-drivers/">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Awesome ROS 2 Robot Drivers</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#directory">Skip to directory</a>
+
+    <header class="site-header">
+      <a class="exokern-link" href="https://exokern.com" aria-label="EXOKERN home">
+        <img src="exokern-wordmark.png" alt="EXOKERN" width="1079" height="129">
+      </a>
+      <span class="header-divider" aria-hidden="true"></span>
+      <a class="index-name" href="./">ROS 2 driver index</a>
+      <nav aria-label="Project links">
+        <a href="https://github.com/Exokern/awesome-ros2-robot-drivers/blob/main/docs/selection-guide.md">Selection guide</a>
+        <a class="github-link" href="https://github.com/Exokern/awesome-ros2-robot-drivers">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="overline">Curated ROS 2 hardware directory</p>
+        <div class="hero-grid">
+          <div>
+            <h1 id="page-title">Find the driver before you choose the hardware.</h1>
+            <p class="hero-copy">Search upstream repositories by hardware, category, ownership, license, and review status. Every result includes the first bringup risk to verify.</p>
+          </div>
+          <dl class="stats" aria-label="Index summary">
+            <div><dt id="entry-stat">—</dt><dd>curated repositories</dd></div>
+            <div><dt id="category-stat">—</dt><dd>hardware categories</dd></div>
+            <div><dt id="official-stat">—</dt><dd>official sources</dd></div>
+            <div><dt id="review-stat">—</dt><dd>last full review</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="directory" id="directory" aria-labelledby="directory-title">
+        <div class="search-row">
+          <div class="search-field">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.75"/><path d="m16 16 4.25 4.25"/></svg>
+            <label class="sr-only" for="search">Search drivers, hardware, repositories, and caveats</label>
+            <input id="search" type="search" autocomplete="off" spellcheck="false" placeholder="Search hardware, vendor, driver, or bringup risk">
+            <kbd aria-hidden="true">/</kbd>
+          </div>
+          <button id="clear-filters" type="button">Reset</button>
+        </div>
+
+        <div class="filters" aria-label="Directory filters">
+          <label>Category<select id="category-filter"><option value="">All categories</option></select></label>
+          <label>Ownership<select id="source-filter"><option value="">All sources</option><option value="official">Official</option><option value="community">Community</option><option value="vendor-adjacent">Vendor-adjacent</option><option value="legacy">Legacy</option></select></label>
+          <label>Review<select id="review-filter"><option value="">All review states</option><option value="curated">Curated</option><option value="needs-review">Needs review</option><option value="candidate">Candidate</option><option value="legacy">Legacy</option></select></label>
+          <label>License<select id="license-filter"><option value="">All licenses</option></select></label>
+        </div>
+
+        <div class="results-heading">
+          <h2 id="directory-title"><span id="result-count">—</span> matching drivers</h2>
+          <p>Indexed means reviewed for discovery, not tested or guaranteed compatible.</p>
+        </div>
+        <div class="results" id="results" aria-live="polite" aria-busy="true"></div>
+      </section>
+
+      <section class="method" aria-labelledby="method-title">
+        <div>
+          <p class="overline">Curation method</p>
+          <h2 id="method-title">Useful evidence. Visible uncertainty.</h2>
+        </div>
+        <div>
+          <p>The index records upstream ownership, license evidence, review freshness, and a deployment caveat for every entry. It does not claim that EXOKERN tested the driver or hardware.</p>
+          <div class="method-links">
+            <a href="https://github.com/Exokern/awesome-ros2-robot-drivers/blob/main/docs/curation-policy.md">Curation policy <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/Exokern/awesome-ros2-robot-drivers/issues/new?template=suggest-driver.md">Suggest a driver <span aria-hidden="true">↗</span></a>
+            <a href="data/index.json" download>Canonical JSON <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Maintained by <a href="https://exokern.com">EXOKERN</a> for the ROS 2 community.</p>
+      <p><a href="https://github.com/Exokern/awesome-ros2-robot-drivers/blob/main/LICENSE">CC0-1.0</a></p>
+    </footer>
+
+    <noscript>JavaScript is required for browser search. The complete index remains available in the <a href="https://github.com/Exokern/awesome-ros2-robot-drivers#readme">GitHub README</a>.</noscript>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

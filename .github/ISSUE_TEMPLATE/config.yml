@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ROS 2 driver selection guide
+    url: https://github.com/Exokern/awesome-ros2-robot-drivers/blob/main/docs/selection-guide.md
+    about: Check the selection workflow before relying on an indexed repository for hardware bringup.
+  - name: Ask the upstream maintainer
+    url: https://github.com/Exokern/awesome-ros2-robot-drivers#before-bringup
+    about: Compatibility and installation questions belong in the listed upstream repository.

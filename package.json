@@ -41,11 +41,13 @@
     "export": "node scripts/render-exports.mjs",
     "find": "node scripts/query-index.mjs",
     "generate": "node scripts/generate.mjs",
+    "site:build": "node scripts/build-site.mjs",
+    "site:check": "node scripts/check-site.mjs",
     "lint:awesome": "awesome-lint",
     "report": "node scripts/render-curation-report.mjs",
     "smoke": "node scripts/smoke-local-tools.mjs",
     "validate": "node scripts/validate-index.mjs",
-    "check": "npm run validate && npm run smoke && npm run lint:awesome"
+    "check": "npm run validate && npm run smoke && npm run lint:awesome && npm run site:check"
   },
   "keywords": [
     "awesome",
