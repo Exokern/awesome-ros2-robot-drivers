@@ -13,7 +13,7 @@ Search 48 curated upstream repositories across 8 hardware categories before buyi
 | Curated repositories      | 48            |
 | Hardware categories       | 8             |
 | Official upstream sources | 32            |
-| Last full review          | 2026-10-04    |
+| Latest index review       | 2026-10-04    |
 
 This is a public discovery and decision-support index, not a compatibility guarantee, endorsement, or hardware test report. A listed repository remains subject to its upstream documentation, version support, licensing, and local workcell validation.
 

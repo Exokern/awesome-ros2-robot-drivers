@@ -134,7 +134,7 @@ ${markdownTable(["Scope", "Current index"], [
     ["Curated repositories", String(data.entries.length)],
     ["Hardware categories", String(data.categories.length)],
     ["Official upstream sources", String(data.entries.filter((entry) => entry.source_status === "official").length)],
-    ["Last full review", data.reviewed_at],
+    ["Latest index review", data.reviewed_at],
   ])}
 
 This is a public discovery and decision-support index, not a compatibility guarantee, endorsement, or hardware test report. A listed repository remains subject to its upstream documentation, version support, licensing, and local workcell validation.
