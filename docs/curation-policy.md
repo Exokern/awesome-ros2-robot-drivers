@@ -113,3 +113,7 @@ Every pull request that changes curation data should:
 - Improve or preserve the generated quality gates.
 
 The generated README, curation report, and `dist/` exports should not be edited by hand.
+
+## Retired Entries
+
+- 2026-10-04: Removed [DYNAMIXEL Workbench](https://github.com/ROBOTIS-GIT/dynamixel-workbench) from the active index after upstream archived it. The actuator category now includes the vendor's [DYNAMIXEL SDK ROS 2 wrapper](https://github.com/ROBOTIS-GIT/DynamixelSDK/blob/main/ros/dynamixel_sdk/package.xml). This is a lower-level integration option, not a drop-in controller replacement; the existing DYNAMIXEL Hardware Interface entry covers ros2_control integration. Workbench remains available upstream for historical reference.

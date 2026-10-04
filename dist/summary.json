@@ -1,6 +1,6 @@
 {
   "schema_version": "0.3",
-  "reviewed_at": "2026-06-02",
+  "reviewed_at": "2026-10-04",
   "entry_count": 48,
   "category_count": 8,
   "counts_by_category": {
@@ -48,14 +48,14 @@
   "low_coverage_categories": [],
   "stale_entry_repos": [],
   "oldest_review_age_days_by_category": {
-    "industrial-manipulators": 0,
-    "mobile-bases-and-robots": 0,
-    "cameras-and-rgb-d": 0,
-    "lidar": 0,
-    "imu-and-positioning": 0,
-    "grippers-and-end-effectors": 0,
-    "actuators-and-motor-controllers": 0,
-    "control-and-hardware-interfaces": 0
+    "industrial-manipulators": 124,
+    "mobile-bases-and-robots": 124,
+    "cameras-and-rgb-d": 124,
+    "lidar": 124,
+    "imu-and-positioning": 124,
+    "grippers-and-end-effectors": 124,
+    "actuators-and-motor-controllers": 124,
+    "control-and-hardware-interfaces": 124
   },
   "quality_gates": {
     "passed": true,

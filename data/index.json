@@ -1,6 +1,6 @@
 {
   "schema_version": "0.3",
-  "reviewed_at": "2026-06-02",
+  "reviewed_at": "2026-10-04",
   "categories": [
     {
       "id": "industrial-manipulators",
@@ -1696,11 +1696,11 @@
       ]
     },
     {
-      "name": "DYNAMIXEL Workbench",
-      "repo": "ROBOTIS-GIT/dynamixel-workbench",
-      "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench",
+      "name": "DYNAMIXEL SDK",
+      "repo": "ROBOTIS-GIT/DynamixelSDK",
+      "url": "https://github.com/ROBOTIS-GIT/DynamixelSDK",
       "category": "actuators-and-motor-controllers",
-      "description": "ROS packages for DYNAMIXEL controllers, managers, toolbox utilities, messages, and tutorials with ROS 2 branches.",
+      "description": "ROS 2 wrapper for ROBOTIS DYNAMIXEL SDK packet communication and actuator control.",
       "hardware": [
         "ROBOTIS DYNAMIXEL smart servos"
       ],
@@ -1708,28 +1708,24 @@
       "source_status": "official",
       "review_status": "curated",
       "license": "Apache-2.0",
-      "last_checked": "2026-06-02",
-      "notes": "Confirm whether Workbench or the ros2_control hardware interface is the right integration path for the target ROS distro and controller.",
+      "last_checked": "2026-10-04",
+      "notes": "Lower-level ROS 2 SDK wrapper, not a drop-in Workbench controller replacement. Confirm actuator protocol, transport, and distro branch; use dynamixel_hardware_interface for ros2_control integration.",
       "evidence": [
         {
           "type": "repository",
-          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench"
+          "url": "https://github.com/ROBOTIS-GIT/DynamixelSDK"
         },
         {
           "type": "readme",
-          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench/blob/main/README.md"
+          "url": "https://github.com/ROBOTIS-GIT/DynamixelSDK/blob/main/README.md"
         },
         {
           "type": "license",
-          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench/blob/main/LICENSE"
+          "url": "https://github.com/ROBOTIS-GIT/DynamixelSDK/blob/main/LICENSE"
         },
         {
           "type": "manifest",
-          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench/blob/main/dynamixel_workbench/package.xml"
-        },
-        {
-          "type": "manifest",
-          "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench/blob/main/dynamixel_workbench_toolbox/package.xml"
+          "url": "https://github.com/ROBOTIS-GIT/DynamixelSDK/blob/main/ros/dynamixel_sdk/package.xml"
         }
       ]
     },
