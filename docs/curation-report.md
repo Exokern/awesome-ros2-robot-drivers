@@ -4,7 +4,7 @@ Generated from [data/index.json](../data/index.json). Use this report to see cov
 
 It is not an endorsement, compatibility claim, or hardware test report.
 
-- Last reviewed: 2026-06-02
+- Last reviewed: 2026-10-04
 - Entries: 48
 - Categories: 8
 
@@ -68,14 +68,14 @@ It is not an endorsement, compatibility claim, or hardware test report.
 
 | Category                        | Oldest Last-Checked Age |
 | ------------------------------- | ----------------------- |
-| Industrial Manipulators         | 0 days                  |
-| Mobile Bases And Robots         | 0 days                  |
-| Cameras And RGB-D               | 0 days                  |
-| LiDAR                           | 0 days                  |
-| IMU And Positioning             | 0 days                  |
-| Grippers And End Effectors      | 0 days                  |
-| Actuators And Motor Controllers | 0 days                  |
-| Control And Hardware Interfaces | 0 days                  |
+| Industrial Manipulators         | 124 days                |
+| Mobile Bases And Robots         | 124 days                |
+| Cameras And RGB-D               | 124 days                |
+| LiDAR                           | 124 days                |
+| IMU And Positioning             | 124 days                |
+| Grippers And End Effectors      | 124 days                |
+| Actuators And Motor Controllers | 124 days                |
+| Control And Hardware Interfaces | 124 days                |
 
 ## License Follow-Up Queue
 

@@ -13,7 +13,7 @@ Search 48 curated upstream repositories across 8 hardware categories before buyi
 | Curated repositories      | 48            |
 | Hardware categories       | 8             |
 | Official upstream sources | 32            |
-| Last full review          | 2026-06-02    |
+| Last full review          | 2026-10-04    |
 
 This is a public discovery and decision-support index, not a compatibility guarantee, endorsement, or hardware test report. A listed repository remains subject to its upstream documentation, version support, licensing, and local workcell validation.
 
@@ -276,10 +276,10 @@ Actuator SDKs, smart-servo interfaces, and motor-controller packages used in ROS
   - Check: Confirm supported actuator models, serial or controller transport, ros2_control plugin configuration, and ROS distro branch upstream.
   - Metadata: official; Apache-2.0; checked 2026-06-02.
 
-- [DYNAMIXEL Workbench](https://github.com/ROBOTIS-GIT/dynamixel-workbench) - ROS packages for DYNAMIXEL controllers, managers, toolbox utilities, messages, and tutorials with ROS 2 branches.
+- [DYNAMIXEL SDK](https://github.com/ROBOTIS-GIT/DynamixelSDK) - ROS 2 wrapper for ROBOTIS DYNAMIXEL SDK packet communication and actuator control.
   - Hardware: ROBOTIS DYNAMIXEL smart servos.
-  - Check: Confirm whether Workbench or the ros2_control hardware interface is the right integration path for the target ROS distro and controller.
-  - Metadata: official; Apache-2.0; checked 2026-06-02.
+  - Check: Lower-level ROS 2 SDK wrapper, not a drop-in Workbench controller replacement. Confirm actuator protocol, transport, and distro branch; use dynamixel_hardware_interface for ros2_control integration.
+  - Metadata: official; Apache-2.0; checked 2026-10-04.
 
 - [ODrive ros2_control](https://github.com/Factor-Robotics/odrive_ros2_control) - ros2_control hardware interface for ODrive motor controllers.
   - Hardware: ODrive motor controllers.

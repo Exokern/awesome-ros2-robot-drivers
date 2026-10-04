@@ -520,9 +520,9 @@
         "category": "actuators-and-motor-controllers"
       },
       {
-        "name": "DYNAMIXEL Workbench",
-        "repo": "ROBOTIS-GIT/dynamixel-workbench",
-        "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench",
+        "name": "DYNAMIXEL SDK",
+        "repo": "ROBOTIS-GIT/DynamixelSDK",
+        "url": "https://github.com/ROBOTIS-GIT/DynamixelSDK",
         "category": "actuators-and-motor-controllers"
       }
     ]

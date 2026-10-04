@@ -687,9 +687,9 @@
     "search_text": "dynamixel hardware interface robotis-git dynamixel hardware interface actuators-and-motor-controllers ros 2 hardware interface for controlling robotis dynamixel motors through ros2 control. robotis dynamixel smart servos official curated apache-2.0 confirm supported actuator models serial or controller transport ros2 control plugin configuration and ros distro branch upstream."
   },
   {
-    "name": "DYNAMIXEL Workbench",
-    "repo": "ROBOTIS-GIT/dynamixel-workbench",
-    "url": "https://github.com/ROBOTIS-GIT/dynamixel-workbench",
+    "name": "DYNAMIXEL SDK",
+    "repo": "ROBOTIS-GIT/DynamixelSDK",
+    "url": "https://github.com/ROBOTIS-GIT/DynamixelSDK",
     "category": "actuators-and-motor-controllers",
     "hardware": [
       "ROBOTIS DYNAMIXEL smart servos"
@@ -698,9 +698,9 @@
     "source_status": "official",
     "review_status": "curated",
     "license": "Apache-2.0",
-    "last_checked": "2026-06-02",
-    "evidence_count": 5,
-    "search_text": "dynamixel workbench robotis-git dynamixel-workbench actuators-and-motor-controllers ros packages for dynamixel controllers managers toolbox utilities messages and tutorials with ros 2 branches. robotis dynamixel smart servos official curated apache-2.0 confirm whether workbench or the ros2 control hardware interface is the right integration path for the target ros distro and controller."
+    "last_checked": "2026-10-04",
+    "evidence_count": 4,
+    "search_text": "dynamixel sdk robotis-git dynamixelsdk actuators-and-motor-controllers ros 2 wrapper for robotis dynamixel sdk packet communication and actuator control. robotis dynamixel smart servos official curated apache-2.0 lower-level ros 2 sdk wrapper not a drop-in workbench controller replacement. confirm actuator protocol transport and distro branch use dynamixel hardware interface for ros2 control integration."
   },
   {
     "name": "ODrive ros2_control",
